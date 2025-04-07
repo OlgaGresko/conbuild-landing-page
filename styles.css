@@ -1,0 +1,55 @@
+:root {
+  --bg-color: #ffffff;
+  --dark: #0e0e0e;
+  --accent: #fb5b11;
+  --light-text: #d8d8d8;
+  --dark-text: #555555;
+  --contacts-color: #cdcdcd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  line-height: 1.625;
+  color: var(--dark-text);
+  background-color: var(--bg-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
