@@ -71,6 +71,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.container {
+  width: 1297px;
+  margin: 0 auto;
+}
+
 /* --------- HEADER --------- */
 
 .header {
@@ -292,11 +297,12 @@ html {
 .hero {
   position: relative;
   padding-bottom: 150px;
+  margin-bottom: 143px;
 }
 
 .hero-wrapper {
   background: linear-gradient(
-    to bottom, 
+    to bottom,
     rgba(14, 14, 14, 0.6) 0%,
     rgba(14, 14, 14, 0.9) 100%
   );
@@ -334,25 +340,32 @@ html {
   margin-bottom: 43px;
 }
 
-.accent-button {
+.button {
   width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 17px 22px 17px 32px;
-  background-color: var(--accent);
-  border: none;
+  padding: 17px 35px;
   font-family: "Jost", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.625;
-  color: var(--bg-color);
-  fill: var(--bg-color);
-  transition: background-color var(--transition), transform var(--transition);
+  background-color: var(--bg-color);
+  border: 1px solid var(--dark);
+  color: var(--dark);
+  fill: var(--dark);
+  transition: background-color var(--transition), transform var(--transition), color var(--transition), fill var(--transition);
 }
 
-.accent-button:hover {
+.button.accent {
+  background-color: var(--accent);
+  border: 1px solid transparent;
+  color: var(--bg-color);
+  fill: var(--bg-color);
+}
+
+.button.accent:hover {
   background-color: var(--accent-hover);
   transform: scale(1.05);
 }
@@ -369,4 +382,73 @@ html {
   position: absolute;
   bottom: 0;
   left: calc(50% - (539px / 2));
+}
+
+/* --------- SERVICES --------- */
+
+.services {
+  margin-bottom: 143px;
+}
+
+.container-services {
+  display: flex;
+  flex-direction: row;
+  gap: 75px;
+}
+
+.services-text{
+  width: 476px;
+  background-image: url(./assets/img/man.png);
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  background-position: right 0 bottom 31px;
+}
+
+.section-name {
+  margin-left: 25px;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.625;
+  color: var(--dark);
+}
+
+.section-name::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 1px;
+  background-color: var(--accent);
+  position: absolute;
+  top: calc(50% - 1px);
+  left: -25px;
+}
+
+.section-title {
+  margin-bottom: 9px;
+  font-family: "Jost", sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.192;
+  color: var(--dark);
+}
+
+.button:hover {
+  background-color: var(--accent);
+  border: 1px solid transparent;
+  color: var(--bg-color);
+  fill: var(--bg-color);
+}
+
+.section-descr {
+  margin-bottom: 43px;
+}
+
+.services-box {
+  width: 746px;
+  height: 418px;
+  overflow: hidden;
 }
