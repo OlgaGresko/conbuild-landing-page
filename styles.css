@@ -72,6 +72,7 @@ html {
 /* --------- HEADER --------- */
 
 .header {
+  height: 145px;
   display: flex;
   flex-direction: row;
   background-color: var(--dark);
@@ -116,10 +117,17 @@ html {
   color: var(--bg-color);
 }
 
+.middle-header {
+  flex: 1;
+  border-right: 1px solid var(--dark-text);
+}
+
 .upper-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-right: 29px;
+  border-bottom: 1px solid var(--dark-text);
 }
 
 .contacts-list {
@@ -190,8 +198,8 @@ html {
 .nav-list {
   display: flex;
   flex-direction: row;
-  gap: 36px;
-  padding: 16px 29px 17px 60px;
+  gap: 32px;
+  padding: 30px 0px 24px 60px;
 }
 
 .nav-link {
@@ -216,6 +224,50 @@ html {
   height: 4px;
   background-color: var(--accent);
   position: absolute;
-  bottom: -35px;
+  bottom: -30px;
   left: 0;
+}
+
+.phone {
+  padding: 42px 83px 43px 23px;
+}
+
+.phone-link {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+}
+
+.phone-icon-frame {
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-icon {
+  fill: var(--bg-color);
+}
+
+.phone-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.phone-text-cta {
+  font-size: 14px;
+  line-height: 1.714;
+  color: var(--contacts-color);
+}
+
+.phone-text-number {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.625;
+  color: var(--bg-color);
 }
