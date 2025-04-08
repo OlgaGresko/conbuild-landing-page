@@ -83,13 +83,13 @@
         </div>
         <nav class="nav-list">
           <a href="" class="nav-link active">Home</a>
-          <a href="" class="nav-link">About</a>
-          <a href="" class="nav-link">Projects</a>
-          <a href="" class="nav-link">Testimonials</a>
-          <a href="" class="nav-link">Team</a>
-          <a href="" class="nav-link">Pricing</a>
-          <a href="" class="nav-link">Blog</a>
-          <a href="" class="nav-link">Contact</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
+          <a href="#team" class="nav-link">Team</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#blog" class="nav-link">Blog</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </nav>
       </div>
 
@@ -110,18 +110,26 @@
 
     <main>
       <section class="hero">
-        <div class="container">
-          <div>
-            <h1>Experts In Construction</h1>
-            <p>
-              The construction industry boasts a diverse range of experts, each
-              playing a crucial role in bringing a project from vision to
-              reality.
-            </p>
-            <button type="button">Explore More</button>
+        <div class="hero-wrapper">
+          <div class="hero-container">
+            <div class="hero-text">
+              <h1 class="hero-title">Experts In Construction</h1>
+              <p class="hero-descr">
+                The construction industry boasts a diverse range of experts,
+                each playing a crucial role in bringing a project from vision to
+                reality.
+              </p>
+              <button type="button" class="accent-button">
+                <span>Explore More</span>
+                <svg width="19px" height="19px" class="">
+                  <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
+                </svg>
+              </button>
+            </div>
+            <img src="" alt="" />
           </div>
-          <img src="" alt="" />
         </div>
+        <img src="" alt="" />
       </section>
 
       <section class="services">
@@ -173,7 +181,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div>
             <div>
@@ -273,7 +281,7 @@
         </div>
       </section>
 
-      <section class="projects">
+      <section class="projects" id="projects">
         <div class="container">
           <div>
             <p>Our Projects</p>
@@ -338,7 +346,7 @@
         </div>
       </section>
 
-      <section class="testimonials">
+      <section class="testimonials" id="testimonials">
         <div class="container">
           <p>Our Testimonials</p>
           <h2>What Our Clients Say About Our Work.</h2>
@@ -364,7 +372,7 @@
         </div>
       </section>
 
-      <section class="team">
+      <section class="team" id="team">
         <div class="container">
           <div>
             <p>Our Team Members</p>
@@ -398,7 +406,7 @@
         </div>
       </section>
 
-      <section class="pricing">
+      <section class="pricing" id="pricing">
         <div class="container">
           <p>Our Price table</p>
           <h2>Solutions For Price Table</h2>
@@ -462,7 +470,7 @@
         </div>
       </section>
 
-      <section class="blog">
+      <section class="blog" id="blog">
         <div class="container">
           <p>Our Blog</p>
           <h2>Latest Insights and Updates</h2>
@@ -528,7 +536,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer id="contact">
       <img src="" alt="" />
       <div>
         <h3>Sign up for our newsletter to get weekly updates.</h3>
