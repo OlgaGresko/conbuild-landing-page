@@ -75,14 +75,14 @@ html {
   display: flex;
   flex-direction: row;
   background-color: var(--dark);
-}
-
-.logo {
-  padding: 40px 243px 40px 93px;
   background-image: url(./assets/img/logo-bg.png);
   background-repeat: no-repeat;
   background-size: 578px 156px;
   background-position: 0;
+}
+
+.logo {
+  padding: 40px 243px 40px 93px;
 }
 
 .logo-link {
@@ -185,4 +185,37 @@ html {
 
 .socials-icon:hover {
   fill: var(--bg-color);
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+  padding: 16px 29px 17px 60px;
+}
+
+.nav-link {
+  font-weight: 700;
+  line-height: 1.625;
+  color: var(--bg-color);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.nav-link.active {
+  color: var(--accent);
+}
+
+.nav-link.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent);
+  position: absolute;
+  bottom: -35px;
+  left: 0;
 }
