@@ -4,9 +4,11 @@
   --bg-color: #ffffff;
   --dark: #0e0e0e;
   --accent: #fb5b11;
+  --accent-hover: #d84c16;
   --light-text: #d8d8d8;
   --dark-text: #555555;
   --contacts-color: #cdcdcd;
+  --transition: 0.3s ease;
 }
 
 * {
@@ -153,6 +155,7 @@ html {
   font-size: 14px;
   line-height: 1.714;
   color: var(--contacts-color);
+  transition: color var(--transition);
 }
 
 .contacts-text.mail:hover {
@@ -189,6 +192,7 @@ html {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+  transition: fill var(--transition);
 }
 
 .socials-icon:hover {
@@ -207,6 +211,7 @@ html {
   line-height: 1.625;
   color: var(--bg-color);
   position: relative;
+  transition: color var(--transition);
 }
 
 .nav-link:hover {
@@ -246,10 +251,20 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--transition);
+}
+
+.phone-link:hover .phone-icon-frame {
+  background-color: var(--accent-hover);
 }
 
 .phone-icon {
   fill: var(--bg-color);
+  transition: transform var(--transition);
+}
+
+.phone-link:hover .phone-icon {
+  transform: scale(1.2);
 }
 
 .phone-text {
@@ -320,6 +335,7 @@ html {
 }
 
 .accent-button {
+  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -333,6 +349,12 @@ html {
   line-height: 1.625;
   color: var(--bg-color);
   fill: var(--bg-color);
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.accent-button:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.05);
 }
 
 .hero-portrait {
