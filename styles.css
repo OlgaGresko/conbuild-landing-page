@@ -274,14 +274,33 @@ html {
 
 /* --------- HERO --------- */
 
+.hero {
+  position: relative;
+  padding-bottom: 150px;
+}
+
+.hero-wrapper {
+  background: linear-gradient(
+    to bottom, 
+    rgba(14, 14, 14, 0.6) 0%,
+    rgba(14, 14, 14, 0.9) 100%
+  );
+}
+
 .hero-container {
   margin: 0 auto;
+  padding-top: 49px;
+  padding-bottom: 72px;
   width: 1595px;
+  display: flex;
+  flex-direction: row;
+  gap: 54px;
 }
 
 .hero-text {
   width: 901px;
-  padding-top: 198px;
+  padding-top: 149px;
+  padding-bottom: 124px;
 }
 
 .hero-title {
@@ -290,7 +309,7 @@ html {
   font-size: 158px;
   font-weight: 600;
   line-height: 0.873;
-  color: var(--dark-text);
+  color: var(--bg-color);
 }
 
 .hero-descr {
@@ -314,4 +333,18 @@ html {
   line-height: 1.625;
   color: var(--bg-color);
   fill: var(--bg-color);
+}
+
+.hero-portrait {
+  width: 640px;
+  height: 729px;
+  background-image: url(./assets/img/portrait-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.front-loader {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - (539px / 2));
 }
