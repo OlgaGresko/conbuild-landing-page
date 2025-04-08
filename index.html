@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -157,39 +161,63 @@
               </svg>
             </button>
           </div>
-          <div class="services-box">
-            <ul>
-              <li>
-                <img src="" alt="" />
-                <h3>Building Contraction</h3>
-                <p>This involves various stages like planning, design</p>
-              </li>
-              <li>
-                <img src="" alt="" />
-                <h3>Building Contraction</h3>
-                <p>This involves various stages like planning, design</p>
-              </li>
-              <li>
-                <img src="" alt="" />
-                <h3>Building Contraction</h3>
-                <p>This involves various stages like planning, design</p>
-              </li>
-              <li>
-                <img src="" alt="" />
-                <h3>Building Contraction</h3>
-                <p>This involves various stages like planning, design</p>
-              </li>
-              <li>
-                <img src="" alt="" />
-                <h3>Building Contraction</h3>
-                <p>This involves various stages like planning, design</p>
-              </li>
-              <li>
-                <img src="" alt="" />
-                <h3>Building Contraction</h3>
-                <p>This involves various stages like planning, design</p>
-              </li>
-            </ul>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide my-slide">
+                <img src="./assets/img/building-logo.png" alt="building" class="slide-img"/>
+                <div class="slide-text">
+                  <h3 class="service-name">Building Contraction</h3>
+                  <p class="service-decsr">
+                    This involves various stages like planning, design.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide my-slide">
+                <img src="./assets/img/building-logo.png" alt="building" class="slide-img"/>
+                <div class="slide-text">
+                  <h3 class="service-name">Building Design</h3>
+                  <p class="service-decsr">
+                    Creating custom building designs that meet your needs. We focus on functionality and aesthetic appeal.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide my-slide">
+                <img src="./assets/img/building-logo.png" alt="building" class="slide-img"/>
+                <div class="slide-text">
+                  <h3 class="service-name">Construction Management</h3>
+                  <p class="service-decsr">
+                    Overseeing the construction process from start to finish, ensuring quality and timely completion.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide my-slide">
+                <img src="./assets/img/building-logo.png" alt="building" class="slide-img"/>
+                <div class="slide-text">
+                  <h3 class="service-name">Renovation Services</h3>
+                  <p class="service-decsr">
+                    Transform your existing space with professional renovation. We update and improve interiors to match your vision.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide my-slide">
+                <img src="./assets/img/building-logo.png" alt="building" class="slide-img"/>
+                <div class="slide-text">
+                  <h3 class="service-name">Structural Engineering</h3>
+                  <p class="service-decsr">
+                    Providing expert structural design and analysis for safe, durable buildings that stand the test of time.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide my-slide">
+                <img src="./assets/img/building-logo.png" alt="building" class="slide-img"/>
+                <div class="slide-text">
+                  <h3 class="service-name">Project Planning</h3>
+                  <p class="service-decsr">
+                    Efficiently planning every phase of construction. We ensure everything is mapped out for a smooth project execution.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -608,5 +636,7 @@
 
       <p>© 1995-2024 All rights for <span>Conbuild</span> exclusive</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
