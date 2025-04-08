@@ -1,3 +1,5 @@
+/* --------- GENERAL --------- */
+
 :root {
   --bg-color: #ffffff;
   --dark: #0e0e0e;
@@ -44,6 +46,19 @@ a {
   color: inherit;
 }
 
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
 img,
 video {
   max-width: 100%;
@@ -52,4 +67,122 @@ video {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* --------- HEADER --------- */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--dark);
+}
+
+.logo {
+  padding: 40px 243px 40px 93px;
+  background-image: url(./assets/img/logo-bg.png);
+  background-repeat: no-repeat;
+  background-size: 578px 156px;
+  background-position: 0;
+}
+
+.logo-link {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+}
+
+.logo-pic {
+  width: 86px;
+  height: 76px;
+}
+
+.logo-descr {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text {
+  font-size: 14px;
+  line-height: 1.714;
+  color: var(--bg-color);
+}
+
+.logo-name {
+  font-family: "Jost", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--bg-color);
+}
+
+.upper-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contacts-list {
+  padding: 16px 29px 17px 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 42px;
+}
+
+.contacts-item {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  align-items: center;
+}
+
+.contacts-icon {
+  fill: var(--accent);
+}
+
+.contacts-text {
+  font-size: 14px;
+  line-height: 1.714;
+  color: var(--contacts-color);
+}
+
+.contacts-text.mail:hover {
+  color: var(--accent);
+}
+
+.socials-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.socials-item {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.socials-icon:hover {
+  fill: var(--bg-color);
 }
