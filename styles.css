@@ -357,6 +357,7 @@ html {
   fill: var(--dark);
   transition: background-color var(--transition), transform var(--transition),
     color var(--transition), fill var(--transition);
+  cursor: pointer;
 }
 
 .button.accent {
@@ -501,4 +502,74 @@ html {
 
 .service-decsr {
   color: var(--bg-color);
+}
+
+/* --------- ABOUT --------- */
+
+.about-upper-block {
+  display: flex;
+  flex-direction: row;
+  gap: 172px;
+}
+
+.about-text {
+  margin-top: 16px;
+  margin-bottom: 23px;
+  width: 439px;
+}
+
+.about-right-block {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+
+.about-span-container {
+  display: inline-block;
+  position: relative;
+}
+
+.about-span {
+  font-family: "Jost", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.313;
+  line-height: 1;
+  color: var(--dark);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.about-span-reflection {
+  font-family: "Jost", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.313;
+  line-height: 1;
+  color: var(--dark);
+  position: absolute;
+  left: 0;
+  top: 60%;
+  width: 100%;
+  text-align: left;
+  transform: scaleY(-1);
+  opacity: 1;
+  overflow: hidden;
+  height: 100%;
+  pointer-events: none;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(201, 201, 201, 0) 40%,
+    rgba(201, 201, 201, 0.3) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(201, 201, 201, 0) 40%,
+    rgba(201, 201, 201, 0.3) 100%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
