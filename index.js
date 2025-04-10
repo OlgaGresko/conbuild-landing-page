@@ -60,3 +60,38 @@ function updateCentralSlide(swiperInstance) {
       }
     });
   }
+
+const counters = document.querySelectorAll('.status-value');
+const speed = 200;
+
+const animateCounter = (counter) => {
+  const animate = () => {
+      const value = +counter.getAttribute('value');
+      let data = +counter.innerText;
+
+      const increment = value / speed;
+
+      if (data < value) {
+          data += increment;
+          counter.innerText = Math.min(Math.ceil(data), value);
+          requestAnimationFrame(animate);
+      } else {
+          counter.innerText = value;
+      }
+  };
+
+  animate();
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+      }
+  });
+}, { threshold: 0.5 });
+
+counters.forEach(counter => {
+  observer.observe(counter);
+});
