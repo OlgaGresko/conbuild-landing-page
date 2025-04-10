@@ -37,5 +37,8 @@
 <symbol id="icon-arrow-left" viewBox="0 0 96 32">
   <path d="M63.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586H2c-1.105 0-2 0.895-2 2s0.895 2 2 2h65.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"/>
 </symbol>
+<symbol id="icon-plus" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M16 1.6v28.8M30.4 17.2h-28.8"></path>
+</symbol>
 </defs>
 </svg>

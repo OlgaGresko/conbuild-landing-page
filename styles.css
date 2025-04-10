@@ -635,7 +635,7 @@ html {
 
 .swiper-button-prev:hover svg,
 .swiper-button-next:hover svg {
-  fill: var(--accent); 
+  fill: var(--accent);
 }
 
 .about-swiper-content {
@@ -644,7 +644,7 @@ html {
   transition: top var(--transition);
 }
 
-.swiper-second-name{
+.swiper-second-name {
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
@@ -725,25 +725,125 @@ html {
 /* --------- PROJECTS --------- */
 
 .container.container-projects {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: end;
+  position: relative;
   margin-bottom: 67px;
+  
 }
 
-.process-buttons{
-  padding-bottom: 7px;
+.projects-text {
+  width: fit-content;
 }
 
-.projects-button {
+.projects-buttons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 166px;
+  height: 40px;
+  top: 66px;
+  right: 0;
+}
+
+.projects-button.swiper-button-prev:after,
+.projects-button.swiper-button-next:after {
+  content: none;
+}
+
+.projects-button.swiper-button-prev,
+.projects-button.swiper-button-next {
+  width: 60px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.projects-button.swiper-button-prev svg,
+.projects-button.swiper-button-next svg {
   fill: var(--dark);
   transition: fill var(--transition);
 }
 
-.projects-button:hover {
+
+.projects-button.swiper-button-prev:hover svg,
+.projects-button.swiper-button-next:hover svg {
   fill: var(--accent);
+}
+
+.swiper-wrapper.projects-list {
+  display: flex;
+  font-display: row;
+}
+
+.swiper-slide.projects-item {
+  position: relative;
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+.projects-item-button-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 82px;
+  background-color: #b6b6b6;
+  left: 50%;
+  top: 153px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.projects-item-button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: var(--accent);
+  cursor: pointer;
+}
+
+.projects-item-icon {
+  stroke: var(--bg-color);
+}
+
+.projects-type {
+  display: inline-block;
+  width:fit-content;
+  margin-bottom: 20px;
+  padding: 5px 16px;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.625;
+  color: var(--bg-color);
+  background-color: var(--accent);
+}
+
+.projects-name {
+  display: inline-block;
+  width:fit-content;
+  padding: 16px 24px;
+  font-family: "Jost", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.313;
+  color: var(--bg-color);
+  background-color: var(--dark);
+}
+
+.projects-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 626px;
+  height: 443px;
+  padding: 30px;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1 ease;
 }

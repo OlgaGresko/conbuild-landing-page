@@ -95,3 +95,38 @@ const observer = new IntersectionObserver((entries) => {
 counters.forEach(counter => {
   observer.observe(counter);
 });
+
+const swiper3 = new Swiper(".swiper-3", {
+  spaceBetween: 24,
+  loop: true,
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  simulateTouch: false,
+  navigation: {
+    nextEl: '.swiper-button-next.projects-button',
+    prevEl: '.swiper-button-prev.projects-button',
+  },
+  on: {
+    slideChange: function () {
+      updateHoverSlide(this);
+    },
+  },
+});
+
+function updateHoverSlide(swiper) {
+  const slides = swiper.slides;
+  
+  slides.forEach(slide => {
+    const content = slide.querySelector('.projects-item-content');
+    
+    if (content) {
+      slide.addEventListener('mouseenter', () => {
+        content.classList.remove('hidden');
+      });
+      
+      slide.addEventListener('mouseleave', () => {
+        content.classList.add('hidden');
+      });
+    }
+  });
+}
