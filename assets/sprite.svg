@@ -40,5 +40,8 @@
 <symbol id="icon-plus" viewBox="0 0 32 32">
 <path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M16 1.6v28.8M30.4 17.2h-28.8"></path>
 </symbol>
+<symbol id="icon-play" viewBox="0 0 22 32">
+<path d="M21.677 16l-21.677 16v-32l21.677 16z"></path>
+</symbol>
 </defs>
 </svg>

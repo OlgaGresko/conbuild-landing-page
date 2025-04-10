@@ -18,8 +18,8 @@ const swiper2 = new Swiper(".swiper-2", {
   slidesPerGroup: 1,
   simulateTouch: false,
   navigation: {
-    nextEl: '.swiper-button-next.swiper-second',
-    prevEl: '.swiper-button-prev.swiper-second',
+    nextEl: ".swiper-button-next.swiper-second",
+    prevEl: ".swiper-button-prev.swiper-second",
   },
   on: {
     slideChange: function () {
@@ -29,70 +29,73 @@ const swiper2 = new Swiper(".swiper-2", {
 });
 
 function updateCentralSlide(swiperInstance) {
-    const slides = swiperInstance.slides;
-  
-    slides.forEach((slide, index) => {
-      const img = slide.querySelector('.slide-img');
-      const text = slide.querySelector('.slide-text');
-      
-      img.classList.remove('slide-visible');
-      text.classList.remove('slide-visible');
-      slide.classList.remove('swiper-slide-gradient');
-  
-      if (index === swiperInstance.activeIndex) {
-        img.classList.add('slide-visible');
-        text.classList.add('slide-visible');
-        slide.classList.add('swiper-slide-gradient');
-      }
-    });
-  }
+  const slides = swiperInstance.slides;
 
-  function updateCentralSlide2(swiperInstance) {
-    const slides = swiperInstance.slides;
-  
-    slides.forEach((slide, index) => {
-      const text = slide.querySelector('.about-swiper-content');
-      
-      text.classList.remove('points-visible');
-  
-      if (index === (swiperInstance.activeIndex + 1)) {
-        text.classList.add('points-visible');
-      }
-    });
-  }
+  slides.forEach((slide, index) => {
+    const img = slide.querySelector(".slide-img");
+    const text = slide.querySelector(".slide-text");
 
-const counters = document.querySelectorAll('.status-value');
+    img.classList.remove("slide-visible");
+    text.classList.remove("slide-visible");
+    slide.classList.remove("swiper-slide-gradient");
+
+    if (index === swiperInstance.activeIndex) {
+      img.classList.add("slide-visible");
+      text.classList.add("slide-visible");
+      slide.classList.add("swiper-slide-gradient");
+    }
+  });
+}
+
+function updateCentralSlide2(swiperInstance) {
+  const slides = swiperInstance.slides;
+
+  slides.forEach((slide, index) => {
+    const text = slide.querySelector(".about-swiper-content");
+
+    text.classList.remove("points-visible");
+
+    if (index === swiperInstance.activeIndex + 1) {
+      text.classList.add("points-visible");
+    }
+  });
+}
+
+const counters = document.querySelectorAll(".status-value");
 const speed = 200;
 
 const animateCounter = (counter) => {
   const animate = () => {
-      const value = +counter.getAttribute('value');
-      let data = +counter.innerText;
+    const value = +counter.getAttribute("value");
+    let data = +counter.innerText;
 
-      const increment = value / speed;
+    const increment = value / speed;
 
-      if (data < value) {
-          data += increment;
-          counter.innerText = Math.min(Math.ceil(data), value);
-          requestAnimationFrame(animate);
-      } else {
-          counter.innerText = value;
-      }
+    if (data < value) {
+      data += increment;
+      counter.innerText = Math.min(Math.ceil(data), value);
+      requestAnimationFrame(animate);
+    } else {
+      counter.innerText = value;
+    }
   };
 
   animate();
 };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          observer.unobserve(entry.target);
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
       }
-  });
-}, { threshold: 0.5 });
+    });
+  },
+  { threshold: 0.5 }
+);
 
-counters.forEach(counter => {
+counters.forEach((counter) => {
   observer.observe(counter);
 });
 
@@ -103,8 +106,8 @@ const swiper3 = new Swiper(".swiper-3", {
   slidesPerGroup: 1,
   simulateTouch: false,
   navigation: {
-    nextEl: '.swiper-button-next.projects-button',
-    prevEl: '.swiper-button-prev.projects-button',
+    nextEl: ".swiper-button-next.projects-button",
+    prevEl: ".swiper-button-prev.projects-button",
   },
   on: {
     slideChange: function () {
@@ -115,18 +118,46 @@ const swiper3 = new Swiper(".swiper-3", {
 
 function updateHoverSlide(swiper) {
   const slides = swiper.slides;
-  
-  slides.forEach(slide => {
-    const content = slide.querySelector('.projects-item-content');
-    
+
+  slides.forEach((slide) => {
+    const content = slide.querySelector(".projects-item-content");
+
     if (content) {
-      slide.addEventListener('mouseenter', () => {
-        content.classList.remove('hidden');
+      slide.addEventListener("mouseenter", () => {
+        content.classList.remove("hidden");
       });
-      
-      slide.addEventListener('mouseleave', () => {
-        content.classList.add('hidden');
+
+      slide.addEventListener("mouseleave", () => {
+        content.classList.add("hidden");
       });
     }
   });
 }
+
+const tabs = document.querySelectorAll(".process-button");
+const iframe = document.getElementById("video-frame");
+const playButton = document.querySelector(".custom-play-button");
+
+let selectedVideoId = "HdW1-guocPA";
+
+function setVideo(videoId) {
+  selectedVideoId = videoId;
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=0&enablejsapi=1`;
+  playButton.style.display = "block";
+}
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    tabs.forEach((t) => t.classList.remove("process-active"));
+    tab.classList.add("process-active");
+
+    const videoId = tab.dataset.video;
+    setVideo(videoId);
+  });
+});
+
+playButton.addEventListener("click", () => {
+  playButton.style.display = "none";
+
+  iframe.src = `https://www.youtube.com/embed/${selectedVideoId}?autoplay=1&enablejsapi=1`;
+});

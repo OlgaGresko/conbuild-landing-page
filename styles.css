@@ -727,7 +727,6 @@ html {
 .container.container-projects {
   position: relative;
   margin-bottom: 67px;
-  
 }
 
 .projects-text {
@@ -763,10 +762,13 @@ html {
   transition: fill var(--transition);
 }
 
-
 .projects-button.swiper-button-prev:hover svg,
 .projects-button.swiper-button-next:hover svg {
   fill: var(--accent);
+}
+
+.swiper.swiper-3 {
+  margin-bottom: 143px;
 }
 
 .swiper-wrapper.projects-list {
@@ -808,7 +810,7 @@ html {
 
 .projects-type {
   display: inline-block;
-  width:fit-content;
+  width: fit-content;
   margin-bottom: 20px;
   padding: 5px 16px;
   font-family: "Jost", sans-serif;
@@ -821,7 +823,7 @@ html {
 
 .projects-name {
   display: inline-block;
-  width:fit-content;
+  width: fit-content;
   padding: 16px 24px;
   font-family: "Jost", sans-serif;
   font-size: 32px;
@@ -846,4 +848,113 @@ html {
   opacity: 0;
   visibility: hidden;
   transition: opacity 1 ease;
+}
+
+/* --------- PROCESS --------- */
+.process-container {
+  text-align: center;
+}
+
+.section-name.process-name {
+  margin-bottom: 15px;
+}
+
+.section-title.process-title {
+  margin-bottom: 37px;
+}
+
+.process-list {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-bottom: 90px;
+}
+
+.process-button {
+  width: calc((1296px - 48px) / 3);
+  background-color: var(--bg-color);
+  height: 80px;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+  background-color: transparent;
+  font-family: "Jost", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.417;
+  color: var(--dark);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.process-active {
+  border: 1px solid transparent;
+  background-color: var(--accent);
+  color: var(--bg-color);
+}
+
+.process-button:hover {
+  border: 1px solid transparent;
+  background-color: var(--accent);
+  color: var(--bg-color);
+}
+
+.process-button-indicator {
+  position: absolute;
+  bottom: -9px;
+  left: calc(((1296px - 48px) / 3) / 2);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--accent);
+  transform: translateX(-50%);
+  transition: left 0.3s ease;
+  pointer-events: none;
+}
+
+.process-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.process-video {
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+  background-color: var(--accent);
+  transition:  background-color var(--transition);
+}
+
+.custom-play-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.custom-play-icon {
+  position: relative;
+  fill: var(--bg-color);
+  z-index: 10;
+  transition: transform var(--transition);
+}
+
+.custom-play-button:hover .custom-play-icon {
+transform: scale(1.2);
 }
