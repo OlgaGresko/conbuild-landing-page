@@ -75,6 +75,7 @@ html {
 .container {
   width: 1297px;
   margin: 0 auto;
+  margin-bottom: 143px;
 }
 
 /* --------- HEADER --------- */
@@ -389,10 +390,6 @@ html {
 
 /* --------- SERVICES --------- */
 
-.services {
-  margin-bottom: 143px;
-}
-
 .container-services {
   display: flex;
   flex-direction: row;
@@ -431,12 +428,15 @@ html {
 }
 
 .section-title {
-  margin-bottom: 9px;
   font-family: "Jost", sans-serif;
   font-size: 52px;
   font-weight: 600;
   line-height: 1.192;
   color: var(--dark);
+}
+
+.section-title.services-section-title {
+  margin-bottom: 9px;
 }
 
 .button:hover {
@@ -507,7 +507,7 @@ html {
 
 /* --------- ABOUT --------- */
 
-.about {
+.container.container-about {
   margin-bottom: 137px;
 }
 
@@ -516,10 +516,6 @@ html {
   flex-direction: row;
   gap: 172px;
   margin-bottom: 67px;
-}
-
-.section-title.about-title {
-  margin-bottom: 0;
 }
 
 .about-text {
@@ -586,7 +582,7 @@ html {
 .swiper-wrapper.swiper-second {
   width: 100%;
   height: 332px;
-  padding-bottom: 54px;
+  padding-bottom: 64px;
   display: flex;
 }
 
@@ -611,13 +607,13 @@ html {
   content: none;
 }
 
-.swiper-second.swiper-navigation {
+.swiper-navigation.swiper-second {
   display: flex;
   justify-content: center;
   width: 166px;
   height: 20px;
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: calc(50% - (166px / 2));
   padding: 0 20px;
 }
@@ -724,4 +720,30 @@ html {
 
 .status-item:hover .status-descr {
   color: var(--bg-color);
+}
+
+/* --------- PROJECTS --------- */
+
+.container.container-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 67px;
+}
+
+.process-buttons{
+  padding-bottom: 7px;
+}
+
+.projects-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  fill: var(--dark);
+  transition: fill var(--transition);
+}
+
+.projects-button:hover {
+  fill: var(--accent);
 }
