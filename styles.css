@@ -8,6 +8,7 @@
   --light-text: #d8d8d8;
   --dark-text: #555555;
   --contacts-color: #cdcdcd;
+  --status-items: #f8f8f8;
   --transition: 0.3s ease;
 }
 
@@ -506,11 +507,19 @@ html {
 
 /* --------- ABOUT --------- */
 
+.about {
+  margin-bottom: 137px;
+}
+
 .about-upper-block {
   display: flex;
   flex-direction: row;
   gap: 172px;
   margin-bottom: 67px;
+}
+
+.section-title.about-title {
+  margin-bottom: 0;
 }
 
 .about-text {
@@ -654,4 +663,65 @@ html {
 
 .points-visible {
   top: 0;
+}
+
+/* --------- STATUS --------- */
+
+.status {
+  margin-bottom: 143px;
+}
+
+.status-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title.status-title {
+  margin-bottom: 67px;
+}
+
+.status-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 306px;
+  height: 206px;
+  background-color: var(--status-items);
+  transition: background-color var(--transition);
+}
+
+.status-number {
+  font-family: "Jost", sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.192;
+  color: var(--dark);
+}
+
+.status-descr {
+  font-family: "Jost", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.417;
+  color: var(--dark);
+}
+
+.status-item:hover {
+  background-color: var(--accent);
+}
+
+.status-item:hover .status-number {
+  color: var(--bg-color);
+}
+
+.status-item:hover .status-descr {
+  color: var(--bg-color);
 }

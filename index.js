@@ -12,13 +12,14 @@ const swiper = new Swiper(".swiper-1", {
 });
 
 const swiper2 = new Swiper(".swiper-2", {
-  spaceBetween: 24,  // відстань між слайдами
-  loop: true,        // слайдер буде крутитися по колу
-  slidesPerView: 3,  // показуємо 3 слайди одночасно
-  slidesPerGroup: 1, // рухаємо один слайд за раз
+  spaceBetween: 24,
+  loop: true,
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  simulateTouch: false,
   navigation: {
-    nextEl: '.swiper-button-next.swiper-second',  // кнопка "Наступний"
-    prevEl: '.swiper-button-prev.swiper-second',  // кнопка "Попередній"
+    nextEl: '.swiper-button-next.swiper-second',
+    prevEl: '.swiper-button-prev.swiper-second',
   },
   on: {
     slideChange: function () {
