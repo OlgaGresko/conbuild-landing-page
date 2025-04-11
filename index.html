@@ -613,34 +613,44 @@
       </section>
 
       <section class="team" id="team">
-        <div class="container">
-          <div>
-            <p>Our Team Members</p>
-            <h2>Our Dedicated Team Members.</h2>
-            <p>
+        <div class="container team-container">
+          <div class="team-text">
+            <p class="section-name team-section-name">Our Team Members</p>
+            <h2 class="section-title team-title">Our Dedicated Team Members.</h2>
+            <p class="team-descr">
               In today's world, we're bombarded with choices. From streaming
               services to meal kits, it can be overwhelming to find the best
               option.
             </p>
-            <button type="button">See All Members</button>
+            <button type="button" class="button">
+              <span>See All Members</span>
+              <svg width="19px" height="19px" class="">
+                <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
+              </svg>
+            </button>
           </div>
-          <img src="" alt="photo" />
-          <ul>
+          <div class="team-images">
+            <img src="" alt="photo" class="team-image active" />
+            <img src="" alt="photo" class="team-image" />
+            <img src="" alt="photo" class="team-image" />
+            <img src="" alt="photo" class="team-image" />
+          </div>
+          <ul class="team-members">
             <li>
-              <h3>Wade Warren</h3>
-              <p>Architect</p>
+              <h3 class="team-member-name active">Wade Warren</h3>
+              <p class="team-member-position">Architect</p>
             </li>
             <li>
-              <h3>Brooklyn Simmons</h3>
-              <p>Architect Designer</p>
+              <h3 class="team-member-name">Brooklyn Simmons</h3>
+              <p class="team-member-position">Architect Designer</p>
             </li>
             <li>
-              <h3>Jonson Duoing</h3>
-              <p>Architect</p>
+              <h3 class="team-member-name">Jonson Duoing</h3>
+              <p class="team-member-position">Architect</p>
             </li>
             <li>
-              <h3>Esther Howard</h3>
-              <p>Architect</p>
+              <h3 class="team-member-name">Esther Howard</h3>
+              <p class="team-member-position">Architect</p>
             </li>
           </ul>
         </div>

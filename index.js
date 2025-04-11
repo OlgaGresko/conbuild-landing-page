@@ -180,3 +180,16 @@ photos.forEach((photo, index) => {
     roles[index].classList.add("active");
   });
 });
+
+const teamPhotos = document.querySelectorAll(".team-image");
+const teamNames = document.querySelectorAll(".team-member-name");
+
+teamNames.forEach((teamName, index) => {
+  teamName.addEventListener("click", () => {
+    teamPhotos.forEach((p) => p.classList.remove("active"));
+    teamNames.forEach((n) => n.classList.remove("active"));
+
+    teamName.classList.add("active");
+    teamPhotos[index].classList.add("active");
+  });
+});
