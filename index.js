@@ -161,3 +161,22 @@ playButton.addEventListener("click", () => {
 
   iframe.src = `https://www.youtube.com/embed/${selectedVideoId}?autoplay=1&enablejsapi=1`;
 });
+
+const photos = document.querySelectorAll(".testimonials-photo");
+const reviews = document.querySelectorAll(".testimonials-review");
+const names = document.querySelectorAll(".testimonials-name");
+const roles = document.querySelectorAll(".testimonials-role");
+
+photos.forEach((photo, index) => {
+  photo.addEventListener("click", () => {
+    photos.forEach((p) => p.classList.remove("active"));
+    reviews.forEach((r) => r.classList.remove("active"));
+    names.forEach((n) => n.classList.remove("active"));
+    roles.forEach((r) => r.classList.remove("active"));
+
+    photo.classList.add("active");
+    reviews[index].classList.add("active");
+    names[index].classList.add("active");
+    roles[index].classList.add("active");
+  });
+});
