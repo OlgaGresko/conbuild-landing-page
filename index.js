@@ -193,3 +193,18 @@ teamNames.forEach((teamName, index) => {
     teamPhotos[index].classList.add("active");
   });
 });
+
+const pricingItems = document.querySelectorAll(".pricing-item");
+
+pricingItems.forEach((item) => {
+  const button = item.querySelector(".pricing-button");
+  const rectangle = item.querySelector(".pricing-rectangle");
+
+  button.addEventListener("mouseenter", () => {
+    rectangle.style.fill = "var(--accent)";
+  });
+
+  button.addEventListener("mouseleave", () => {
+    rectangle.style.fill = "";
+  });
+});

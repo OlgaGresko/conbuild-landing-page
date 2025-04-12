@@ -990,7 +990,6 @@ iframe {
 }
 
 .testimonials-reviews {
-
   margin-bottom: 33px;
   width: 950px;
 }
@@ -1016,8 +1015,8 @@ iframe {
 }
 
 .testimonials-quote {
-fill: var(--dark);
-stroke: var(--dark);
+  fill: var(--dark);
+  stroke: var(--dark);
 }
 
 .testimonials-name {
@@ -1063,7 +1062,7 @@ stroke: var(--dark);
 .testimonials-photo.active {
   width: 110px;
   height: 110px;
-border: 2px solid var(--accent);
+  border: 2px solid var(--accent);
 }
 
 .testimonials-hr {
@@ -1075,7 +1074,9 @@ border: 2px solid var(--accent);
 }
 
 /* --------- TEAM --------- */
+
 .team-container {
+  margin-bottom: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1140,4 +1141,134 @@ border: 2px solid var(--accent);
 .team-member-position {
   font-size: 24px;
   text-align: end;
+}
+
+/* --------- PRICING --------- */
+
+.pricing {
+  background-color: #f8f8f8;
+  background-image: url(./assets/img/map.png);
+  background-repeat: no-repeat;
+  background-size: 997px 640px;
+  background-position: 0 0;
+}
+
+.pricing-container {
+  padding-top: 143px;
+  padding-bottom: 236px;
+  text-align: center;
+}
+
+.section-name.pricing-name {
+  margin-bottom: 14px;
+}
+
+.section-title.pricing-title {
+  margin-bottom: 67px;
+}
+
+.pricing-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pricing-item {
+  position: relative;
+  width: 416px;
+  height: 536px;
+  padding: 44px 39px 50px;
+  border: 1px solid var(--contacts-color);
+  background-color: var(--bg-color);
+  text-align: start;
+}
+
+.price-line {
+  margin-bottom: 13px;
+}
+
+.price {
+  font-family: "Jost", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.313;
+  color: var(--dark);
+}
+
+.price-span {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.625;
+}
+
+.price-tariff {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 27px;
+}
+
+.price-icon-star {
+  stroke: var(--accent);
+  fill: transparent;
+}
+
+.pricing-hr {
+  width: 316px;
+  height: 2px;
+  background-color: var(--contacts-color);
+}
+
+.pricing-features {
+  margin-bottom: 38px;
+}
+
+.pricing-feature {
+  position: relative;
+  padding-left: 16px;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  line-height: 2.25;
+  color: var(--dark);
+}
+
+.pricing-feature::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 2px;
+  height: 2px;
+  background-color: var(--dark);
+  border-radius: 50%;
+}
+
+.pricing-feature.closed {
+  color: var(--dark-text);
+}
+
+.pricing-feature.closed::before {
+  background-color: var(--dark-text);
+}
+
+.pricing-rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: var(--dark);
+}
+
+.pricing-special {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 100px;
+  height: 30px;
+  color: var(--bg-color);
+  background-color: #39ca6e;
+  border-radius: 20px;
+  text-align: center;
 }
