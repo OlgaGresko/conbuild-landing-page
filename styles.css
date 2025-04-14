@@ -847,7 +847,7 @@ html {
 .hidden {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1 ease;
+  transition: opacity 1s ease;
 }
 
 /* --------- PROCESS --------- */
@@ -1404,6 +1404,8 @@ iframe {
   padding: 30px 30px 23px;
   text-align: left;
   border: 1px solid var(--light-text);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: border var(--transition), box-shadow var(--transition);
 }
 
 .blog-article-pic {
@@ -1432,27 +1434,39 @@ iframe {
   fill: var(--dark);
 }
 
-.blog-button.blog-button-listed:hover {
-  color: var(--accent);
-  fill: var(--accent);
-}
-
 .blog-more {
   margin: 0 auto;
 }
 
 .blog-article-date {
   position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition);
   padding: 8px 13px 8px 12px;
   top: 238px;
-  right: 0px;
-  transform: translateX(-50%);
-  display: block;
+  right: 40px;
   width: 73px;
   height: 68px;
   color: var(--bg-color);
+  text-align: center;
   background-image: url(./assets/img/date.png);
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.blog-article:hover {
+  border: 1px solid transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.blog-article:hover .blog-article-date {
+  opacity: 1;
+  visibility: visible;
+}
+
+.blog-article:hover .blog-button-listed {
+  color: var(--accent);
+  fill: var(--accent);
 }
