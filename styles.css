@@ -1275,6 +1275,11 @@ iframe {
 
 /* --------- BLOG --------- */
 
+.container.blog-container {
+  margin-bottom: 73px;
+  text-align: center;
+}
+
 .blog-main-article {
   position: relative;
   margin-bottom: 30px;
@@ -1469,4 +1474,24 @@ iframe {
 .blog-article:hover .blog-button-listed {
   color: var(--accent);
   fill: var(--accent);
+}
+
+/* --------- FOOTER --------- */
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 568px;
+  height: 0;
+  overflow: hidden;
+}
+
+.map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(100%);
 }
