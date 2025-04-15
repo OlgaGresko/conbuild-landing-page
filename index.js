@@ -208,3 +208,14 @@ pricingItems.forEach((item) => {
     rectangle.style.fill = "";
   });
 });
+
+const form = document.querySelector('.sigh-up-form');
+  const input = document.querySelector('.sign-up-input');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const value = input.value;
+
+    input.value = '';
+  });

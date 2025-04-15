@@ -1495,3 +1495,70 @@ iframe {
   border: 0;
   filter: grayscale(100%);
 }
+
+.contact-container {
+  position: relative;
+}
+
+.sign-up-wrapper {
+  position: absolute;
+  top: -92px;
+  width: 100%;
+  height: 184px;
+  padding: 51px 109px;
+  display: flex;
+  flex-direction: row;
+  gap: 257px;
+  background-color: var(--accent);
+  background-image: url(./assets/img/newsletter.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top 40px left 270px;
+}
+
+.sign-up-cta {
+  width: 403px;
+  font-family: "Jost", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.313;
+  color: var(--bg-color);
+  text-transform: capitalize;
+}
+
+.sigh-up-form {
+  position: relative;
+  margin-top: 10px;
+}
+
+.sign-up-input {
+  padding-left: 10px;
+  width: 417px;
+  height: 45px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--bg-color);
+  color: var(--bg-color);
+}
+
+.sign-up-input::placeholder {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sign-up-input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--bg-color);
+}
+
+.sign-up-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 31px;
+  background-color: var(--bg-color);
+  fill: var(--accent);
+  border: none;
+  cursor: pointer;
+}
