@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -144,7 +144,7 @@
         />
       </section>
 
-      <section class="services">
+      <section class="services" id="services">
         <div class="container container-services">
           <div class="services-text">
             <p class="section-name">Latest Services</p>
@@ -865,7 +865,7 @@
       </section>
     </main>
 
-    <footer id="contact">
+    <footer id="contact" class="footer">
       <div class="map-wrapper">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9932.693837701741!2d-0.12845092124651683!3d51.51003360888699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2z0JvQvtC90LTQvtC90YHRjNC60LUg0L7QutC-!5e0!3m2!1suk!2sua!4v1744748493292!5m2!1suk!2sua"
@@ -880,9 +880,15 @@
 
       <div class="container contact-container">
         <div class="sign-up-wrapper">
-          <h3 class="sign-up-cta">Sign up for our newsletter to get weekly updates.</h3>
+          <h3 class="sign-up-cta">
+            Sign up for our newsletter to get weekly updates.
+          </h3>
           <form action="" class="sigh-up-form">
-            <input type="email" placeholder="Enter Your Email" class="sign-up-input" />
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              class="sign-up-input"
+            />
             <button type="submit" class="sign-up-button">
               <svg width="11px" height="11px">
                 <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
@@ -890,56 +896,91 @@
             </button>
           </form>
         </div>
-        <div>
+
+        <div class="footer-lower">
           <div>
-            <img src="" alt="" />
-            <div>
-              <span>Construction Building</span>
-              <span>Conbuild</span>
+            <div class="logo footer-logo">
+              <a href="#" class="logo-link">
+                <img src="./assets/img/logo.png" alt="logo" class="logo-pic" />
+                <div class="logo-descr">
+                  <span class="logo-text footer-logo-text"
+                    >Construction Building</span
+                  >
+                  <span class="logo-name">Conbuild</span>
+                </div>
+              </a>
             </div>
+            <p class="footer-text">
+              Welcome to consaik, a leader in the industry/sector since With a
+              passion for excellence and a commitment.
+            </p>
+            <p class="footer-available">We are available</p>
+            <p class="footer-hours">Mon - Sat : 10:00Am To 07:30Pm</p>
           </div>
-          <p>
-            Welcome to consaik, a leader in the industry/sector since With a
-            passion for excellence and a commitment.
-          </p>
-          <p>We are available</p>
-          <p>Mon - Sat : 10:00Am To 07:30Pm</p>
+          <div>
+            <h4 class="footer-header">Quick links</h4>
+            <ul class="footer-list">
+              <li>
+                <a href="#about">About Us</a>
+              </li>
+              <li>
+                <a href="#services">Our Services</a>
+              </li>
+              <li>
+                <a href="#pricing">Our Pricing</a>
+              </li>
+              <li>
+                <a href="#team">Our Team</a>
+              </li>
+              <li>
+                <a href="#contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-header">Information</h4>
+            <ul class="footer-list">
+              <li>
+                <a href="">Regulatory Compliance</a>
+              </li>
+              <li>
+                <a href="">A sustainable Future</a>
+              </li>
+              <li>
+                <a href="">Architectural Design</a>
+              </li>
+              <li>
+                <a href="">Structural Engineering</a>
+              </li>
+              <li>
+                <a href="">Environmental Impact</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-header">Social Media</h4>
+            <ul class="footer-list">
+              <li>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              </li>
+              <li>
+                <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer">X</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul>
-          <li>
-            <h4>Quick links</h4>
-            <ul>
-              <li>About Us</li>
-              <li>Our Services</li>
-              <li>Our Pricing</li>
-              <li>Our Team</li>
-              <li>Contact Us</li>
-            </ul>
-          </li>
-          <li>
-            <h4>Information</h4>
-            <ul>
-              <li>Regulatory Compliance</li>
-              <li>A sustainable Future</li>
-              <li>Architectural Design</li>
-              <li>Structural Engineering</li>
-              <li>Environmental Impact</li>
-            </ul>
-          </li>
-          <li>
-            <h4>Social Media</h4>
-            <ul>
-              <li>Facebook</li>
-              <li>Instagram</li>
-              <li>X</li>
-              <li>YouTube</li>
-              <li>LinkedIn</li>
-            </ul>
-          </li>
-        </ul>
       </div>
 
-      <p>© 1995-2024 All rights for <span>Conbuild</span> exclusive</p>
+      <p class="footer-rights">© 1995-2025 All rights for <span class="footer-rights-span">&nbsp;Conbuild&nbsp;</span> exclusive</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
