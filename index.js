@@ -1,3 +1,30 @@
+const sections = document.querySelectorAll('section, footer');
+const navLinks = document.querySelectorAll('.nav-link');
+
+function onScroll() {
+  const scrollPos = window.scrollY + window.innerHeight / 2;
+
+  let currentSectionId = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+      currentSectionId = section.id;
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${currentSectionId}`) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', onScroll);
+
 const swiper = new Swiper(".swiper-1", {
   slidesPerView: "auto",
   centeredSlides: true,

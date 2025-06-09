@@ -25,6 +25,7 @@
 }
 
 body {
+  padding-top: 145px;
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   line-height: 1.625;
@@ -72,6 +73,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  scroll-margin-top: 215px;
+}
+
 .container {
   width: 1297px;
   margin: 0 auto;
@@ -81,6 +86,11 @@ html {
 /* --------- HEADER --------- */
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   height: 145px;
   display: flex;
   flex-direction: row;
@@ -237,7 +247,7 @@ html {
   height: 4px;
   background-color: var(--accent);
   position: absolute;
-  bottom: -30px;
+  bottom: -31px;
   left: 0;
 }
 
@@ -1147,6 +1157,7 @@ iframe {
 /* --------- PRICING --------- */
 
 .pricing {
+  scroll-margin-top: 145px;
   background-color: #f8f8f8;
   background-image: url(./assets/img/map.png);
   background-repeat: no-repeat;
@@ -1480,6 +1491,7 @@ iframe {
 /* --------- FOOTER --------- */
 
 .footer {
+  scroll-margin-top: 145px;
   background-color: var(--dark);
   background-image: url(./assets/img/city.png);
   background-size: contain;
