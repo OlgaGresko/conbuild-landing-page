@@ -95,7 +95,6 @@ section {
   display: flex;
   flex-direction: row;
   background-color: var(--dark);
-  background-image: url(./assets/img/logo-bg.png);
   background-repeat: no-repeat;
   background-size: 578px 156px;
   background-position: 0;
@@ -103,6 +102,11 @@ section {
 
 .logo {
   padding: 40px 243px 40px 93px;
+}
+
+.logo-background {
+  position: absolute;
+  z-index: -999;
 }
 
 .logo-link {
