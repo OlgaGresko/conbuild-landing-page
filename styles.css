@@ -212,8 +212,7 @@ section {
   width: 1em;
   height: 1em;
   stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+  fill: rgba(255, 255, 255, 0.3);
   transition: fill var(--transition);
 }
 
@@ -276,10 +275,6 @@ section {
   transition: background-color var(--transition);
 }
 
-.phone-link:hover .phone-icon-frame {
-  background-color: var(--accent-hover);
-}
-
 .phone-icon {
   fill: var(--bg-color);
   transition: transform var(--transition);
@@ -318,11 +313,28 @@ section {
 }
 
 .hero-wrapper {
-  background: linear-gradient(
+  background: url(./assets/img/bigger-line.png),
+  url(./assets/img/smaller-line.png),
+  linear-gradient(
     to bottom,
     rgba(14, 14, 14, 0.6) 0%,
     rgba(14, 14, 14, 0.9) 100%
-  );
+  ), url(./assets/img/hero.webp);
+    background-position: 
+    bottom -16px left -10px,
+    bottom -16px left -10px,
+    center,
+    center;
+  background-repeat: 
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+  background-size: 
+    auto,
+    auto,
+    cover,
+    cover;
 }
 
 .hero-container {
@@ -385,7 +397,6 @@ section {
 }
 
 .button.accent:hover {
-  background-color: var(--accent-hover);
   transform: scale(1.05);
 }
 
@@ -1639,6 +1650,7 @@ iframe {
 }
 
 .footer-header {
+  margin-bottom: 24px;
   font-family: "Jost", sans-serif;
   font-weight: 600;
   color: var(--bg-color);
