@@ -414,6 +414,12 @@ section {
   left: calc(50% - (539px / 2));
 }
 
+.crane {
+  position: absolute;
+  bottom: -87px;
+  left: 69px;
+}
+
 /* --------- SERVICES --------- */
 
 .container-services {
@@ -493,12 +499,52 @@ section {
   transition: background-image var(--transition);
 }
 
-.swiper-slide-gradient.swiper-first {
+.swiper-slide.swiper-first.swiper-first-1st {
   background-image: linear-gradient(
     to bottom,
     rgba(5, 0, 0, 0) 0%,
     rgba(14, 14, 14, 1) 100%
-  );
+  ), url(./assets/img/building-construction.webp);
+}
+
+.swiper-slide.swiper-first.swiper-first-2st {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(5, 0, 0, 0) 0%,
+    rgba(14, 14, 14, 1) 100%
+  ), url(./assets/img/building-design.webp);
+}
+
+.swiper-slide.swiper-first.swiper-first-3st {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(5, 0, 0, 0) 0%,
+    rgba(14, 14, 14, 1) 100%
+  ), url(./assets/img/construction-management.webp);
+}
+
+.swiper-slide.swiper-first.swiper-first-4st {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(5, 0, 0, 0) 0%,
+    rgba(14, 14, 14, 1) 100%
+  ), url(./assets/img/renovation-services.webp);
+}
+
+.swiper-slide.swiper-first.swiper-first-5st {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(5, 0, 0, 0) 0%,
+    rgba(14, 14, 14, 1) 100%
+  ), url(./assets/img/structural-engineering.webp);
+}
+
+.swiper-slide.swiper-first.swiper-first-6st {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(5, 0, 0, 0) 0%,
+    rgba(14, 14, 14, 1) 100%
+  ), url(./assets/img/project-planning.webp);
 }
 
 .slide-img {
@@ -527,7 +573,7 @@ section {
   text-decoration: underline;
 }
 
-.service-decsr {
+.service-descr {
   color: var(--bg-color);
 }
 
