@@ -314,27 +314,17 @@ section {
 
 .hero-wrapper {
   background: url(./assets/img/bigger-line.png),
-  url(./assets/img/smaller-line.png),
-  linear-gradient(
-    to bottom,
-    rgba(14, 14, 14, 0.6) 0%,
-    rgba(14, 14, 14, 0.9) 100%
-  ), url(./assets/img/hero.webp);
-    background-position: 
-    bottom -16px left -10px,
-    bottom -16px left -10px,
-    center,
+    url(./assets/img/smaller-line.png),
+    linear-gradient(
+      to bottom,
+      rgba(14, 14, 14, 0.6) 0%,
+      rgba(14, 14, 14, 0.9) 100%
+    ),
+    url(./assets/img/hero.webp);
+  background-position: bottom -16px left -10px, bottom -16px left -10px, center,
     center;
-  background-repeat: 
-    no-repeat,
-    no-repeat,
-    no-repeat,
-    no-repeat;
-  background-size: 
-    auto,
-    auto,
-    cover,
-    cover;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: auto, auto, cover, cover;
 }
 
 .hero-container {
@@ -501,50 +491,56 @@ section {
 
 .swiper-slide.swiper-first.swiper-first-1st {
   background-image: linear-gradient(
-    to bottom,
-    rgba(5, 0, 0, 0) 0%,
-    rgba(14, 14, 14, 1) 100%
-  ), url(./assets/img/building-construction.webp);
+      to bottom,
+      rgba(5, 0, 0, 0) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/building-construction.webp);
 }
 
 .swiper-slide.swiper-first.swiper-first-2st {
   background-image: linear-gradient(
-    to bottom,
-    rgba(5, 0, 0, 0) 0%,
-    rgba(14, 14, 14, 1) 100%
-  ), url(./assets/img/building-design.webp);
+      to bottom,
+      rgba(5, 0, 0, 0) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/building-design.webp);
 }
 
 .swiper-slide.swiper-first.swiper-first-3st {
   background-image: linear-gradient(
-    to bottom,
-    rgba(5, 0, 0, 0) 0%,
-    rgba(14, 14, 14, 1) 100%
-  ), url(./assets/img/construction-management.webp);
+      to bottom,
+      rgba(5, 0, 0, 0) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/construction-management.webp);
 }
 
 .swiper-slide.swiper-first.swiper-first-4st {
   background-image: linear-gradient(
-    to bottom,
-    rgba(5, 0, 0, 0) 0%,
-    rgba(14, 14, 14, 1) 100%
-  ), url(./assets/img/renovation-services.webp);
+      to bottom,
+      rgba(5, 0, 0, 0) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/renovation-services.webp);
 }
 
 .swiper-slide.swiper-first.swiper-first-5st {
   background-image: linear-gradient(
-    to bottom,
-    rgba(5, 0, 0, 0) 0%,
-    rgba(14, 14, 14, 1) 100%
-  ), url(./assets/img/structural-engineering.webp);
+      to bottom,
+      rgba(5, 0, 0, 0) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/structural-engineering.webp);
 }
 
 .swiper-slide.swiper-first.swiper-first-6st {
   background-image: linear-gradient(
-    to bottom,
-    rgba(5, 0, 0, 0) 0%,
-    rgba(14, 14, 14, 1) 100%
-  ), url(./assets/img/project-planning.webp);
+      to bottom,
+      rgba(5, 0, 0, 0) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/project-planning.webp);
 }
 
 .slide-img {
@@ -666,17 +662,71 @@ section {
   padding: 21px 29px;
   width: 416px;
   height: 332px;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom,
     rgba(5, 0, 0, 0.2) 0%,
     rgba(14, 14, 14, 1) 100%
-  );
+  ); */
   overflow: hidden;
 }
 
 .swiper-second.swiper-button-prev:after,
 .swiper-second.swiper-button-next:after {
   content: none;
+}
+
+.swiper-slide.swiper-second.swiper-second-1st {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(5, 0, 0, 0.2) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/about-1.webp);
+}
+
+.swiper-slide.swiper-second.swiper-second-2st {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(5, 0, 0, 0.2) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/about-2.webp);
+}
+
+.swiper-slide.swiper-second.swiper-second-3st {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(5, 0, 0, 0.2) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/about-3.webp);
+}
+
+.swiper-slide.swiper-second.swiper-second-4st {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(5, 0, 0, 0.2) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/about-4.webp);
+}
+
+.swiper-slide.swiper-second.swiper-second-5st {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(5, 0, 0, 0.2) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/about-5.webp);
+}
+
+.swiper-slide.swiper-second.swiper-second-6st {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(5, 0, 0, 0.2) 0%,
+      rgba(14, 14, 14, 1) 100%
+    ),
+    url(./assets/img/about-6.webp);
 }
 
 .swiper-navigation.swiper-second {
