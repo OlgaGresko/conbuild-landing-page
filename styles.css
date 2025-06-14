@@ -478,69 +478,54 @@ section {
 }
 
 .swiper-slide.swiper-first {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 306px;
   height: 100%;
   padding: 24px;
-  align-content: end;
-  background-image: none;
-  transition: background-image var(--transition);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.swiper-slide.swiper-first.swiper-first-1st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/building-construction.webp);
+.swiper-slide.swiper-first::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(5, 0, 0, 0) 0%, rgba(14, 14, 14, 1) 100%);
+  z-index: 0;
 }
 
-.swiper-slide.swiper-first.swiper-first-2st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/building-design.webp);
+.swiper-slide.swiper-first > * {
+  position: relative;
+  z-index: 1;
 }
 
-.swiper-slide.swiper-first.swiper-first-3st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/construction-management.webp);
+.swiper-first-1st {
+  background-image: url(./assets/img/building-construction.webp);
 }
 
-.swiper-slide.swiper-first.swiper-first-4st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/renovation-services.webp);
+.swiper-first-2nd {
+  background-image: url(./assets/img/building-design.webp);
 }
 
-.swiper-slide.swiper-first.swiper-first-5st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/structural-engineering.webp);
+.swiper-first-3rd {
+  background-image: url(./assets/img/construction-management.webp);
 }
 
-.swiper-slide.swiper-first.swiper-first-6st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/project-planning.webp);
+.swiper-first-4th {
+  background-image: url(./assets/img/renovation-services.webp);
+}
+
+.swiper-first-5th {
+  background-image: url(./assets/img/structural-engineering.webp);
+}
+
+.swiper-first-6th {
+  background-image: url(./assets/img/project-planning.webp);
 }
 
 .slide-img {
@@ -574,6 +559,28 @@ section {
 }
 
 /* --------- ABOUT --------- */
+
+.about {
+  position: relative;
+  background-image: url(./assets/img/architecture.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right 0 top 7px;
+  overflow: visible;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 580px;
+  left: 0;
+  width: 286px;
+  height: 545px;
+  background-image: url(./assets/img/architecture-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
 
 .container.container-about {
   margin-bottom: 137px;
@@ -662,73 +669,52 @@ section {
   padding: 21px 29px;
   width: 416px;
   height: 332px;
-  /* background-image: linear-gradient(
-    to bottom,
-    rgba(5, 0, 0, 0.2) 0%,
-    rgba(14, 14, 14, 1) 100%
-  ); */
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
+}
+
+.swiper-slide.swiper-second::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(5, 0, 0, 0.2) 0%, rgba(14, 14, 14, 1) 100%);
+  z-index: 0;
+}
+
+.about-swiper-content {
+  position: relative;
+  z-index: 1;
+}
+
+.swiper-slide.swiper-second.swiper-second-1st {
+  background-image: url(./assets/img/about-1.webp);
+}
+
+.swiper-slide.swiper-second.swiper-second-2nd {
+  background-image: url(./assets/img/about-2.webp);
+}
+
+.swiper-slide.swiper-second.swiper-second-3rd {
+  background-image: url(./assets/img/about-3.webp);
+}
+
+.swiper-slide.swiper-second.swiper-second-4th {
+  background-image: url(./assets/img/about-4.webp);
+}
+
+.swiper-slide.swiper-second.swiper-second-5th {
+  background-image: url(./assets/img/about-5.webp);
+}
+
+.swiper-slide.swiper-second.swiper-second-6th {
+  background-image: url(./assets/img/about-6.webp);
 }
 
 .swiper-second.swiper-button-prev:after,
 .swiper-second.swiper-button-next:after {
   content: none;
 }
-
-.swiper-slide.swiper-second.swiper-second-1st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0.2) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/about-1.webp);
-}
-
-.swiper-slide.swiper-second.swiper-second-2st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0.2) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/about-2.webp);
-}
-
-.swiper-slide.swiper-second.swiper-second-3st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0.2) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/about-3.webp);
-}
-
-.swiper-slide.swiper-second.swiper-second-4st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0.2) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/about-4.webp);
-}
-
-.swiper-slide.swiper-second.swiper-second-5st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0.2) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/about-5.webp);
-}
-
-.swiper-slide.swiper-second.swiper-second-6st {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(5, 0, 0, 0.2) 0%,
-      rgba(14, 14, 14, 1) 100%
-    ),
-    url(./assets/img/about-6.webp);
-}
-
 .swiper-navigation.swiper-second {
   display: flex;
   justify-content: center;
@@ -822,6 +808,7 @@ section {
   font-weight: 600;
   line-height: 1.192;
   color: var(--dark);
+  transition: color var(--transition);
 }
 
 .status-descr {
@@ -830,6 +817,7 @@ section {
   font-weight: 600;
   line-height: 1.417;
   color: var(--dark);
+  transition: color var(--transition);
 }
 
 .status-item:hover {
