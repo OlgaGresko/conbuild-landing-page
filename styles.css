@@ -750,6 +750,7 @@ section {
   position: relative;
   top: 94px;
   transition: top var(--transition);
+  user-select: none;
 }
 
 .swiper-second-name {
@@ -789,6 +790,8 @@ section {
   display: flex;
   flex-direction: row;
   gap: 24px;
+  cursor: default;
+  user-select: none;
 }
 
 .status-item {
@@ -886,10 +889,33 @@ section {
   font-display: row;
 }
 
-.swiper-slide.projects-item {
+.projects-item {
   position: relative;
-  background-color: #d9d9d9;
   cursor: pointer;
+}
+
+.project-1 {
+  background-image: url(./assets/img/project-1.webp);
+}
+
+.project-2 {
+  background-image: url(./assets/img/project-2.webp);
+}
+
+.project-3 {
+  background-image: url(./assets/img/project-3.webp);
+}
+
+.project-4 {
+  background-image: url(./assets/img/project-4.webp);
+}
+
+.project-5 {
+  background-image: url(./assets/img/project-5.webp);
+}
+
+.project-6 {
+  background-image: url(./assets/img/project-6.webp);
 }
 
 .projects-item-button-container {
@@ -899,7 +925,7 @@ section {
   align-items: center;
   width: 82px;
   height: 82px;
-  background-color: #b6b6b6;
+  background-color: rgba(14, 14, 14, 0.5);
   left: 50%;
   top: 153px;
   transform: translateX(-50%);
@@ -912,6 +938,11 @@ section {
   border: none;
   background-color: var(--accent);
   cursor: pointer;
+}
+
+.projects-item-button.clicked {
+  transform: scale(1.35);
+  transition: transform 0.1s ease;
 }
 
 .projects-item-icon {
@@ -947,11 +978,12 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  width: 626px;
+  width: 623px;
   height: 443px;
   padding: 30px;
   opacity: 1;
   transition: opacity 1s ease;
+  user-select: none;
 }
 
 .hidden {

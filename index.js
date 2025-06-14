@@ -148,14 +148,28 @@ function updateHoverSlide(swiper) {
 
   slides.forEach((slide) => {
     const content = slide.querySelector(".projects-item-content");
+    const button = slide.querySelector(".projects-item-button");
 
-    if (content) {
+    if (content && button) {
       slide.addEventListener("mouseenter", () => {
         content.classList.remove("hidden");
       });
 
       slide.addEventListener("mouseleave", () => {
         content.classList.add("hidden");
+        button.classList.remove("clicked");
+      });
+
+      slide.addEventListener("mousedown", () => {
+        button.classList.add("clicked");
+      });
+
+      slide.addEventListener("mouseup", () => {
+        button.classList.remove("clicked");
+      });
+
+      slide.addEventListener("mouseleave", () => {
+        button.classList.remove("clicked");
       });
     }
   });
