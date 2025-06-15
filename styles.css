@@ -941,7 +941,7 @@ section {
 }
 
 .projects-item-button.clicked {
-  transform: scale(1.35);
+  transform: scale(1.36);
   transition: transform 0.1s ease;
 }
 
@@ -1030,20 +1030,16 @@ section {
 }
 
 .process-active {
+  position: relative;
   border: 1px solid transparent;
   background-color: var(--accent);
   color: var(--bg-color);
 }
 
-.process-button:hover {
-  border: 1px solid transparent;
-  background-color: var(--accent);
-  color: var(--bg-color);
-}
-
-.process-button-indicator {
+.process-active::after {
+  content: "";
   position: absolute;
-  bottom: -9px;
+  bottom: -11px;
   left: calc(((1296px - 48px) / 3) / 2);
   width: 0;
   height: 0;
@@ -1053,6 +1049,12 @@ section {
   transform: translateX(-50%);
   transition: left 0.3s ease;
   pointer-events: none;
+}
+
+.process-button:hover {
+  border: 1px solid transparent;
+  background-color: var(--accent);
+  color: var(--bg-color);
 }
 
 .process-video-wrapper {

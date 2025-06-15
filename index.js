@@ -1,3 +1,5 @@
+// HERO
+
 const sections = document.querySelectorAll('section, footer');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -25,6 +27,8 @@ function onScroll() {
 
 window.addEventListener('scroll', onScroll);
 
+// SERVICES
+
 const swiper = new Swiper(".swiper-1", {
   slidesPerView: "auto",
   centeredSlides: true,
@@ -37,6 +41,8 @@ const swiper = new Swiper(".swiper-1", {
     },
   },
 });
+
+// ABOUT
 
 const swiper2 = new Swiper(".swiper-2", {
   spaceBetween: 24,
@@ -88,6 +94,8 @@ function updateCentralSlide2(swiperInstance) {
   });
 }
 
+// STATUS
+
 const counters = document.querySelectorAll(".status-value");
 const speed = 200;
 
@@ -125,6 +133,8 @@ const observer = new IntersectionObserver(
 counters.forEach((counter) => {
   observer.observe(counter);
 });
+
+// PROJECTS
 
 const swiper3 = new Swiper(".swiper-3", {
   spaceBetween: 24,
@@ -175,6 +185,8 @@ function updateHoverSlide(swiper) {
   });
 }
 
+// PROCESS
+
 const tabs = document.querySelectorAll(".process-button");
 const iframe = document.getElementById("video-frame");
 const playButton = document.querySelector(".custom-play-button");
@@ -203,6 +215,8 @@ playButton.addEventListener("click", () => {
   iframe.src = `https://www.youtube.com/embed/${selectedVideoId}?autoplay=1&enablejsapi=1`;
 });
 
+// TESTIMONIALS
+
 const photos = document.querySelectorAll(".testimonials-photo");
 const reviews = document.querySelectorAll(".testimonials-review");
 const names = document.querySelectorAll(".testimonials-name");
@@ -222,6 +236,8 @@ photos.forEach((photo, index) => {
   });
 });
 
+// TEAM
+
 const teamPhotos = document.querySelectorAll(".team-image");
 const teamNames = document.querySelectorAll(".team-member-name");
 
@@ -234,6 +250,8 @@ teamNames.forEach((teamName, index) => {
     teamPhotos[index].classList.add("active");
   });
 });
+
+// PRICING
 
 const pricingItems = document.querySelectorAll(".pricing-item");
 
@@ -249,6 +267,8 @@ pricingItems.forEach((item) => {
     rectangle.style.fill = "";
   });
 });
+
+// FOOTER
 
 const form = document.querySelector('.sigh-up-form');
   const input = document.querySelector('.sign-up-input');
