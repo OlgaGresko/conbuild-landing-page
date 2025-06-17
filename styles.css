@@ -1555,6 +1555,7 @@ iframe {
   border: 1px solid var(--light-text);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   transition: border var(--transition), box-shadow var(--transition);
+  cursor: pointer;
 }
 
 .blog-article-pic {
@@ -1680,7 +1681,7 @@ iframe {
   text-transform: capitalize;
 }
 
-.sigh-up-form {
+.sign-up-form {
   position: relative;
   margin-top: 10px;
 }
@@ -1798,4 +1799,72 @@ iframe {
 
 .footer-rights-span {
   color: var(--bg-color);
+}
+
+/* --------- MODAL --------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 3rem;
+  border-radius: 4px;
+  min-width: 300px;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+/* .modal-content.modal-subscribe {
+
+} */
+
+.modal-subscribe-title {
+  margin-bottom: 14px;
+  font-family: "Jost", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.417;
+  color: var(--dark);
+}
+
+.modal-subscribe-wrapper {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: start;
+  align-items: center;
+}
+
+.modal-subscribe-text {
+  font-size: 18px;
+}
+
+.modal-subscribe-span {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--accent);
+}
+
+.modal-subscribe-button {
+  margin: 0 auto;
 }

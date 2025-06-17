@@ -344,13 +344,36 @@ fetch('./assets/data/blog-posts.json')
 
 // FOOTER
 
-const form = document.querySelector('.sigh-up-form');
-  const input = document.querySelector('.sign-up-input');
+const form = document.querySelector('.sign-up-form');
+const input = document.querySelector('.sign-up-input');
+const button = document.querySelector('.sign-up-button');
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-    const value = input.value;
+  if (input.checkValidity()) {
+    const modal = document.querySelector(button.dataset.modalTarget);
+
+    if (modal) {
+      modal.classList.add('show');
+    }
 
     input.value = '';
+  } else {
+    input.reportValidity();
+  }
+});
+
+document.querySelectorAll('[data-close]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.modal').classList.remove('show');
   });
+});
+
+document.querySelectorAll('.modal').forEach(modal => {
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+    }
+  });
+});
