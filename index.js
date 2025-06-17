@@ -268,6 +268,80 @@ pricingItems.forEach((item) => {
   });
 });
 
+// BLOG
+
+const mainTemplate = document.getElementById('main-article-template');
+const articleTemplate = document.getElementById('article-template');
+const mainContainer = document.querySelector('.blog-container');
+const listContainer = document.querySelector('.blog-list');
+const readMoreBtn = document.getElementById('read-more-btn');
+
+let allArticles = [];
+let currentIndex = 4;
+
+function formatDate(dateString) {
+  return dateString.replaceAll('/', ' ');
+}
+
+function renderMainArticle(article) {
+  const clone = mainTemplate.cloneNode(true);
+  clone.removeAttribute('id');
+  clone.style.display = '';
+  clone.querySelector('.blog-main-article-date').textContent = formatDate(article.date);
+  clone.querySelector('.blog-author').textContent = `By ${article.author}`;
+  clone.querySelector('.blog-theme').textContent = article.category;
+  clone.querySelector('.blog-main-article-title').textContent = article.title;
+  clone.querySelector('.blog-main-article-paragraph').textContent = article.excerpt;
+  clone.querySelector('.blog-main-article-pic').src = article.coverImage;
+  mainTemplate.after(clone);
+}
+
+function renderListArticles(articles) {
+  articles.forEach(article => {
+    const clone = articleTemplate.cloneNode(true);
+    clone.removeAttribute('id');
+    clone.style.display = '';
+    clone.querySelector('.blog-article-date').textContent = formatDate(article.date);
+    clone.querySelector('.blog-author').textContent = `By ${article.author}`;
+    clone.querySelector('.blog-theme').textContent = article.category;
+    clone.querySelector('.blog-article-title').textContent = article.title;
+    clone.querySelector('.blog-article-pic').src = article.coverImage;
+    listContainer.appendChild(clone);
+  });
+}
+
+function loadNextArticles() {
+  const nextArticles = allArticles.slice(currentIndex, currentIndex + 3);
+  renderListArticles(nextArticles);
+  currentIndex += 3;
+
+  if (currentIndex >= allArticles.length) {
+    mainTemplate.remove();
+    articleTemplate.remove();
+    readMoreBtn.remove();
+  }
+}
+
+fetch('./assets/data/blog-posts.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Can not fetch data');
+    }
+    return response.json();
+  })
+  .then(data => {
+    allArticles = data;
+    renderMainArticle(allArticles[0]);
+    renderListArticles(allArticles.slice(1, 4));
+
+    if (readMoreBtn) {
+      readMoreBtn.addEventListener('click', loadNextArticles);
+    }
+  })
+  .catch(error => {
+    console.error('Error loading articles:', error);
+  });
+
 // FOOTER
 
 const form = document.querySelector('.sigh-up-form');

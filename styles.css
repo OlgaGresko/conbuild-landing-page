@@ -1090,10 +1090,6 @@ iframe {
   transition: background-color var(--transition);
 }
 
-.custom-play-button:hover {
-  background-color: var(--accent-hover);
-}
-
 .custom-play-icon {
   position: relative;
   fill: var(--bg-color);
@@ -1102,7 +1098,7 @@ iframe {
 }
 
 .custom-play-button:hover .custom-play-icon {
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 
 /* --------- TESTIMONIALS --------- */
@@ -1202,6 +1198,7 @@ iframe {
   height: 70px;
   border-radius: 50%;
   background-color: #d9d9d9;
+  cursor: pointer;
 }
 
 .testimonials-photo.active {
@@ -1530,20 +1527,21 @@ iframe {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.625;
-  color: var(--accent);
-  fill: var(--accent);
+  color: var(--dark);
+  fill: var(--dark);
   cursor: pointer;
   transition: color var(--transition), fill var(--transition);
 }
 
 .blog-button:hover {
-  color: var(--accent-hover);
-  fill: var(--accent-hover);
+  color: var(--accent);
+  fill: var(--accent);
 }
 
 .blog-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 24px;
   margin-bottom: 42px;
 }
@@ -1780,6 +1778,10 @@ iframe {
   flex-direction: column;
   gap: 16px;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-list > li:hover {
+  color: var(--accent);
 }
 
 .footer-rights {
