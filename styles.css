@@ -1831,10 +1831,6 @@ iframe {
   cursor: pointer;
 }
 
-/* .modal-content.modal-subscribe {
-
-} */
-
 .modal-subscribe-title {
   margin-bottom: 14px;
   font-family: "Jost", sans-serif;
@@ -1867,4 +1863,57 @@ iframe {
 
 .modal-subscribe-button {
   margin: 0 auto;
+}
+
+.modal-content.modal-blog {
+  position: relative;
+  padding: 4rem 6rem;
+  width: 1700px;
+}
+
+.modal-blog-article-date {
+  position: absolute;
+  padding: 8px 13px 8px 12px;
+  top: 4rem;
+  right: 6rem;
+  width: 73px;
+  height: 68px;
+  color: var(--bg-color);
+  text-align: center;
+  background-image: url(./assets/img/date.png);
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.blog-article-content {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  justify-content: space-between;
+}
+
+.modal-blog-article-paragraph {
+  font-family: "Jost", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.blog-article-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-article-text > p {
+  text-align: justify;
+  text-indent: 2em;
+}
+
+.modal-blog-button {
+  display: block;
+  margin-left: auto; 
 }

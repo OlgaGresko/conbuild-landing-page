@@ -843,7 +843,11 @@
                 </div>
                 <h3 class="blog-main-article-title"></h3>
                 <p class="blog-main-article-paragraph"></p>
-                <button type="button" class="blog-button">
+                <button
+                  type="button"
+                  class="blog-button"
+                  data-modal-target="#modal2"
+                >
                   <span>Read More</span>
                   <svg width="24px" height="7px">
                     <use href="./assets/sprite.svg#icon-arrow2"></use>
@@ -858,6 +862,7 @@
               class="blog-article"
               id="article-template"
               style="display: none"
+              data-modal-target="#modal2"
             >
               <span class="blog-article-date"></span>
               <img src="" alt="" class="blog-article-pic" />
@@ -912,7 +917,7 @@
             <button
               type="submit"
               class="sign-up-button"
-              data-modal-target="#modal1"
+              data-modal-target-on-submit="#modal1"
             >
               <svg width="11px" height="11px">
                 <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
@@ -1052,6 +1057,24 @@
           P.S. Check your spam folder just in case.
         </p>
         <button class="button modal-subscribe-button" data-close>Close</button>
+      </div>
+    </div>
+    <div class="modal" id="modal2">
+      <div class="modal-content modal-blog">
+        <span class="modal-blog-article-date"></span>
+        <div class="blog-descr blog-descr-other">
+          <span class="blog-author"></span>
+          <span class="blog-theme"></span>
+        </div>
+        <h3 class="blog-article-title"></h3>
+        <div class="blog-article-content">
+          <img src="" alt="" class="modal-blog-article-pic" />
+          <div>
+            <p class="modal-blog-article-paragraph"></p>
+            <p class="blog-article-text"></p>
+          </div>
+        </div>
+        <button class="button modal-blog-button" data-close>Close</button>
       </div>
     </div>
 
