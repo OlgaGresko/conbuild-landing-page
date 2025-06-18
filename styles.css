@@ -1814,6 +1814,7 @@ iframe {
 }
 
 .modal-content {
+  position: relative;
   background: white;
   padding: 3rem;
   border-radius: 4px;
@@ -1822,6 +1823,14 @@ iframe {
 
 .modal.show {
   display: flex;
+}
+
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: var(--dark);
+  cursor: pointer;
 }
 
 .close-button {
