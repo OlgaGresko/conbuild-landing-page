@@ -1893,6 +1893,15 @@ iframe {
   flex-direction: row;
   gap: 70px;
   justify-content: space-between;
+  align-items: start;
+}
+
+.modal-blog-article-pic {
+  margin-top: 7px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .modal-blog-article-paragraph {
