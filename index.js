@@ -42,6 +42,75 @@ const swiper = new Swiper(".swiper-1", {
   },
 });
 
+function formatTextWithParagraphs(text) {
+  return text
+    .split('\n\n')
+    .map(p => `<p>${p}</p>`)
+    .join('');
+}
+
+const servicesListContainer = document.querySelector('.modal-services-list');
+let allServices = [];
+const serviceTemplate = document.getElementById('modal-services-template');
+
+function renderFullServiceModal(service) {
+  const modal = document.querySelector('#modal5');
+  modal.querySelector('.full-service-title').textContent = service.title;
+  modal.querySelector('.full-service-description').textContent = service.fullDescription;
+  modal.querySelector('.full-service-img').src = service.image;
+  modal.classList.add('show');
+}
+
+document.querySelectorAll('.swiper-slide').forEach(slide => {
+  slide.addEventListener('click', () => {
+    const id = slide.dataset.serviceId;
+    const service = allServices.find(s => s.id === id);
+    if (service) renderFullServiceModal(service);
+  });
+});
+
+function renderListServices(services) {
+  services.forEach(service => {
+    const clone = serviceTemplate.cloneNode(true);
+    clone.removeAttribute('id');
+    clone.style.display = '';
+
+    clone.querySelector('.modal-services-title').textContent = service.title;
+    clone.querySelector('.modal-services-descr').textContent = service.description;
+    clone.querySelector('.modal-services-img').src = service.image;
+
+    clone.dataset.serviceId = service.id;
+
+    servicesListContainer.appendChild(clone);
+  });
+}
+
+fetch('./assets/data/services.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Can not fetch data');
+    }
+    return response.json();
+  })
+  .then(data => {
+    allServices = data;
+    renderListServices(allServices);
+  })
+  .catch(error => {
+    console.error('Error loading articles:', error);
+  });
+
+  document.querySelectorAll('[data-modal-target]').forEach(button => {
+  button.addEventListener('click', () => {
+    const modalSelector = button.dataset.modalTarget;
+    const modal = document.querySelector(modalSelector);
+    if (modal) {
+      modal.classList.add('show');
+    }
+  });
+});
+
+
 // ABOUT
 
 const swiper2 = new Swiper(".swiper-2", {
@@ -283,15 +352,8 @@ function formatDate(dateString) {
   return dateString.replaceAll('/', ' ');
 }
 
-function formatTextWithParagraphs(text) {
-  return text
-    .split('\n\n')
-    .map(p => `<p>${p}</p>`)
-    .join('');
-}
-
 function renderModalContent(article) {
-  const modal = document.querySelector('#modal2');
+  const modal = document.querySelector('#modal5');
   const rawText = article.text;
   const formattedHTML = formatTextWithParagraphs(rawText);
   modal.querySelector('.modal-blog-article-date').textContent = formatDate(article.date);
@@ -382,16 +444,6 @@ fetch('./assets/data/blog-posts.json')
   .catch(error => {
     console.error('Error loading articles:', error);
   });
-
-  document.querySelectorAll('[data-modal-target]').forEach(button => {
-  button.addEventListener('click', () => {
-    const modalSelector = button.dataset.modalTarget;
-    const modal = document.querySelector(modalSelector);
-    if (modal) {
-      modal.classList.add('show');
-    }
-  });
-});
 
 // FOOTER
 

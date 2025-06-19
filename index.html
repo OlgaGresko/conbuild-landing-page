@@ -182,7 +182,7 @@
               services to meal kits, it can be overwhelming to find the best
               option.
             </p>
-            <button type="button" class="button">
+            <button type="button" class="button" data-modal-target="#modal1">
               <span>See All</span>
               <svg width="19px" height="19px" class="">
                 <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
@@ -191,7 +191,10 @@
           </div>
           <div class="swiper swiper-1">
             <div class="swiper-wrapper swiper-first">
-              <div class="swiper-slide swiper-first swiper-first-1st">
+              <div
+                class="swiper-slide swiper-first swiper-first-1st"
+                data-service-id="service-001"
+              >
                 <img
                   src="./assets/img/building-logo.png"
                   alt="building"
@@ -204,7 +207,10 @@
                   </p>
                 </div>
               </div>
-              <div class="swiper-slide swiper-first swiper-first-2nd">
+              <div
+                class="swiper-slide swiper-first swiper-first-2nd"
+                data-service-id="service-001"
+              >
                 <img
                   src="./assets/img/building-logo.png"
                   alt="building"
@@ -218,7 +224,10 @@
                   </p>
                 </div>
               </div>
-              <div class="swiper-slide swiper-first swiper-first-3rd">
+              <div
+                class="swiper-slide swiper-first swiper-first-3rd"
+                data-service-id="service-001"
+              >
                 <img
                   src="./assets/img/building-logo.png"
                   alt="building"
@@ -232,7 +241,10 @@
                   </p>
                 </div>
               </div>
-              <div class="swiper-slide swiper-first swiper-first-4th">
+              <div
+                class="swiper-slide swiper-first swiper-first-4th"
+                data-service-id="service-001"
+              >
                 <img
                   src="./assets/img/building-logo.png"
                   alt="building"
@@ -246,7 +258,10 @@
                   </p>
                 </div>
               </div>
-              <div class="swiper-slide swiper-first swiper-first-5th">
+              <div
+                class="swiper-slide swiper-first swiper-first-5th"
+                data-service-id="service-001"
+              >
                 <img
                   src="./assets/img/building-logo.png"
                   alt="building"
@@ -260,7 +275,10 @@
                   </p>
                 </div>
               </div>
-              <div class="swiper-slide swiper-first swiper-first-6th">
+              <div
+                class="swiper-slide swiper-first swiper-first-6th"
+                data-service-id="service-001"
+              >
                 <img
                   src="./assets/img/building-logo.png"
                   alt="building"
@@ -846,7 +864,7 @@
                 <button
                   type="button"
                   class="blog-button"
-                  data-modal-target="#modal2"
+                  data-modal-target="#modal5"
                 >
                   <span>Read More</span>
                   <svg width="24px" height="7px">
@@ -862,7 +880,7 @@
               class="blog-article"
               id="article-template"
               style="display: none"
-              data-modal-target="#modal2"
+              data-modal-target="#modal5"
             >
               <span class="blog-article-date"></span>
               <img src="" alt="" class="blog-article-pic" />
@@ -917,7 +935,7 @@
             <button
               type="submit"
               class="sign-up-button"
-              data-modal-target-on-submit="#modal1"
+              data-modal-target-on-submit="#modal4"
             >
               <svg width="11px" height="11px">
                 <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
@@ -1041,6 +1059,39 @@
     </footer>
 
     <div class="modal" id="modal1">
+      <div class="modal-content modal-services">
+        <svg width="18px" height="18px" class="close-icon" data-close>
+          <use href="./assets/sprite.svg#icon-close"></use>
+        </svg>
+        <ul class="modal-services-list">
+          <li
+            class="modal-services-item"
+            id="modal-services-template"
+            style="display: none"
+          >
+            <img src="" alt="" class="modal-services-img" />
+            <div class="modal-services-content">
+              <h4 class="modal-services-title service-name"></h4>
+              <p class="modal-services-descr service-descr"></p>
+            </div>
+          </li>
+        </ul>
+        <button class="button modal-subscribe-button" data-close>Close</button>
+      </div>
+    </div>
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <svg class="close-icon" data-close>
+          <use href="./assets/sprite.svg#icon-close"></use>
+        </svg>
+        <h3 class="full-service-title"></h3>
+        <img class="full-service-img" src="" alt="" />
+        <p class="full-service-description"></p>
+        <button class="button" data-close>Close</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal4">
       <div class="modal-content modal-subscribe">
         <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>
@@ -1062,7 +1113,7 @@
         <button class="button modal-subscribe-button" data-close>Close</button>
       </div>
     </div>
-    <div class="modal" id="modal2">
+    <div class="modal" id="modal5">
       <div class="modal-content modal-blog">
         <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>
