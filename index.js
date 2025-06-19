@@ -59,6 +59,7 @@ function renderFullServiceModal(service) {
   modal.querySelector('.full-service-description').textContent = service.fullDescription;
   modal.querySelector('.full-service-img').src = service.image;
   modal.classList.add('show');
+  document.body.classList.add('no-scroll');
 }
 
 document.querySelectorAll('.swiper-slide').forEach(slide => {
@@ -106,6 +107,7 @@ fetch('./assets/data/services.json')
     const modal = document.querySelector(modalSelector);
     if (modal) {
       modal.classList.add('show');
+      document.body.classList.add('no-scroll');
     }
   });
 });
@@ -364,6 +366,7 @@ function renderModalContent(article) {
   modal.querySelector('.blog-article-text').innerHTML = formattedHTML;
   modal.querySelector('.modal-blog-article-pic').src = article.coverImage;
   modal.classList.add('show');
+  document.body.classList.add('no-scroll');
 }
 
 function renderMainArticle(article) {
@@ -459,6 +462,7 @@ form.addEventListener('submit', (event) => {
 
     if (modal) {
       modal.classList.add('show');
+      document.body.classList.add('no-scroll');
     }
 
     input.value = '';
@@ -470,6 +474,7 @@ form.addEventListener('submit', (event) => {
 document.querySelectorAll('[data-close]').forEach(btn => {
   btn.addEventListener('click', () => {
     btn.closest('.modal').classList.remove('show');
+    document.body.classList.remove('no-scroll');
   });
 });
 
@@ -477,6 +482,7 @@ document.querySelectorAll('.modal').forEach(modal => {
   modal.addEventListener('click', e => {
     if (e.target === modal) {
       modal.classList.remove('show');
+      document.body.classList.remove('no-scroll');
     }
   });
 });
