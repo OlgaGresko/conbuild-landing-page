@@ -194,6 +194,7 @@
               <div
                 class="swiper-slide swiper-first swiper-first-1st"
                 data-service-id="service-001"
+                data-modal-target="#modal2"
               >
                 <img
                   src="./assets/img/building-logo.png"
@@ -209,7 +210,8 @@
               </div>
               <div
                 class="swiper-slide swiper-first swiper-first-2nd"
-                data-service-id="service-001"
+                data-service-id="service-002"
+                data-modal-target="#modal2"
               >
                 <img
                   src="./assets/img/building-logo.png"
@@ -226,7 +228,8 @@
               </div>
               <div
                 class="swiper-slide swiper-first swiper-first-3rd"
-                data-service-id="service-001"
+                data-service-id="service-003"
+                data-modal-target="#modal2"
               >
                 <img
                   src="./assets/img/building-logo.png"
@@ -243,7 +246,8 @@
               </div>
               <div
                 class="swiper-slide swiper-first swiper-first-4th"
-                data-service-id="service-001"
+                data-service-id="service-004"
+                data-modal-target="#modal2"
               >
                 <img
                   src="./assets/img/building-logo.png"
@@ -260,7 +264,8 @@
               </div>
               <div
                 class="swiper-slide swiper-first swiper-first-5th"
-                data-service-id="service-001"
+                data-service-id="service-005"
+                data-modal-target="#modal2"
               >
                 <img
                   src="./assets/img/building-logo.png"
@@ -277,7 +282,8 @@
               </div>
               <div
                 class="swiper-slide swiper-first swiper-first-6th"
-                data-service-id="service-001"
+                data-service-id="service-006"
+                data-modal-target="#modal2"
               >
                 <img
                   src="./assets/img/building-logo.png"
@@ -1068,6 +1074,7 @@
             class="modal-services-item"
             id="modal-services-template"
             style="display: none"
+            data-modal-target="#modal2"
           >
             <img src="" alt="" class="modal-services-img" />
             <div class="modal-services-content">
@@ -1080,13 +1087,19 @@
       </div>
     </div>
     <div class="modal" id="modal2">
-      <div class="modal-content">
-        <svg class="close-icon" data-close>
+      <div class="modal-content modal-full-service">
+        <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>
         </svg>
         <h3 class="full-service-title"></h3>
-        <img class="full-service-img" src="" alt="" />
-        <p class="full-service-description"></p>
+        <hr class="full-service-line" />
+        <div class="full-service-content-wrapper">
+          <div>
+            <p class="full-service-description modal-blog-article-paragraph"></p>
+            <div class="full-service-text"></div>
+          </div>
+          <img class="full-service-img" src="" alt="" />
+        </div>
         <button class="button" data-close>Close</button>
       </div>
     </div>

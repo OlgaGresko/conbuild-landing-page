@@ -1941,12 +1941,13 @@ iframe {
 }
 
 .modal-services {
-  padding: 2rem 3rem;
+  padding: 3rem 3rem;
   width: 1150px;
+  height: 95vh;
+  
 }
 
 .modal-services-list {
-  margin-top: 30px;
   margin-bottom: 40px;
   display: flex;
   flex-direction: raw;
@@ -1984,4 +1985,46 @@ iframe {
   top: 120px;
   padding: 20px;
   z-index: 10;
+}
+
+.modal-full-service {
+  padding: 4rem 6rem;
+  width: 1150px;
+  height: 95vh;
+}
+
+.full-service-title {
+  margin-bottom: 15px;
+  font-family: "Jost", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.313;
+  color: var(--dark);
+}
+
+.full-service-line {
+  margin-bottom: 30px;
+  width: 580px;
+  height: 3px;
+  background-color: var(--accent);
+  border: none;
+}
+
+.full-service-content-wrapper {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  align-items: start;
+}
+
+.full-service-img {
+  margin-top: 7px;
+  object-fit: contain;
+}
+
+.full-service-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
