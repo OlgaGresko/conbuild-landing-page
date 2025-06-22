@@ -1882,6 +1882,8 @@ iframe {
   position: relative;
   padding: 4rem 6rem;
   width: 1700px;
+  max-width: 85vw;
+  max-height: 78vh;
 }
 
 .modal-blog-article-date {
@@ -1907,6 +1909,11 @@ iframe {
   gap: 70px;
   justify-content: space-between;
   align-items: start;
+}
+
+.blog-article-content-text {
+  max-height: 56vh;
+  overflow-y: auto;
 }
 
 .modal-blog-article-pic {
@@ -2031,16 +2038,22 @@ iframe {
   overflow-y: auto;
 }
 
-::-webkit-scrollbar {
+.full-service-content-container::-webkit-scrollbar,
+.modal-services-list::-webkit-scrollbar,
+.blog-article-content-text::-webkit-scrollbar {
   width: 4px;
 }
 
-::-webkit-scrollbar-thumb {
+.full-service-content-container::-webkit-scrollbar-thumb,
+.modal-services-list::-webkit-scrollbar-thumb,
+.blog-article-content-text::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background: var(--accent);
 }
 
-::-webkit-scrollbar-thumb:hover {
+.full-service-content-container::-webkit-scrollbar-thumb:hover,
+.modal-services-list::-webkit-scrollbar-thumb:hover,
+.blog-article-content-text::-webkit-scrollbar-thumb:hover {
   background: var(--accent-hover);
 }
 
