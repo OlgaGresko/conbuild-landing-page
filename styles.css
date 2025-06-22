@@ -1954,13 +1954,13 @@ iframe {
   gap: 40px;
   justify-content: center;
   align-items: center;
-  max-height: 78vh;
+  max-height: 76vh;
   overflow-y: auto;
 }
 
 .modal-services-item {
   position: relative;
-  height: 380px;
+  height: 374px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -2026,7 +2026,7 @@ iframe {
 }
 
 .full-service-content-container {
-  height: 63vh;
+  height: 64vh;
   padding-right: 16px;
   overflow-y: auto;
 }
@@ -2053,4 +2053,10 @@ iframe {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.full-service-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 314px;
 }
