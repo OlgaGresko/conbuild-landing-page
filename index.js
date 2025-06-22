@@ -86,6 +86,7 @@ function renderListServices(services) {
     clone.dataset.serviceId = service.id;
 
     servicesListContainer.appendChild(clone);
+    serviceTemplate.remove();
   });
 }
 
@@ -104,17 +105,6 @@ fetch('./assets/data/services.json')
     console.error('Error loading articles:', error);
   });
 
-// document.querySelectorAll('[data-modal-target]').forEach(button => {
-//   button.addEventListener('click', () => {
-//     const modalSelector = button.dataset.modalTarget;
-//     const modal = document.querySelector(modalSelector);
-//     if (modal) {
-//       modal.classList.add('show');
-//       document.body.classList.add('no-scroll');
-//     }
-//   });
-// });
-
 function closeAllModals() {
   const openModals = document.querySelectorAll('.modal.show');
   openModals.forEach(modal => modal.classList.remove('show'));
@@ -128,7 +118,6 @@ document.addEventListener('click', function (event) {
   const target = event.target.closest('[data-modal-target]');
   if (!target) return;
 
-  // Перешкодити повторному відкриттю тієї ж модалки
   closeAllModals();
 
   const modalSelector = target.dataset.modalTarget;
@@ -138,7 +127,6 @@ document.addEventListener('click', function (event) {
     modalToOpen.classList.add('show');
     document.body.classList.add('no-scroll');
 
-    // Якщо картка сервісу (динамічна з модалки), завантажуємо сервіс по id
     const serviceId = target.dataset.serviceId;
     if (modalSelector === '#modal2' && serviceId) {
       const service = allServices.find(s => s.id === serviceId);

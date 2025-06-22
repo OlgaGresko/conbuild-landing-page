@@ -1944,17 +1944,18 @@ iframe {
   padding: 3rem 3rem;
   width: 1150px;
   height: 95vh;
-  
 }
 
 .modal-services-list {
   margin-bottom: 40px;
   display: flex;
-  flex-direction: raw;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center;
   align-items: center;
+  max-height: 78vh;
+  overflow-y: auto;
 }
 
 .modal-services-item {
@@ -1994,7 +1995,9 @@ iframe {
 }
 
 .full-service-title {
-  margin-bottom: 15px;
+  position: relative;
+  margin-bottom: 50px;
+  width: fit-content;
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
@@ -2002,12 +2005,16 @@ iframe {
   color: var(--dark);
 }
 
-.full-service-line {
-  margin-bottom: 30px;
-  width: 580px;
-  height: 3px;
-  background-color: var(--accent);
-  border: none;
+.full-service-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--dark);
+  bottom: -14px;
+  left: 0;
 }
 
 .full-service-content-wrapper {
@@ -2016,6 +2023,25 @@ iframe {
   flex-direction: row;
   gap: 70px;
   align-items: start;
+}
+
+.full-service-content-container {
+  height: 63vh;
+  padding-right: 16px;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
 }
 
 .full-service-img {
