@@ -466,7 +466,7 @@
         </div>
         <div class="swiper swiper-3">
           <ul class="swiper-wrapper projects-list">
-            <li class="swiper-slide projects-item project-1">
+            <li class="swiper-slide projects-item project-1" data-modal-target="#modal3" data-project-id="project-001">
               <div class="projects-item-content hidden">
                 <div class="projects-item-button-container">
                   <button type="button" class="projects-item-button">
@@ -479,7 +479,7 @@
                 <h3 class="projects-name">Skyline Tower Renovation</h3>
               </div>
             </li>
-            <li class="swiper-slide projects-item project-2">
+            <li class="swiper-slide projects-item project-2" data-modal-target="#modal3" data-project-id="project-002">
               <div class="projects-item-content hidden">
                 <div class="projects-item-button-container">
                   <button type="button" class="projects-item-button">
@@ -492,7 +492,7 @@
                 <h3 class="projects-name">Central Park Business Center</h3>
               </div>
             </li>
-            <li class="swiper-slide projects-item project-3">
+            <li class="swiper-slide projects-item project-3" data-modal-target="#modal3" data-project-id="project-003">
               <div class="projects-item-content hidden">
                 <div class="projects-item-button-container">
                   <button type="button" class="projects-item-button">
@@ -505,7 +505,7 @@
                 <h3 class="projects-name">Riverside Private Estate</h3>
               </div>
             </li>
-            <li class="swiper-slide projects-item project-4">
+            <li class="swiper-slide projects-item project-4" data-modal-target="#modal3" data-project-id="project-004">
               <div class="projects-item-content hidden">
                 <div class="projects-item-button-container">
                   <button type="button" class="projects-item-button">
@@ -518,7 +518,7 @@
                 <h3 class="projects-name">Aurora Office Hub</h3>
               </div>
             </li>
-            <li class="swiper-slide projects-item project-5">
+            <li class="swiper-slide projects-item project-5" data-modal-target="#modal3" data-project-id="project-005">
               <div class="projects-item-content hidden">
                 <div class="projects-item-button-container">
                   <button type="button" class="projects-item-button">
@@ -531,7 +531,7 @@
                 <h3 class="projects-name">Harmony Shopping Mall</h3>
               </div>
             </li>
-            <li class="swiper-slide projects-item project-6">
+            <li class="swiper-slide projects-item project-6" data-modal-target="#modal3" data-project-id="project-006">
               <div class="projects-item-content hidden">
                 <div class="projects-item-button-container">
                   <button type="button" class="projects-item-button">
@@ -903,7 +903,7 @@
               </button>
             </li>
           </ul>
-          <button class="button accent blog-more" id="read-more-btn">
+          <button type="button" class="button accent blog-more" id="read-more-btn">
             <span>Read More</span>
             <svg width="19px" height="19px">
               <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
@@ -1083,7 +1083,7 @@
             </div>
           </li>
         </ul>
-        <button class="button modal-subscribe-button" data-close>Close</button>
+        <button type="button" class="button modal-subscribe-button" data-close>Close</button>
       </div>
     </div>
     <div class="modal" id="modal2">
@@ -1108,10 +1108,26 @@
             </svg>
             <span>Back</span>
           </button>
-          <button class="button" data-close>Close</button>
+          <button type="button" class="button" data-close>Close</button>
         </div>
       </div>
     </div>
+    <div class="modal" id="modal3">
+      <div class="modal-content modal-project">
+        <svg width="18px" height="18px" class="close-icon" data-close>
+          <use href="./assets/sprite.svg#icon-close"></use>
+        </svg>
+        <h3 class="modal-project-title"></h3>
+        <p class="modal-project-type"></p>
+        <div class="modal-project-wrapper">
+          <img class="modal-project-img" src="" alt="">
+          <ul class="modal-project-features"></ul>
+        </div>
+        <div class="modal-project-text"></div>
+        <button type="button" class="button modal-project-button" data-close>Close</button>
+      </div>
+    </div>
+
 
     <div class="modal" id="modal4">
       <div class="modal-content modal-subscribe">
@@ -1132,7 +1148,7 @@
         <p class="modal-subscribe-span">
           P.S. Check your spam folder just in case.
         </p>
-        <button class="button modal-subscribe-button" data-close>Close</button>
+        <button type="button" class="button modal-subscribe-button" data-close>Close</button>
       </div>
     </div>
     <div class="modal" id="modal5">
@@ -1153,7 +1169,7 @@
             <p class="blog-article-text"></p>
           </div>
         </div>
-        <button class="button modal-blog-button" data-close>Close</button>
+        <button type="button" class="button modal-blog-button" data-close>Close</button>
       </div>
     </div>
 

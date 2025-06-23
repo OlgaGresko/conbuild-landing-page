@@ -132,6 +132,18 @@ document.addEventListener('click', function (event) {
       const service = allServices.find(s => s.id === serviceId);
       if (service) renderFullServiceModal(service);
     }
+
+    const projectId = target.dataset.projectId;
+    if (modalSelector === '#modal3' && projectId) {
+      const project = allProjects.find(s => s.id === projectId);
+      if (project) renderProjectModal(project);
+    }
+  }
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    closeAllModals();
   }
 });
 
@@ -277,6 +289,41 @@ function updateHoverSlide(swiper) {
     }
   });
 }
+
+let allProjects = [];
+
+function formatProjectFeatures(text) {
+  return text.map(p => `<li>${p}</li>`).join('');
+}
+
+function renderProjectModal(project) {
+  const modal = document.querySelector('#modal3');
+  const formattedFeatures = formatProjectFeatures(project.features);
+  const formattedText = formatTextWithParagraphs(project.text);
+
+  modal.querySelector('.modal-project-title').textContent = project.title;
+  modal.querySelector('.modal-project-type').textContent = project.type;
+  modal.querySelector('.modal-project-img').src = project.image;
+  modal.querySelector('.modal-project-features').innerHTML = formattedFeatures;
+  modal.querySelector('.modal-project-text').innerHTML = formattedText;
+  modal.classList.add('show');
+  document.body.classList.add('no-scroll');
+}
+
+fetch('./assets/data/projects.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Can not fetch data');
+    }
+    return response.json();
+  })
+  .then(data => {
+    allProjects = data;
+    renderListServices(allProjects);
+  })
+  .catch(error => {
+    console.error('Error loading articles:', error);
+  });
 
 // PROCESS
 

@@ -87,6 +87,10 @@ section {
   overflow: hidden;
 }
 
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* --------- HEADER --------- */
 
 .header {
@@ -899,27 +903,27 @@ section {
 }
 
 .project-1 {
-  background-image: url(./assets/img/project-1.webp);
+  background-image: url(./assets/img/projects/project-1.webp);
 }
 
 .project-2 {
-  background-image: url(./assets/img/project-2.webp);
+  background-image: url(./assets/img/projects/project-2.webp);
 }
 
 .project-3 {
-  background-image: url(./assets/img/project-3.webp);
+  background-image: url(./assets/img/projects/project-3.webp);
 }
 
 .project-4 {
-  background-image: url(./assets/img/project-4.webp);
+  background-image: url(./assets/img/projects/project-4.webp);
 }
 
 .project-5 {
-  background-image: url(./assets/img/project-5.webp);
+  background-image: url(./assets/img/projects/project-5.webp);
 }
 
 .project-6 {
-  background-image: url(./assets/img/project-6.webp);
+  background-image: url(./assets/img/projects/project-6.webp);
 }
 
 .projects-item-button-container {
@@ -2072,4 +2076,66 @@ iframe {
   display: flex;
   flex-direction: row;
   gap: 314px;
+}
+
+.modal-project {
+  padding: 4rem 6rem;
+  width: 1700px;
+  max-height: 95vh;
+}
+
+.modal-project-title {
+  margin-bottom: 20px;
+  font-family: "Jost", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.313;
+  color: var(--dark);
+}
+
+.modal-project-type {
+  position: absolute;
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 20px;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.625;
+  color: var(--bg-color);
+  background-color: var(--accent);
+}
+
+.modal-project-wrapper {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.modal-project-img {
+  height: 320px;
+  object-fit: cover;
+}
+
+.modal-project-features {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  font-weight: 500;
+}
+
+.modal-project-features > li:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.modal-project-text {
+  margin-bottom: 30px;
+}
+
+.modal-project-text > p {
+  margin-bottom: 10px;
+}
+
+.modal-project-button {
+  margin-left: auto;
 }
