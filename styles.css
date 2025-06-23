@@ -696,27 +696,27 @@ section {
 }
 
 .swiper-slide.swiper-second.swiper-second-1st {
-  background-image: url(./assets/img/about-1.webp);
+  background-image: url(./assets/img/about/about-1.webp);
 }
 
 .swiper-slide.swiper-second.swiper-second-2nd {
-  background-image: url(./assets/img/about-2.webp);
+  background-image: url(./assets/img/about/about-2.webp);
 }
 
 .swiper-slide.swiper-second.swiper-second-3rd {
-  background-image: url(./assets/img/about-3.webp);
+  background-image: url(./assets/img/about/about-3.webp);
 }
 
 .swiper-slide.swiper-second.swiper-second-4th {
-  background-image: url(./assets/img/about-4.webp);
+  background-image: url(./assets/img/about/about-4.webp);
 }
 
 .swiper-slide.swiper-second.swiper-second-5th {
-  background-image: url(./assets/img/about-5.webp);
+  background-image: url(./assets/img/about/about-5.webp);
 }
 
 .swiper-slide.swiper-second.swiper-second-6th {
-  background-image: url(./assets/img/about-6.webp);
+  background-image: url(./assets/img/about/about-6.webp);
 }
 
 .swiper-second.swiper-button-prev:after,
