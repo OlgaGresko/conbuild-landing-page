@@ -1,0 +1,86 @@
+[
+    {
+        "id": "team-001",
+        "name": "Wade Warren",
+        "position": "Architect",
+        "description": "With over 30 years of experience, Wade specializes in sustainable building design and complex urban planning projects. Known for his precision and leadership on-site.",
+        "photo": "./assets/img/team/wade-warren.webp"
+    },
+    {
+        "id": "team-002",
+        "name": "Brooklyn Simmons",
+        "position": "Architect Designer",
+        "description": "Brooklyn blends creativity with functionality, delivering modern and human-centered architectural concepts. She focuses on residential and commercial interiors",
+        "photo": "./assets/img/team/brooklyn-simmons.webp"
+    },
+    {
+        "id": "team-003",
+        "name": "Jonson Duoing",
+        "position": "Architect",
+        "description": "Jonson has a strong background in structural design and project execution. His approach combines technical expertise with practical solutions tailored to client needs.",
+        "photo": "./assets/img/team/jonson-duoing.webp"
+    },
+    {
+        "id": "team-004",
+        "name": "Esther Howard",
+        "position": "Architect",
+        "description": "Esther brings a refined aesthetic to every project she leads. Her passion lies in public spaces, where she merges form, accessibility, and community impact.",
+        "photo": "./assets/img/team/esther-howard.webp"
+    },
+    {
+        "id": "team-005",
+        "name": "Dmytro Novak",
+        "position": "Structural Engineer",
+        "description": "Dmytro ensures that every building stands strong — literally. His deep understanding of load-bearing systems and materials helps turn ambitious architectural designs into safe, durable structures.",
+        "photo": "./assets/img/team/dmytro-novak.webp"
+    },
+    {
+        "id": "team-006",
+        "name": "Isabelle Clarke",
+        "position": "Interior Designer",
+        "description": "Isabelle creates elegant, functional interiors that reflect the client's lifestyle and vision. She specializes in blending textures, colors, and lighting for unforgettable spaces.",
+        "photo": "./assets/img/team/isabelle-clarke.webp"
+    },
+    {
+        "id": "team-007",
+        "name": "Marcus Reed",
+        "position": "Project Manager",
+        "description": "Marcus oversees projects from concept to completion, keeping everything on time and within budget. His clear communication and organization keep the team aligned and clients confident.",
+        "photo": "./assets/img/team/marcus-reed.webp"
+    },
+    {
+        "id": "team-008",
+        "name": "Sofia Benitez",
+        "position": "Landscape Architect",
+        "description": "Sofia designs outdoor spaces that connect architecture with nature. From urban parks to private gardens, she brings balance, sustainability, and beauty to every project.",
+        "photo": "./assets/img/team/sofia-benitez.webp"
+    },
+    {
+        "id": "team-009",
+        "name": "Liam Chen",
+        "position": "Construction Supervisor",
+        "description": "Liam brings blueprints to life on-site. With a hands-on approach and a sharp eye for detail, he ensures that every construction phase meets quality and safety standards.",
+        "photo": "./assets/img/team/liam-chen.webp"
+    },
+    {
+        "id": "team-010",
+        "name": "Amina Khalil",
+        "position": "Sustainability Consultant",
+        "description": "Amina helps projects go green — from energy efficiency to eco-materials. She advises on reducing environmental impact without compromising design or performance.",
+        "photo": "./assets/img/team/amina-khalil.webp"
+    },
+    {
+        "id": "team-011",
+        "name": "Nathan O'Connor",
+        "position": "MEP Engineer (Mechanical, Electrical & Plumbing)",
+        "description": "Nathan integrates mechanical, electrical, and plumbing systems into each project with precision. His solutions are efficient, future-ready, and seamlessly coordinated with the design team.",
+        "photo": "./assets/img/team/nathan-o'connor.webp"
+    },
+    {
+        "id": "team-012",
+        "name": "Claire Dubois",
+        "position": "Client Relations Manager",
+        "description": "Claire is the bridge between the team and the client. With a warm approach and strong problem-solving skills, she ensures every collaboration feels clear, smooth, and professional.",
+        "photo": "./assets/img/team/claire-dubois.webp"
+    }
+]
