@@ -1002,6 +1002,15 @@ section {
 
 /* --------- PROCESS --------- */
 
+.process {
+  position: relative;
+  background-image: url(./assets/img/architecture.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right 0 top 7px;
+  overflow: visible;
+}
+
 .process-container {
   text-align: center;
 }
@@ -1110,6 +1119,23 @@ iframe {
 }
 
 /* --------- TESTIMONIALS --------- */
+
+.testimonials {
+  position: relative;
+}
+
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: -142px;
+  left: 0;
+  width: 286px;
+  height: 545px;
+  background-image: url(./assets/img/architecture-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
 
 .testimonials-container {
   position: relative;
@@ -1224,6 +1250,23 @@ iframe {
 }
 
 /* --------- TEAM --------- */
+
+.team {
+  position: relative;
+}
+
+.team::before {
+  content: "";
+  position: absolute;
+  top: -142px;
+  right: 0;
+  width: 286px;
+  height: 545px;
+  background-image: url(./assets/img/architecture.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
 
 .team-container {
   margin-bottom: 150px;
@@ -1425,6 +1468,23 @@ iframe {
 }
 
 /* --------- BLOG --------- */
+
+.blog {
+  position: relative;
+}
+
+.blog::before {
+  content: "";
+  position: absolute;
+  top: 596px;
+  left: 0;
+  width: 286px;
+  height: 545px;
+  background-image: url(./assets/img/architecture-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
 
 .container.blog-container {
   margin-bottom: 73px;
