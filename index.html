@@ -685,7 +685,7 @@
               services to meal kits, it can be overwhelming to find the best
               option.
             </p>
-            <button type="button" class="button">
+            <button type="button" class="button" data-modal-target="#modal4">
               <span>See All Members</span>
               <svg width="19px" height="19px" class="">
                 <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
@@ -870,7 +870,7 @@
                 <button
                   type="button"
                   class="blog-button"
-                  data-modal-target="#modal5"
+                  data-modal-target="#modal7"
                 >
                   <span>Read More</span>
                   <svg width="24px" height="7px">
@@ -886,7 +886,7 @@
               class="blog-article"
               id="article-template"
               style="display: none"
-              data-modal-target="#modal5"
+              data-modal-target="#modal7"
             >
               <span class="blog-article-date"></span>
               <img src="" alt="" class="blog-article-pic" />
@@ -941,7 +941,7 @@
             <button
               type="submit"
               class="sign-up-button"
-              data-modal-target-on-submit="#modal4"
+              data-modal-target-on-submit="#modal6"
             >
               <svg width="11px" height="11px">
                 <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
@@ -1127,9 +1127,35 @@
         <button type="button" class="button modal-project-button" data-close>Close</button>
       </div>
     </div>
-
-
     <div class="modal" id="modal4">
+      <div class="modal-content modal-team">
+        <svg width="18px" height="18px" class="close-icon" data-close>
+          <use href="./assets/sprite.svg#icon-close"></use>
+        </svg>
+        <h3 class="modal-team-title">Our Team Behind Every Project</h3>
+        <ul class="modal-team-list">
+          <li
+            class="modal-team-item"
+            id="modal-team-template"
+            style="display: none"
+          >
+            <div class="modal-team-img-wrapper">
+              <div class="modal-team-overlay">
+                <p class="modal-team-description"></p>
+              </div>
+              <img src="" alt="" class="modal-team-img">
+            </div>
+            <h4 class="modal-team-name"></h4>
+            <p class="modal-team-position"></p>
+          </li>
+        </ul>
+        <button type="button" class="button modal-team-button" data-close>Close</button>
+      </div>
+    </div>
+
+
+
+    <div class="modal" id="modal6">
       <div class="modal-content modal-subscribe">
         <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>
@@ -1151,7 +1177,7 @@
         <button type="button" class="button modal-subscribe-button" data-close>Close</button>
       </div>
     </div>
-    <div class="modal" id="modal5">
+    <div class="modal" id="modal7">
       <div class="modal-content modal-blog">
         <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>

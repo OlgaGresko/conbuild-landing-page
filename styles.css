@@ -2104,20 +2104,23 @@ iframe {
 
 .full-service-content-container::-webkit-scrollbar,
 .modal-services-list::-webkit-scrollbar,
-.blog-article-content-text::-webkit-scrollbar {
+.blog-article-content-text::-webkit-scrollbar,
+.modal-team-list::-webkit-scrollbar {
   width: 4px;
 }
 
 .full-service-content-container::-webkit-scrollbar-thumb,
 .modal-services-list::-webkit-scrollbar-thumb,
-.blog-article-content-text::-webkit-scrollbar-thumb {
+.blog-article-content-text::-webkit-scrollbar-thumb,
+.modal-team-list::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background: var(--accent);
 }
 
 .full-service-content-container::-webkit-scrollbar-thumb:hover,
 .modal-services-list::-webkit-scrollbar-thumb:hover,
-.blog-article-content-text::-webkit-scrollbar-thumb:hover {
+.blog-article-content-text::-webkit-scrollbar-thumb:hover,
+.modal-team-list::-webkit-scrollbar-thumb:hover {
   background: var(--accent-hover);
 }
 
@@ -2198,4 +2201,83 @@ iframe {
 
 .modal-project-button {
   margin-left: auto;
+}
+
+.modal-team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1600px;
+  max-height: 95vh;
+  padding: 2rem 5rem;
+}
+
+.modal-team-title {
+  margin-bottom: 40px;
+  font-family: "Jost", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.313;
+  color: var(--dark);
+  text-decoration: underline
+}
+
+.modal-team-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 60px;
+  row-gap: 35px;
+  margin-bottom: 40px;
+  padding-right: 20px;
+  overflow-y: auto;
+}
+
+.modal-team-item {
+  width: calc((100% - 180px) / 4);
+  cursor: help;
+}
+
+.modal-team-name {
+  font-family: "Jost", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.417;
+  color: var(--dark);
+  text-align: center;
+}
+
+.modal-team-description {
+color: #000;
+}
+
+.modal-team-position {
+  font-size: 20px;
+  text-align: center;
+}
+
+.modal-team-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-team-overlay {
+  position: absolute;
+  height: 100%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 170px 45px;
+  background-color: rgba(256, 256, 256, 0.7);
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+}
+
+.modal-team-item:hover .modal-team-overlay {
+  transform: translateY(0);
+}
+
+.modal-team-item:hover .modal-team-name {
+  color: var(--accent);
 }

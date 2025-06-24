@@ -138,6 +138,10 @@ document.addEventListener('click', function (event) {
       const project = allProjects.find(s => s.id === projectId);
       if (project) renderProjectModal(project);
     }
+
+    if (modalSelector === '#modal4') {
+      renderAllMembers(allMembers);
+    }
   }
 });
 
@@ -391,6 +395,42 @@ teamNames.forEach((teamName, index) => {
   });
 });
 
+function renderAllMembers(members) {
+  const teamListContainer = document.querySelector('.modal-team-list');
+  const teamTemplate = document.getElementById('modal-team-template');
+
+  teamListContainer.innerHTML = '';
+  teamListContainer.appendChild(teamTemplate);
+
+  members.forEach(member => {
+    const clone = teamTemplate.cloneNode(true);
+    clone.removeAttribute('id');
+    clone.style.display = '';
+
+    clone.querySelector('.modal-team-name').textContent = member.name;
+    clone.querySelector('.modal-team-position').textContent = member.position;
+    clone.querySelector('.modal-team-img').src = member.photo;
+    clone.querySelector('.modal-team-description').textContent = member.description;
+
+    teamListContainer.appendChild(clone);
+  });
+}
+
+fetch('./assets/data/team.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Can not fetch data');
+    }
+    return response.json();
+  })
+  .then(data => {
+    allMembers = data;
+    renderAllMembers(allMembers);
+  })
+  .catch(error => {
+    console.error('Error loading articles:', error);
+  });
+
 // PRICING
 
 const pricingItems = document.querySelectorAll(".pricing-item");
@@ -424,7 +464,7 @@ function formatDate(dateString) {
 }
 
 function renderModalContent(article) {
-  const modal = document.querySelector('#modal5');
+  const modal = document.querySelector('#modal7');
   const rawText = article.text;
   const formattedHTML = formatTextWithParagraphs(rawText);
   modal.querySelector('.modal-blog-article-date').textContent = formatDate(article.date);
