@@ -448,6 +448,17 @@ pricingItems.forEach((item) => {
   });
 });
 
+const planElements = document.querySelectorAll('.pricing-button');
+const planNameSpan = document.getElementById('selectedPlanName');
+
+planElements.forEach(plan => {
+  plan.addEventListener('click', () => {
+    const selectedPlan = plan.getAttribute('data-plan-name');
+
+    planNameSpan.textContent = selectedPlan;
+  });
+});
+
 // BLOG
 
 const mainTemplate = document.getElementById('main-article-template');

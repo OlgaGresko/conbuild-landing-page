@@ -2281,3 +2281,157 @@ color: #000;
 .modal-team-item:hover .modal-team-name {
   color: var(--accent);
 }
+
+
+
+
+.modal-pricing-one {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-height: 95vh;
+  width: 700px;
+  padding: 4rem 4rem 3rem;
+  font-family: "Jost", sans-serif;
+}
+
+.modal-progress-bar {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.modal-progress-bar-first,
+.modal-progress-bar-second,
+.modal-progress-bar-third {
+  width: calc((100% - 60px) / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.modal-progress-step {
+  width: 100%;
+  height: 10px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 10px;
+}
+
+.modal-progress-step.done {
+  background-color: var(--accent);
+}
+
+.modal-progress-descr {
+  color: rgb(200, 200, 200);
+}
+
+.modal-progress-descr.done {
+  margin-left: 20px;
+  position: relative;
+  color: rgb(6, 188, 66);
+}
+
+.modal-progress-descr.done::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background-image: url(./assets/img/check.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.modal-progress-step.active {
+  background-image: linear-gradient(to left, rgba(230, 230, 230, 0.2) 0%, rgba(251, 91, 17, 0.8) 100%);
+}
+
+.modal-progress-descr.active {
+  margin-left: 20px;
+  position: relative;
+  color: var(--accent);
+}
+
+.modal-progress-descr.active::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  top: 5.5px;
+  width: 16px;
+  height: 16px;
+  background-image: url(./assets/img/arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.modal-pricing-congratulations {
+  align-self: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.625;
+  color: var(--dark);
+}
+
+.modal-pricing-cta {
+  margin-bottom: 20px;
+}
+
+.modal-form-person {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+
+.modal-form-label {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.modal-form-label-span {
+  width: 150px;
+}
+
+.modal-form-label-input {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+.modal-form-label-input::placeholder {
+  color: rgba(14, 14, 14, 0.3)
+}
+
+.modal-form-person input:focus {
+  border-bottom: 2px solid var(--accent);
+  outline: none;
+}
+
+.modal-form-person input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: var(--dark-text) !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.modal-form-button-wrapper {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
