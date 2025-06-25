@@ -2282,9 +2282,6 @@ color: #000;
   color: var(--accent);
 }
 
-
-
-
 .modal-pricing {
   height: 580px;
   display: flex;
@@ -2460,8 +2457,6 @@ input:-webkit-autofill:active  {
   gap: 24px;
 }
 
-
-
 .modal-form-label-input-2 {
   height: 40px;
   font-family: "Jost", sans-serif;
@@ -2537,8 +2532,14 @@ width: fit-content;
   line-height: 1.4;
 }
 
-.modal-form-checkbox input[type="checkbox"] {
-  display: none;
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  pointer-events: all;
 }
 
 .custom-checkbox {
@@ -2561,4 +2562,29 @@ width: fit-content;
   border: solid #000;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+
+.modal-pricing.finish {
+  padding: 4rem;
+}
+
+.modal-pricing-image {
+  width: 100%;
+  height: 230px;
+  margin-bottom: 18px;
+  object-fit: cover;
+}
+
+.modal-progress-bar.celbr {
+  margin-bottom: 18px;
+}
+
+.modal-pricing-title {
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.modal-pricing-subtitle {
+  margin: 0 auto;
+  margin-bottom: 18px;
 }

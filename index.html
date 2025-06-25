@@ -909,7 +909,7 @@
                 <button
                   type="button"
                   class="blog-button"
-                  data-modal-target="#modal8"
+                  data-modal-target="#modal9"
                 >
                   <span>Read More</span>
                   <svg width="24px" height="7px">
@@ -925,7 +925,7 @@
               class="blog-article"
               id="article-template"
               style="display: none"
-              data-modal-target="#modal8"
+              data-modal-target="#modal9"
             >
               <span class="blog-article-date"></span>
               <img src="" alt="" class="blog-article-pic" />
@@ -984,7 +984,7 @@
             <button
               type="submit"
               class="sign-up-button"
-              data-modal-target-on-submit="#modal7"
+              data-modal-target-on-submit="#modal8"
             >
               <svg width="11px" height="11px">
                 <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
@@ -1233,6 +1233,7 @@
               type="text"
               name="fullName"
               required
+              id="fullNameInput"
               placeholder="Your full name"
               class="modal-form-label-input"
             />
@@ -1375,10 +1376,10 @@
           </div>
           <div class="modal-form-checkbox-group">
             <label class="modal-form-checkbox">
-              <input type="checkbox" name="terms" required />
+              <input type="checkbox" name="terms" id="termsCheckbox" required />
               <span class="custom-checkbox"></span>
               I agree to the
-              <a href="">&nbsp;terms and conditions</a>*
+              <span>&nbsp;terms and conditions</span>*
             </label>
             <label class="modal-form-checkbox">
               <input type="checkbox" name="newsletter" />
@@ -1387,13 +1388,17 @@
             </label>
           </div>
           <div class="modal-form-button-wrapper">
-            <button type="button" class="blog-button" data-modal-target="#modal5">
+            <button
+              type="button"
+              class="blog-button"
+              data-modal-target="#modal5"
+            >
               <svg width="24px" height="7px">
                 <use href="./assets/sprite.svg#icon-arrow-left2"></use>
               </svg>
               <span>Back</span>
             </button>
-            <button type="submit" class="blog-button">
+            <button type="submit" class="blog-button" id="payButton">
               <span>Pay Now</span>
               <svg width="24px" height="7px">
                 <use href="./assets/sprite.svg#icon-arrow2"></use>
@@ -1403,7 +1408,41 @@
         </form>
       </div>
     </div>
+
     <div class="modal" id="modal7">
+      <div class="modal-content modal-pricing finish">
+        <svg width="18px" height="18px" class="close-icon" data-close>
+          <use href="./assets/sprite.svg#icon-close"></use>
+        </svg>
+        <div class="modal-progress-bar celbr">
+          <div class="modal-progress-bar-first">
+            <div class="modal-progress-step done"></div>
+            <p class="modal-progress-descr done">Choose Plan</p>
+          </div>
+          <div class="modal-progress-bar-second">
+            <div class="modal-progress-step done"></div>
+            <p class="modal-progress-descr done">Personal Details</p>
+          </div>
+          <div class="modal-progress-bar-third">
+            <div class="modal-progress-step done"></div>
+            <p class="modal-progress-descr done">Payment Information</p>
+          </div>
+        </div>
+        <img
+          src="./assets/img/celebration.webp"
+          alt="celebration"
+          class="modal-pricing-image"
+        />
+        <h2 class="modal-pricing-title" id="finalGreeting">Welcome aboard, Anna!</h2>
+        <p class="modal-pricing-subtitle" id="finalPlan">
+          You've successfully subscribed to the <strong>Pro Plan</strong>. Let's get started!
+        </p>
+        <button type="button" class="button modal-subscribe-button" data-close>
+          Start Exploring
+        </button>
+      </div>
+    </div>
+    <div class="modal" id="modal8">
       <div class="modal-content modal-subscribe">
         <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>
@@ -1427,7 +1466,7 @@
         </button>
       </div>
     </div>
-    <div class="modal" id="modal8">
+    <div class="modal" id="modal9">
       <div class="modal-content modal-blog">
         <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>

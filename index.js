@@ -1,14 +1,14 @@
 // HERO
 
-const sections = document.querySelectorAll('section, footer');
-const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll("section, footer");
+const navLinks = document.querySelectorAll(".nav-link");
 
 function onScroll() {
   const scrollPos = window.scrollY + window.innerHeight / 2;
 
-  let currentSectionId = '';
+  let currentSectionId = "";
 
-  sections.forEach(section => {
+  sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
 
@@ -17,15 +17,15 @@ function onScroll() {
     }
   });
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${currentSectionId}`) {
-      link.classList.add('active');
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${currentSectionId}`) {
+      link.classList.add("active");
     }
   });
 }
 
-window.addEventListener('scroll', onScroll);
+window.addEventListener("scroll", onScroll);
 
 // SERVICES
 
@@ -44,44 +44,46 @@ const swiper = new Swiper(".swiper-1", {
 
 function formatTextWithParagraphs(text) {
   return text
-    .split('\n\n')
-    .map(p => `<p>${p}</p>`)
-    .join('');
+    .split("\n\n")
+    .map((p) => `<p>${p}</p>`)
+    .join("");
 }
 
-const servicesListContainer = document.querySelector('.modal-services-list');
-const serviceTemplate = document.getElementById('modal-services-template');
+const servicesListContainer = document.querySelector(".modal-services-list");
+const serviceTemplate = document.getElementById("modal-services-template");
 let allServices = [];
 
 function renderFullServiceModal(service) {
-  const modal = document.querySelector('#modal2');
+  const modal = document.querySelector("#modal2");
   const formattedText = formatTextWithParagraphs(service.text);
 
-  modal.querySelector('.full-service-title').textContent = service.title;
-  modal.querySelector('.full-service-description').textContent = service.description;
-  modal.querySelector('.full-service-img').src = service.image;
-  modal.querySelector('.full-service-text').innerHTML = formattedText;
-  modal.classList.add('show');
-  document.body.classList.add('no-scroll');
+  modal.querySelector(".full-service-title").textContent = service.title;
+  modal.querySelector(".full-service-description").textContent =
+    service.description;
+  modal.querySelector(".full-service-img").src = service.image;
+  modal.querySelector(".full-service-text").innerHTML = formattedText;
+  modal.classList.add("show");
+  document.body.classList.add("no-scroll");
 }
 
-document.querySelectorAll('.swiper-slide').forEach(slide => {
-  slide.addEventListener('click', () => {
+document.querySelectorAll(".swiper-slide").forEach((slide) => {
+  slide.addEventListener("click", () => {
     const id = slide.dataset.serviceId;
-    const service = allServices.find(s => s.id === id);
+    const service = allServices.find((s) => s.id === id);
     if (service) renderFullServiceModal(service);
   });
 });
 
 function renderListServices(services) {
-  services.forEach(service => {
+  services.forEach((service) => {
     const clone = serviceTemplate.cloneNode(true);
-    clone.removeAttribute('id');
-    clone.style.display = '';
+    clone.removeAttribute("id");
+    clone.style.display = "";
 
-    clone.querySelector('.modal-services-title').textContent = service.title;
-    clone.querySelector('.modal-services-descr').textContent = service.description;
-    clone.querySelector('.modal-services-img').src = service.image;
+    clone.querySelector(".modal-services-title").textContent = service.title;
+    clone.querySelector(".modal-services-descr").textContent =
+      service.description;
+    clone.querySelector(".modal-services-img").src = service.image;
 
     clone.dataset.serviceId = service.id;
 
@@ -90,53 +92,53 @@ function renderListServices(services) {
   });
 }
 
-fetch('./assets/data/services.json')
-  .then(response => {
+fetch("./assets/data/services.json")
+  .then((response) => {
     if (!response.ok) {
-      throw new Error('Can not fetch data');
+      throw new Error("Can not fetch data");
     }
     return response.json();
   })
-  .then(data => {
+  .then((data) => {
     allServices = data;
     renderListServices(allServices);
   })
-  .catch(error => {
-    console.error('Error loading articles:', error);
+  .catch((error) => {
+    console.error("Error loading articles:", error);
   });
 
 function closeAllModals() {
-  const openModals = document.querySelectorAll('.modal.show');
-  openModals.forEach(modal => {
-    modal.classList.remove('show');
+  const openModals = document.querySelectorAll(".modal.show");
+  openModals.forEach((modal) => {
+    modal.classList.remove("show");
 
-    const forms = modal.querySelectorAll('form');
-    forms.forEach(form => form.reset());
+    const forms = modal.querySelectorAll("form");
+    forms.forEach((form) => form.reset());
 
-    const toggles = modal.querySelectorAll('.modal-form-eye');
-    toggles.forEach(toggle => {
-      const eyeOpen = toggle.querySelector('.modal-form-eye-open');
-      const eyeClose = toggle.querySelector('.modal-form-eye-close');
-      const input = toggle.closest('label').querySelector('input');
+    const toggles = modal.querySelectorAll(".modal-form-eye");
+    toggles.forEach((toggle) => {
+      const eyeOpen = toggle.querySelector(".modal-form-eye-open");
+      const eyeClose = toggle.querySelector(".modal-form-eye-close");
+      const input = toggle.closest("label").querySelector("input");
 
       if (input) {
-        input.type = 'password';
+        input.type = "password";
       }
 
       if (eyeOpen && eyeClose) {
-        eyeOpen.classList.remove('hide');
-        eyeClose.classList.add('hide');
+        eyeOpen.classList.remove("hide");
+        eyeClose.classList.add("hide");
       }
     });
   });
 
   if (openModals.length > 0) {
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove("no-scroll");
   }
 }
 
-document.addEventListener('click', function (event) {
-  const target = event.target.closest('[data-modal-target]');
+document.addEventListener("click", function (event) {
+  const target = event.target.closest("[data-modal-target]");
   if (!target) return;
 
   closeAllModals();
@@ -145,29 +147,29 @@ document.addEventListener('click', function (event) {
   const modalToOpen = document.querySelector(modalSelector);
 
   if (modalToOpen) {
-    modalToOpen.classList.add('show');
-    document.body.classList.add('no-scroll');
+    modalToOpen.classList.add("show");
+    document.body.classList.add("no-scroll");
 
     const serviceId = target.dataset.serviceId;
-    if (modalSelector === '#modal2' && serviceId) {
-      const service = allServices.find(s => s.id === serviceId);
+    if (modalSelector === "#modal2" && serviceId) {
+      const service = allServices.find((s) => s.id === serviceId);
       if (service) renderFullServiceModal(service);
     }
 
     const projectId = target.dataset.projectId;
-    if (modalSelector === '#modal3' && projectId) {
-      const project = allProjects.find(s => s.id === projectId);
+    if (modalSelector === "#modal3" && projectId) {
+      const project = allProjects.find((s) => s.id === projectId);
       if (project) renderProjectModal(project);
     }
 
-    if (modalSelector === '#modal4') {
+    if (modalSelector === "#modal4") {
       renderAllMembers(allMembers);
     }
   }
 });
 
-document.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
     closeAllModals();
   }
 });
@@ -318,36 +320,36 @@ function updateHoverSlide(swiper) {
 let allProjects = [];
 
 function formatProjectFeatures(text) {
-  return text.map(p => `<li>${p}</li>`).join('');
+  return text.map((p) => `<li>${p}</li>`).join("");
 }
 
 function renderProjectModal(project) {
-  const modal = document.querySelector('#modal3');
+  const modal = document.querySelector("#modal3");
   const formattedFeatures = formatProjectFeatures(project.features);
   const formattedText = formatTextWithParagraphs(project.text);
 
-  modal.querySelector('.modal-project-title').textContent = project.title;
-  modal.querySelector('.modal-project-type').textContent = project.type;
-  modal.querySelector('.modal-project-img').src = project.image;
-  modal.querySelector('.modal-project-features').innerHTML = formattedFeatures;
-  modal.querySelector('.modal-project-text').innerHTML = formattedText;
-  modal.classList.add('show');
-  document.body.classList.add('no-scroll');
+  modal.querySelector(".modal-project-title").textContent = project.title;
+  modal.querySelector(".modal-project-type").textContent = project.type;
+  modal.querySelector(".modal-project-img").src = project.image;
+  modal.querySelector(".modal-project-features").innerHTML = formattedFeatures;
+  modal.querySelector(".modal-project-text").innerHTML = formattedText;
+  modal.classList.add("show");
+  document.body.classList.add("no-scroll");
 }
 
-fetch('./assets/data/projects.json')
-  .then(response => {
+fetch("./assets/data/projects.json")
+  .then((response) => {
     if (!response.ok) {
-      throw new Error('Can not fetch data');
+      throw new Error("Can not fetch data");
     }
     return response.json();
   })
-  .then(data => {
+  .then((data) => {
     allProjects = data;
     renderListServices(allProjects);
   })
-  .catch(error => {
-    console.error('Error loading articles:', error);
+  .catch((error) => {
+    console.error("Error loading articles:", error);
   });
 
 // PROCESS
@@ -417,39 +419,40 @@ teamNames.forEach((teamName, index) => {
 });
 
 function renderAllMembers(members) {
-  const teamListContainer = document.querySelector('.modal-team-list');
-  const teamTemplate = document.getElementById('modal-team-template');
+  const teamListContainer = document.querySelector(".modal-team-list");
+  const teamTemplate = document.getElementById("modal-team-template");
 
-  teamListContainer.innerHTML = '';
+  teamListContainer.innerHTML = "";
   teamListContainer.appendChild(teamTemplate);
 
-  members.forEach(member => {
+  members.forEach((member) => {
     const clone = teamTemplate.cloneNode(true);
-    clone.removeAttribute('id');
-    clone.style.display = '';
+    clone.removeAttribute("id");
+    clone.style.display = "";
 
-    clone.querySelector('.modal-team-name').textContent = member.name;
-    clone.querySelector('.modal-team-position').textContent = member.position;
-    clone.querySelector('.modal-team-img').src = member.photo;
-    clone.querySelector('.modal-team-description').textContent = member.description;
+    clone.querySelector(".modal-team-name").textContent = member.name;
+    clone.querySelector(".modal-team-position").textContent = member.position;
+    clone.querySelector(".modal-team-img").src = member.photo;
+    clone.querySelector(".modal-team-description").textContent =
+      member.description;
 
     teamListContainer.appendChild(clone);
   });
 }
 
-fetch('./assets/data/team.json')
-  .then(response => {
+fetch("./assets/data/team.json")
+  .then((response) => {
     if (!response.ok) {
-      throw new Error('Can not fetch data');
+      throw new Error("Can not fetch data");
     }
     return response.json();
   })
-  .then(data => {
+  .then((data) => {
     allMembers = data;
     renderAllMembers(allMembers);
   })
-  .catch(error => {
-    console.error('Error loading articles:', error);
+  .catch((error) => {
+    console.error("Error loading articles:", error);
   });
 
 // PRICING
@@ -469,30 +472,44 @@ pricingItems.forEach((item) => {
   });
 });
 
-const planElements = document.querySelectorAll('.pricing-button');
-const planNameSpan = document.getElementById('selectedPlanName');
+const planElements = document.querySelectorAll(".pricing-button");
+const planNameSpan = document.getElementById("selectedPlanName");
 
-planElements.forEach(plan => {
-  plan.addEventListener('click', () => {
-    const selectedPlan = plan.getAttribute('data-plan-name');
+planElements.forEach((plan) => {
+  plan.addEventListener("click", () => {
+    const selectedPlan = plan.getAttribute("data-plan-name");
 
     planNameSpan.textContent = selectedPlan;
   });
 });
 
-const planForm = document.getElementById('planForm');
+const planForm = document.getElementById("planForm");
+const paymentForm = document.getElementById("paymentForm");
 
-planForm.addEventListener('submit', function (e) {
+planForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   if (planForm.checkValidity()) {
+    const fullName = document.getElementById("fullNameInput").value.trim();
+    const selectedPlan = document
+      .getElementById("selectedPlanName")
+      .textContent.trim();
+
+    console.log("Ім’я:", fullName);
+    console.log("План:", selectedPlan);
+
+    if (fullName && selectedPlan) {
+      localStorage.setItem("userName", fullName);
+      localStorage.setItem("planName", selectedPlan);
+      console.log("Дані збережені у localStorage");
+    }
     closeAllModals();
 
     setTimeout(() => {
-      const modal6 = document.querySelector('#modal6');
+      const modal6 = document.querySelector("#modal6");
       if (modal6) {
-        modal6.classList.add('show');
-        document.body.classList.add('no-scroll');
+        modal6.classList.add("show");
+        document.body.classList.add("no-scroll");
       }
     }, 50);
   } else {
@@ -500,47 +517,81 @@ planForm.addEventListener('submit', function (e) {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const cardInput = document.querySelector('input[name="cardNumber"]');
+document.getElementById("paymentForm").addEventListener("submit", function (e) {
+  if (!this.checkValidity()) {
+    e.preventDefault();
+    this.reportValidity();
+  }
+});
 
-    cardInput.addEventListener("input", function (e) {
-      let value = e.target.value;
+paymentForm.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-      value = value.replace(/\D/g, "");
+  if (paymentForm.checkValidity()) {
+    closeAllModals();
 
-      const formatted = value.match(/.{1,4}/g)?.join(" ") || "";
+    setTimeout(() => {
+      const modal7 = document.querySelector("#modal7");
+      if (modal7) {
+        const userName = localStorage.getItem("userName") || "there";
+        const planName = localStorage.getItem("planName") || "your plan";
 
-      e.target.value = formatted;
-    });
-  });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const expiryInput = document.querySelector('input[name="expiryDate"]');
-
-    expiryInput.addEventListener("input", function (e) {
-      let value = e.target.value.replace(/\D/g, "");
-
-      if (value.length > 4) {
-        value = value.slice(0, 4);
+        document.querySelector(
+          "#finalGreeting"
+        ).textContent = `Welcome aboard, ${userName}!`;
+        document.querySelector(
+          "#finalPlan"
+        ).innerHTML = `You’ve successfully subscribed to the <strong>${planName}</strong> plan.`;
+        modal7.classList.add("show");
+        document.body.classList.add("no-scroll");
       }
+    }, 50);
+  } else {
+    paymentForm.reportValidity();
+  }
+});
 
-      if (value.length > 2) {
-        value = value.slice(0, 2) + "/" + value.slice(2);
-      }
+document.addEventListener("DOMContentLoaded", function () {
+  const cardInput = document.querySelector('input[name="cardNumber"]');
 
-      e.target.value = value;
-    });
+  cardInput.addEventListener("input", function (e) {
+    let value = e.target.value;
+
+    value = value.replace(/\D/g, "");
+
+    const formatted = value.match(/.{1,4}/g)?.join(" ") || "";
+
+    e.target.value = formatted;
   });
+});
 
-  const phoneInput = document.querySelector('input[name="phone"]');
+document.addEventListener("DOMContentLoaded", function () {
+  const expiryInput = document.querySelector('input[name="expiryDate"]');
 
-phoneInput.addEventListener('input', (e) => {
+  expiryInput.addEventListener("input", function (e) {
+    let value = e.target.value.replace(/\D/g, "");
+
+    if (value.length > 4) {
+      value = value.slice(0, 4);
+    }
+
+    if (value.length > 2) {
+      value = value.slice(0, 2) + "/" + value.slice(2);
+    }
+
+    e.target.value = value;
+  });
+});
+
+const phoneInput = document.querySelector('input[name="phone"]');
+
+phoneInput.addEventListener("input", (e) => {
   let value = e.target.value;
 
-  value = value.replace(/[^\d+]/g, '');
-  value = value.replace(/\+/g, '');
-  if (e.target.value.startsWith('+')) {
-    value = '+' + value;
+  value = value.replace(/[^\d+]/g, "");
+  value = value.replace(/\+/g, "");
+  if (e.target.value.startsWith("+")) {
+    value = "+" + value;
   }
 
   if (value.length > 15) {
@@ -550,74 +601,82 @@ phoneInput.addEventListener('input', (e) => {
   e.target.value = value;
 });
 
-  document.querySelector('input[name="cvv"]').addEventListener('input', function () {
-  this.value = this.value.replace(/\D/g, '');
-});
+document
+  .querySelector('input[name="cvv"]')
+  .addEventListener("input", function () {
+    this.value = this.value.replace(/\D/g, "");
+  });
 
-const passwordInput = document.getElementById('passwordInput');
-const toggleBtn = document.getElementById('passwordToggle');
-const eyeOpen = toggleBtn.querySelector('.modal-form-eye-open');
-const eyeClose = toggleBtn.querySelector('.modal-form-eye-close');
+const passwordInput = document.getElementById("passwordInput");
+const toggleBtn = document.getElementById("passwordToggle");
+const eyeOpen = toggleBtn.querySelector(".modal-form-eye-open");
+const eyeClose = toggleBtn.querySelector(".modal-form-eye-close");
 
-toggleBtn.addEventListener('click', () => {
-  if (passwordInput.type === 'password') {
-    passwordInput.type = 'text';
-    eyeOpen.classList.add('hide');
-    eyeClose.classList.remove('hide');
+toggleBtn.addEventListener("click", () => {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    eyeOpen.classList.add("hide");
+    eyeClose.classList.remove("hide");
   } else {
-    passwordInput.type = 'password';
-    eyeOpen.classList.remove('hide');
-    eyeClose.classList.add('hide');
+    passwordInput.type = "password";
+    eyeOpen.classList.remove("hide");
+    eyeClose.classList.add("hide");
   }
 });
 
 // BLOG
 
-const mainTemplate = document.getElementById('main-article-template');
-const articleTemplate = document.getElementById('article-template');
-const mainContainer = document.querySelector('.blog-container');
-const listContainer = document.querySelector('.blog-list');
-const readMoreBtn = document.getElementById('read-more-btn');
+const mainTemplate = document.getElementById("main-article-template");
+const articleTemplate = document.getElementById("article-template");
+const mainContainer = document.querySelector(".blog-container");
+const listContainer = document.querySelector(".blog-list");
+const readMoreBtn = document.getElementById("read-more-btn");
 
 let allArticles = [];
 let currentIndex = 4;
 
 function formatDate(dateString) {
-  return dateString.replaceAll('/', ' ');
+  return dateString.replaceAll("/", " ");
 }
 
 function renderModalContent(article) {
-  const modal = document.querySelector('#modal8');
+  const modal = document.querySelector("#modal9");
   const rawText = article.text;
   const formattedHTML = formatTextWithParagraphs(rawText);
-  modal.querySelector('.modal-blog-article-date').textContent = formatDate(article.date);
-  modal.querySelector('.blog-author').textContent = `By ${article.author}`;
-  modal.querySelector('.blog-theme').textContent = article.category;
-  modal.querySelector('.blog-article-title').textContent = article.title;
-  modal.querySelector('.modal-blog-article-paragraph').textContent = article.excerpt;
-  modal.querySelector('.blog-article-text').innerHTML = formattedHTML;
-  modal.querySelector('.modal-blog-article-pic').src = article.coverImage;
-  modal.classList.add('show');
-  document.body.classList.add('no-scroll');
+  modal.querySelector(".modal-blog-article-date").textContent = formatDate(
+    article.date
+  );
+  modal.querySelector(".blog-author").textContent = `By ${article.author}`;
+  modal.querySelector(".blog-theme").textContent = article.category;
+  modal.querySelector(".blog-article-title").textContent = article.title;
+  modal.querySelector(".modal-blog-article-paragraph").textContent =
+    article.excerpt;
+  modal.querySelector(".blog-article-text").innerHTML = formattedHTML;
+  modal.querySelector(".modal-blog-article-pic").src = article.coverImage;
+  modal.classList.add("show");
+  document.body.classList.add("no-scroll");
 }
 
 function renderMainArticle(article) {
   const clone = mainTemplate.cloneNode(true);
-  clone.removeAttribute('id');
-  clone.style.display = '';
+  clone.removeAttribute("id");
+  clone.style.display = "";
 
-  clone.querySelector('.blog-main-article-date').textContent = formatDate(article.date);
-  clone.querySelector('.blog-author').textContent = `By ${article.author}`;
-  clone.querySelector('.blog-theme').textContent = article.category;
-  clone.querySelector('.blog-main-article-title').textContent = article.title;
-  clone.querySelector('.blog-main-article-paragraph').textContent = article.excerpt;
-  clone.querySelector('.blog-main-article-pic').src = article.coverImage;
+  clone.querySelector(".blog-main-article-date").textContent = formatDate(
+    article.date
+  );
+  clone.querySelector(".blog-author").textContent = `By ${article.author}`;
+  clone.querySelector(".blog-theme").textContent = article.category;
+  clone.querySelector(".blog-main-article-title").textContent = article.title;
+  clone.querySelector(".blog-main-article-paragraph").textContent =
+    article.excerpt;
+  clone.querySelector(".blog-main-article-pic").src = article.coverImage;
 
-  const modalButton = clone.querySelector('[data-modal-target]');
+  const modalButton = clone.querySelector("[data-modal-target]");
   if (modalButton) {
-    modalButton.addEventListener('click', (e) => {
+    modalButton.addEventListener("click", (e) => {
       e.stopPropagation();
-      const selected = allArticles.find(item => item.id === article.id);
+      const selected = allArticles.find((item) => item.id === article.id);
       if (selected) renderModalContent(selected);
     });
   }
@@ -626,21 +685,23 @@ function renderMainArticle(article) {
 }
 
 function renderListArticles(articles) {
-  articles.forEach(article => {
+  articles.forEach((article) => {
     const clone = articleTemplate.cloneNode(true);
-    clone.removeAttribute('id');
-    clone.style.display = '';
+    clone.removeAttribute("id");
+    clone.style.display = "";
 
-    clone.querySelector('.blog-article-date').textContent = formatDate(article.date);
-    clone.querySelector('.blog-author').textContent = `By ${article.author}`;
-    clone.querySelector('.blog-theme').textContent = article.category;
-    clone.querySelector('.blog-article-title').textContent = article.title;
-    clone.querySelector('.blog-article-pic').src = article.coverImage;
+    clone.querySelector(".blog-article-date").textContent = formatDate(
+      article.date
+    );
+    clone.querySelector(".blog-author").textContent = `By ${article.author}`;
+    clone.querySelector(".blog-theme").textContent = article.category;
+    clone.querySelector(".blog-article-title").textContent = article.title;
+    clone.querySelector(".blog-article-pic").src = article.coverImage;
 
     clone.dataset.articleId = article.id;
 
-    clone.addEventListener('click', () => {
-      const selected = allArticles.find(item => item.id === article.id);
+    clone.addEventListener("click", () => {
+      const selected = allArticles.find((item) => item.id === article.id);
       if (selected) renderModalContent(selected);
     });
 
@@ -660,75 +721,77 @@ function loadNextArticles() {
   }
 }
 
-fetch('./assets/data/blog-posts.json')
-  .then(response => {
+fetch("./assets/data/blog-posts.json")
+  .then((response) => {
     if (!response.ok) {
-      throw new Error('Can not fetch data');
+      throw new Error("Can not fetch data");
     }
     return response.json();
   })
-  .then(data => {
+  .then((data) => {
     allArticles = data;
     renderMainArticle(allArticles[0]);
     renderListArticles(allArticles.slice(1, 4));
 
     if (readMoreBtn) {
-      readMoreBtn.addEventListener('click', loadNextArticles);
+      readMoreBtn.addEventListener("click", loadNextArticles);
     }
   })
-  .catch(error => {
-    console.error('Error loading articles:', error);
+  .catch((error) => {
+    console.error("Error loading articles:", error);
   });
 
 // FOOTER
 
-const form = document.querySelector('.sign-up-form');
-const input = document.querySelector('.sign-up-input');
-const button = document.querySelector('.sign-up-button');
+const form = document.querySelector(".sign-up-form");
+const input = document.querySelector(".sign-up-input");
+const button = document.querySelector(".sign-up-button");
 
-form.addEventListener('submit', (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   if (input.checkValidity()) {
     const modal = document.querySelector(button.dataset.modalTargetOnSubmit);
 
     if (modal) {
-      modal.classList.add('show');
-      document.body.classList.add('no-scroll');
+      modal.classList.add("show");
+      document.body.classList.add("no-scroll");
     }
 
-    input.value = '';
+    input.value = "";
   } else {
     input.reportValidity();
   }
 });
 
-document.querySelectorAll('[data-close]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const modal = btn.closest('.modal');
-    modal.classList.remove('show');
-    document.body.classList.remove('no-scroll');
+document.querySelectorAll("[data-close]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const modal = btn.closest(".modal");
+    modal.classList.remove("show");
+    document.body.classList.remove("no-scroll");
 
-    const passwordInput = modal.querySelector('input[type="text"][name="password"], input[type="password"][name="password"]');
-    const toggleBtn = modal.querySelector('.modal-form-eye');
+    const passwordInput = modal.querySelector(
+      'input[type="text"][name="password"], input[type="password"][name="password"]'
+    );
+    const toggleBtn = modal.querySelector(".modal-form-eye");
     if (passwordInput && toggleBtn) {
-      passwordInput.type = 'password';
+      passwordInput.type = "password";
 
-      const eyeOpen = toggleBtn.querySelector('.modal-form-eye-onen');
-      const eyeClose = toggleBtn.querySelector('.modal-form-eye-close');
+      const eyeOpen = toggleBtn.querySelector(".modal-form-eye-onen");
+      const eyeClose = toggleBtn.querySelector(".modal-form-eye-close");
 
       if (eyeOpen && eyeClose) {
-        eyeOpen.classList.remove('hide');
-        eyeClose.classList.add('hide');
+        eyeOpen.classList.remove("hide");
+        eyeClose.classList.add("hide");
       }
     }
 
-    document.querySelectorAll('.modal form').forEach(form => form.reset());
+    document.querySelectorAll(".modal form").forEach((form) => form.reset());
   });
 });
 
-document.querySelectorAll('.modal').forEach(modal => {
-  modal.addEventListener('click', e => {
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("click", (e) => {
     if (e.target === modal) {
       closeAllModals();
     }
