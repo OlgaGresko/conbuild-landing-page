@@ -2285,7 +2285,8 @@ color: #000;
 
 
 
-.modal-pricing-one {
+.modal-pricing {
+  height: 580px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -2393,8 +2394,10 @@ color: #000;
 }
 
 .modal-form-label {
+  position: relative;
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 20px;
 }
 
@@ -2408,6 +2411,7 @@ color: #000;
   width: 100%;
   border: none;
   border-bottom: 1px solid var(--accent);
+  letter-spacing: 2px;
 }
 
 .modal-form-label-input::placeholder {
@@ -2428,10 +2432,133 @@ input:-webkit-autofill:active  {
   transition: background-color 5000s ease-in-out 0s !important;
 }
 
+.modal-form-eye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 3px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
 .modal-form-button-wrapper {
   align-self: center;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.modal-form-payment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+
+.modal-form-label-input-2 {
+  height: 40px;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+}
+
+.modal-pricing-logo {
+  height: 30px;
+}
+
+.modal-form-label-span.card-number {
+  width: 200px;
+}
+
+.modal-form-label-input-2.card-number {
+  flex-grow: 1;
+  padding-left: 15px;
+  letter-spacing: 2px;
+}
+
+.modal-form-label-input-2.card-number::placeholder {
+  letter-spacing: 2px;
+}
+
+.modal-form-label-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal-form-label-span.exp {
+  width: 110px;
+}
+
+.modal-form-label-input-2.exp {
+  text-align: center;
+  width: 100px;
+  letter-spacing: 2px;
+}
+
+.modal-form-label-input-2.exp::placeholder {
+  letter-spacing: 2px;
+}
+
+.modal-form-label-span.cvv {
+width: fit-content;
+}
+
+.modal-form-label-input-2.cvv {
+  text-align: center;
+  width: 100px;
+  letter-spacing: 2px;
+}
+
+.modal-form-payment input:focus {
+  outline: 2px solid var(--accent) ;
+} 
+
+.modal-form-checkbox-group {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-form-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.modal-form-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  border-radius: 3px;
+}
+
+.modal-form-checkbox input[type="checkbox"]:checked + .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }

@@ -107,7 +107,28 @@ fetch('./assets/data/services.json')
 
 function closeAllModals() {
   const openModals = document.querySelectorAll('.modal.show');
-  openModals.forEach(modal => modal.classList.remove('show'));
+  openModals.forEach(modal => {
+    modal.classList.remove('show');
+
+    const forms = modal.querySelectorAll('form');
+    forms.forEach(form => form.reset());
+
+    const toggles = modal.querySelectorAll('.modal-form-eye');
+    toggles.forEach(toggle => {
+      const eyeOpen = toggle.querySelector('.modal-form-eye-open');
+      const eyeClose = toggle.querySelector('.modal-form-eye-close');
+      const input = toggle.closest('label').querySelector('input');
+
+      if (input) {
+        input.type = 'password';
+      }
+
+      if (eyeOpen && eyeClose) {
+        eyeOpen.classList.remove('hide');
+        eyeClose.classList.add('hide');
+      }
+    });
+  });
 
   if (openModals.length > 0) {
     document.body.classList.remove('no-scroll');
@@ -459,6 +480,97 @@ planElements.forEach(plan => {
   });
 });
 
+const planForm = document.getElementById('planForm');
+
+planForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  if (planForm.checkValidity()) {
+    closeAllModals();
+
+    setTimeout(() => {
+      const modal6 = document.querySelector('#modal6');
+      if (modal6) {
+        modal6.classList.add('show');
+        document.body.classList.add('no-scroll');
+      }
+    }, 50);
+  } else {
+    planForm.reportValidity();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cardInput = document.querySelector('input[name="cardNumber"]');
+
+    cardInput.addEventListener("input", function (e) {
+      let value = e.target.value;
+
+      value = value.replace(/\D/g, "");
+
+      const formatted = value.match(/.{1,4}/g)?.join(" ") || "";
+
+      e.target.value = formatted;
+    });
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const expiryInput = document.querySelector('input[name="expiryDate"]');
+
+    expiryInput.addEventListener("input", function (e) {
+      let value = e.target.value.replace(/\D/g, "");
+
+      if (value.length > 4) {
+        value = value.slice(0, 4);
+      }
+
+      if (value.length > 2) {
+        value = value.slice(0, 2) + "/" + value.slice(2);
+      }
+
+      e.target.value = value;
+    });
+  });
+
+  const phoneInput = document.querySelector('input[name="phone"]');
+
+phoneInput.addEventListener('input', (e) => {
+  let value = e.target.value;
+
+  value = value.replace(/[^\d+]/g, '');
+  value = value.replace(/\+/g, '');
+  if (e.target.value.startsWith('+')) {
+    value = '+' + value;
+  }
+
+  if (value.length > 15) {
+    value = value.slice(0, 15);
+  }
+
+  e.target.value = value;
+});
+
+  document.querySelector('input[name="cvv"]').addEventListener('input', function () {
+  this.value = this.value.replace(/\D/g, '');
+});
+
+const passwordInput = document.getElementById('passwordInput');
+const toggleBtn = document.getElementById('passwordToggle');
+const eyeOpen = toggleBtn.querySelector('.modal-form-eye-open');
+const eyeClose = toggleBtn.querySelector('.modal-form-eye-close');
+
+toggleBtn.addEventListener('click', () => {
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    eyeOpen.classList.add('hide');
+    eyeClose.classList.remove('hide');
+  } else {
+    passwordInput.type = 'password';
+    eyeOpen.classList.remove('hide');
+    eyeClose.classList.add('hide');
+  }
+});
+
 // BLOG
 
 const mainTemplate = document.getElementById('main-article-template');
@@ -475,7 +587,7 @@ function formatDate(dateString) {
 }
 
 function renderModalContent(article) {
-  const modal = document.querySelector('#modal7');
+  const modal = document.querySelector('#modal8');
   const rawText = article.text;
   const formattedHTML = formatTextWithParagraphs(rawText);
   modal.querySelector('.modal-blog-article-date').textContent = formatDate(article.date);
@@ -593,16 +705,32 @@ form.addEventListener('submit', (event) => {
 
 document.querySelectorAll('[data-close]').forEach(btn => {
   btn.addEventListener('click', () => {
-    btn.closest('.modal').classList.remove('show');
+    const modal = btn.closest('.modal');
+    modal.classList.remove('show');
     document.body.classList.remove('no-scroll');
+
+    const passwordInput = modal.querySelector('input[type="text"][name="password"], input[type="password"][name="password"]');
+    const toggleBtn = modal.querySelector('.modal-form-eye');
+    if (passwordInput && toggleBtn) {
+      passwordInput.type = 'password';
+
+      const eyeOpen = toggleBtn.querySelector('.modal-form-eye-onen');
+      const eyeClose = toggleBtn.querySelector('.modal-form-eye-close');
+
+      if (eyeOpen && eyeClose) {
+        eyeOpen.classList.remove('hide');
+        eyeClose.classList.add('hide');
+      }
+    }
+
+    document.querySelectorAll('.modal form').forEach(form => form.reset());
   });
 });
 
 document.querySelectorAll('.modal').forEach(modal => {
   modal.addEventListener('click', e => {
     if (e.target === modal) {
-      modal.classList.remove('show');
-      document.body.classList.remove('no-scroll');
+      closeAllModals();
     }
   });
 });

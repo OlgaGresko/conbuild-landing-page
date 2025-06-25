@@ -909,7 +909,7 @@
                 <button
                   type="button"
                   class="blog-button"
-                  data-modal-target="#modal7"
+                  data-modal-target="#modal8"
                 >
                   <span>Read More</span>
                   <svg width="24px" height="7px">
@@ -925,7 +925,7 @@
               class="blog-article"
               id="article-template"
               style="display: none"
-              data-modal-target="#modal7"
+              data-modal-target="#modal8"
             >
               <span class="blog-article-date"></span>
               <img src="" alt="" class="blog-article-pic" />
@@ -984,7 +984,7 @@
             <button
               type="submit"
               class="sign-up-button"
-              data-modal-target-on-submit="#modal6"
+              data-modal-target-on-submit="#modal7"
             >
               <svg width="11px" height="11px">
                 <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
@@ -1202,7 +1202,7 @@
       </div>
     </div>
     <div class="modal" id="modal5">
-      <div class="modal-content modal-pricing-one">
+      <div class="modal-content modal-pricing">
         <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>
         </svg>
@@ -1256,19 +1256,34 @@
               minlength="6"
               placeholder="Create a password"
               class="modal-form-label-input"
+              id="passwordInput"
             />
+            <div class="modal-form-eye" id="passwordToggle">
+              <img
+                class="modal-form-eye-open"
+                src="./assets/img/eye-open.png"
+                alt=""
+              />
+              <img
+                class="modal-form-eye-close hide"
+                src="./assets/img/eye-close.png"
+                alt=""
+              />
+            </div>
           </label>
           <label class="modal-form-label">
             <span class="modal-form-label-span">Phone Number*</span>
             <input
               type="tel"
               name="phone"
+              required
+              maxlength="15"
               placeholder="+1 234 567 890"
               class="modal-form-label-input"
             />
           </label>
           <div class="modal-form-button-wrapper">
-            <button type="submit" class="blog-button" data-close>
+            <button type="button" class="blog-button" data-close>
               <svg width="24px" height="7px">
                 <use href="./assets/sprite.svg#icon-arrow-left2"></use>
               </svg>
@@ -1284,8 +1299,111 @@
         </form>
       </div>
     </div>
-
     <div class="modal" id="modal6">
+      <div class="modal-content modal-pricing">
+        <svg width="18px" height="18px" class="close-icon" data-close>
+          <use href="./assets/sprite.svg#icon-close"></use>
+        </svg>
+        <div class="modal-progress-bar">
+          <div class="modal-progress-bar-first">
+            <div class="modal-progress-step done"></div>
+            <p class="modal-progress-descr done">Choose Plan</p>
+          </div>
+          <div class="modal-progress-bar-second">
+            <div class="modal-progress-step done"></div>
+            <p class="modal-progress-descr done">Personal Details</p>
+          </div>
+          <div class="modal-progress-bar-third">
+            <div class="modal-progress-step active"></div>
+            <p class="modal-progress-descr active">Payment Information</p>
+          </div>
+        </div>
+        <p class="modal-pricing-congratulations">
+          You're just a step away - keep it up!
+        </p>
+        <p class="modal-pricing-cta">Please enter your card details:</p>
+        <form id="paymentForm" class="modal-form-payment">
+          <label class="modal-form-label">
+            <span class="modal-form-label-span card-number">Card Number:</span>
+            <input
+              type="text"
+              name="cardNumber"
+              required
+              inputmode="numeric"
+              pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}"
+              maxlength="19"
+              placeholder="1234 5678 9012 3456"
+              class="modal-form-label-input-2 card-number"
+              autocomplete="cc-number"
+            />
+            <img
+              class="modal-pricing-logo"
+              src="./assets/img/visa-and-mastercard-logos.png"
+              alt=""
+            />
+          </label>
+          <div class="modal-form-label-wrapper">
+            <label class="modal-form-label">
+              <span class="modal-form-label-span exp">Expiry Date:</span>
+              <input
+                type="text"
+                name="expiryDate"
+                required
+                placeholder="MM/YY"
+                maxlength="5"
+                class="modal-form-label-input-2 exp"
+                inputmode="numeric"
+                autocomplete="cc-exp"
+              />
+            </label>
+            <label class="modal-form-label">
+              <span class="modal-form-label-span cvv"
+                >Card Security Code (CVV):</span
+              >
+              <input
+                type="text"
+                name="cvv"
+                required
+                placeholder="123"
+                maxlength="4"
+                pattern="\d{3,4}"
+                class="modal-form-label-input-2 cvv"
+                inputmode="numeric"
+                autocomplete="cc-csc"
+              />
+            </label>
+          </div>
+          <div class="modal-form-checkbox-group">
+            <label class="modal-form-checkbox">
+              <input type="checkbox" name="terms" required />
+              <span class="custom-checkbox"></span>
+              I agree to the
+              <a href="">&nbsp;terms and conditions</a>*
+            </label>
+            <label class="modal-form-checkbox">
+              <input type="checkbox" name="newsletter" />
+              <span class="custom-checkbox"></span>
+              I agree to receive newsletters
+            </label>
+          </div>
+          <div class="modal-form-button-wrapper">
+            <button type="button" class="blog-button" data-modal-target="#modal5">
+              <svg width="24px" height="7px">
+                <use href="./assets/sprite.svg#icon-arrow-left2"></use>
+              </svg>
+              <span>Back</span>
+            </button>
+            <button type="submit" class="blog-button">
+              <span>Pay Now</span>
+              <svg width="24px" height="7px">
+                <use href="./assets/sprite.svg#icon-arrow2"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal7">
       <div class="modal-content modal-subscribe">
         <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>
@@ -1309,7 +1427,7 @@
         </button>
       </div>
     </div>
-    <div class="modal" id="modal7">
+    <div class="modal" id="modal8">
       <div class="modal-content modal-blog">
         <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>
