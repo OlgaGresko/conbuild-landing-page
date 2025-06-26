@@ -2392,7 +2392,6 @@ iframe {
 }
 
 .modal-form-label {
-  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2428,6 +2427,10 @@ input:-webkit-autofill:active  {
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
   -webkit-text-fill-color: var(--dark-text) !important;
   transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.modal-form-label-pass-wrapper {
+  position: relative;
 }
 
 .modal-form-eye {
@@ -2506,7 +2509,7 @@ input:-webkit-autofill:active  {
 }
 
 .modal-form-label-span.cvv {
-width: fit-content;
+  width: fit-content;
 }
 
 .modal-form-label-input-2.cvv {

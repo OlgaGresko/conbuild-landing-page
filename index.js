@@ -119,7 +119,9 @@ function closeAllModals() {
     toggles.forEach((toggle) => {
       const eyeOpen = toggle.querySelector(".modal-form-eye-open");
       const eyeClose = toggle.querySelector(".modal-form-eye-close");
-      const input = toggle.closest("label").querySelector("input");
+
+      const wrapper = toggle.closest(".modal-form-label-pass-wrapper");
+      const input = wrapper ? wrapper.querySelector("input") : null;
 
       if (input) {
         input.type = "password";
@@ -405,6 +407,7 @@ photos.forEach((photo, index) => {
 
 // TEAM
 
+let allMembers = [];
 const teamPhotos = document.querySelectorAll(".team-image");
 const teamNames = document.querySelectorAll(".team-member-name");
 
@@ -495,13 +498,9 @@ planForm.addEventListener("submit", function (e) {
       .getElementById("selectedPlanName")
       .textContent.trim();
 
-    console.log("Ім’я:", fullName);
-    console.log("План:", selectedPlan);
-
     if (fullName && selectedPlan) {
       localStorage.setItem("userName", fullName);
       localStorage.setItem("planName", selectedPlan);
-      console.log("Дані збережені у localStorage");
     }
     closeAllModals();
 
@@ -777,7 +776,7 @@ document.querySelectorAll("[data-close]").forEach((btn) => {
     if (passwordInput && toggleBtn) {
       passwordInput.type = "password";
 
-      const eyeOpen = toggleBtn.querySelector(".modal-form-eye-onen");
+      const eyeOpen = toggleBtn.querySelector(".modal-form-eye-open");
       const eyeClose = toggleBtn.querySelector(".modal-form-eye-close");
 
       if (eyeOpen && eyeClose) {
