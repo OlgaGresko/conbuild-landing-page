@@ -9,6 +9,8 @@
   --dark-text: #555555;
   --contacts-color: #cdcdcd;
   --status-items: #f8f8f8;
+  --light: #d9d9d9;
+  --footer-light: rgba(255, 255, 255, 0.7);
   --transition: 0.3s ease;
 }
 
@@ -625,7 +627,6 @@ section {
   font-weight: 600;
   line-height: 1;
   color: var(--dark);
-  background-color: rgba(255, 255, 255, 0);
 }
 
 .about-span-reflection {
@@ -1037,7 +1038,7 @@ section {
   background-color: var(--bg-color);
   height: 80px;
   cursor: pointer;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--light);
   background-color: transparent;
   font-family: "Jost", sans-serif;
   font-size: 24px;
@@ -1231,7 +1232,7 @@ iframe {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #d9d9d9;
+  background-color: var(--light);
   cursor: pointer;
 }
 
@@ -1297,7 +1298,7 @@ iframe {
 .team-image {
   width: 416px;
   height: 479px;
-  background-color: #d9d9d9;
+  background-color: var(--light);
   display: none;
 }
 
@@ -1340,7 +1341,7 @@ iframe {
 
 .pricing {
   scroll-margin-top: 145px;
-  background-color: #f8f8f8;
+  background-color: var(--status-items);
   background-image: url(./assets/img/map.png);
   background-repeat: no-repeat;
   background-size: 997px 640px;
@@ -1525,7 +1526,7 @@ iframe {
 .blog-main-article-pic {
   width: 636px;
   height: 361px;
-  background-color: #d9d9d9;
+  background-color: var(--light);
 }
 
 .blog-main-article-text {
@@ -1814,13 +1815,13 @@ iframe {
 }
 
 .footer-logo-text {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--footer-light);
 }
 
 .footer-text {
   width: 400px;
   margin-top: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--footer-light);
 }
 
 .footer-available {
@@ -1847,7 +1848,7 @@ iframe {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--footer-light);
 }
 
 .footer-list > li:hover {
@@ -1862,7 +1863,7 @@ iframe {
   background-color: #000000;
   font-family: "DM Sans", sans-serif;
   text-transform: capitalize;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--footer-light);
 }
 
 .footer-rights-span {
@@ -2249,7 +2250,7 @@ iframe {
 }
 
 .modal-team-description {
-color: #000;
+  color: #000000;
 }
 
 .modal-team-position {
