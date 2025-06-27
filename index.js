@@ -364,7 +364,7 @@ let selectedVideoId = "HdW1-guocPA";
 
 function setVideo(videoId) {
   selectedVideoId = videoId;
-  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=0&enablejsapi=1`;
+  iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=0&enablejsapi=1`;
   playButton.style.display = "block";
 }
 
@@ -381,7 +381,7 @@ tabs.forEach((tab) => {
 playButton.addEventListener("click", () => {
   playButton.style.display = "none";
 
-  iframe.src = `https://www.youtube.com/embed/${selectedVideoId}?autoplay=1&enablejsapi=1`;
+  iframe.src = `https://www.youtube-nocookie.com/embed/${selectedVideoId}?autoplay=1&enablejsapi=1`;
 });
 
 // TESTIMONIALS

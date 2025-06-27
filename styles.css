@@ -1195,6 +1195,11 @@ iframe {
   stroke: var(--dark);
 }
 
+.testimonials-quote-line {
+  height: 281px;
+  width: 41px;
+}
+
 .testimonials-name {
   font-family: "Jost", sans-serif;
   font-size: 32px;

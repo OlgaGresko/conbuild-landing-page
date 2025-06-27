@@ -15,6 +15,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
   </head>
   <body>
     <header class="header">
@@ -62,6 +65,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="socials-link"
+                aria-label="Facebook"
               >
                 <svg width="6px" height="10px" class="socials-icon">
                   <use href="./assets/sprite.svg#icon-facebook"></use>
@@ -74,6 +78,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="socials-link"
+                aria-label="Instagram"
               >
                 <svg width="10px" height="10px" class="socials-icon">
                   <use href="./assets/sprite.svg#icon-instagram"></use>
@@ -86,6 +91,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="socials-link"
+                aria-label="X (Twitter)"
               >
                 <svg width="10px" height="10px" class="socials-icon">
                   <use href="./assets/sprite.svg#icon-x"></use>
@@ -98,6 +104,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="socials-link"
+                aria-label="LinkedIn"
               >
                 <svg width="10px" height="10px" class="socials-icon">
                   <use href="./assets/sprite.svg#icon-linkedin"></use>
@@ -592,7 +599,7 @@
             </button>
           </div>
           <div class="process-video-wrapper">
-            <button type="button" class="custom-play-button">
+            <button type="button" class="custom-play-button" aria-label="Play video">
               <svg width="21px" height="31px" class="custom-play-icon">
                 <use href="./assets/sprite.svg#icon-play"></use>
               </svg>
@@ -601,7 +608,7 @@
               id="video-frame"
               width="100%"
               height="541"
-              src="https://www.youtube.com/embed/HdW1-guocPA"
+              src="https://www.youtube-nocookie.com/embed/HdW1-guocPA"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -663,7 +670,7 @@
               </div>
             </div>
             <div>
-              <img src="./assets/img/quote.webp" alt="" />
+              <img class="testimonials-quote-line" src="./assets/img/quote.webp" alt="" />
             </div>
             <div class="testimonials-photos">
               <img
@@ -709,21 +716,25 @@
               src="./assets/img/team/wade-warren.webp"
               alt="Wade Warren"
               class="team-image active"
+              loading="lazy"
             />
             <img
               src="./assets/img/team/brooklyn-simmons.webp"
               alt="Brooklyn Simmons"
               class="team-image"
+              loading="lazy"
             />
             <img
               src="./assets/img/team/jonson-duoing.webp"
               alt="Jonson Duoing"
               class="team-image"
+              loading="lazy"
             />
             <img
               src="./assets/img/team/esther-howard.webp"
               alt="Esther Howard"
               class="team-image"
+              loading="lazy"
             />
           </div>
           <ul class="team-members">
@@ -907,7 +918,7 @@
                   </svg>
                 </button>
               </div>
-              <img src="" alt="" class="blog-main-article-pic" />
+              <img src="" alt="" class="blog-main-article-pic" loading="lazy" />
             </div>
           </article>
           <ul class="blog-list">
@@ -918,7 +929,7 @@
               data-modal-target="#modal9"
             >
               <span class="blog-article-date"></span>
-              <img src="" alt="" class="blog-article-pic" />
+              <img src="" alt="" class="blog-article-pic" loading="lazy" />
               <div class="blog-descr blog-descr-other">
                 <span class="blog-author"></span>
                 <span class="blog-theme"></span>
@@ -956,6 +967,7 @@
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
+           title="Map showing our office location"
         ></iframe>
       </div>
 
@@ -974,6 +986,7 @@
             <button
               type="submit"
               class="sign-up-button"
+              aria-label="Subscribe"
               data-modal-target-on-submit="#modal8"
             >
               <svg width="11px" height="11px">
