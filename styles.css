@@ -323,8 +323,8 @@ section {
 }
 
 .hero-wrapper {
-  background: url(./assets/img/bigger-line.png),
-    url(./assets/img/smaller-line.png),
+  background: url(./assets/img/bigger-line.webp),
+    url(./assets/img/smaller-line.webp),
     linear-gradient(
       to bottom,
       rgba(14, 14, 14, 0.6) 0%,
@@ -430,7 +430,7 @@ section {
 
 .services-text {
   width: 476px;
-  background-image: url(./assets/img/man.png);
+  background-image: url(./assets/img/man.webp);
   background-repeat: no-repeat;
   background-size: 70px 70px;
   background-position: right 0 bottom 31px;
@@ -572,7 +572,7 @@ section {
 
 .about {
   position: relative;
-  background-image: url(./assets/img/architecture.png);
+  background-image: url(./assets/img/architecture.webp);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right 0 top 7px;
@@ -586,7 +586,7 @@ section {
   left: 0;
   width: 286px;
   height: 545px;
-  background-image: url(./assets/img/architecture-2.png);
+  background-image: url(./assets/img/architecture-2.webp);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 10;
@@ -1005,7 +1005,7 @@ section {
 
 .process {
   position: relative;
-  background-image: url(./assets/img/architecture.png);
+  background-image: url(./assets/img/architecture.webp);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right 0 top 7px;
@@ -1132,7 +1132,7 @@ iframe {
   left: 0;
   width: 286px;
   height: 545px;
-  background-image: url(./assets/img/architecture-2.png);
+  background-image: url(./assets/img/architecture-2.webp);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 10;
@@ -1263,7 +1263,7 @@ iframe {
   right: 0;
   width: 286px;
   height: 545px;
-  background-image: url(./assets/img/architecture.png);
+  background-image: url(./assets/img/architecture.webp);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 10;
@@ -1342,7 +1342,7 @@ iframe {
 .pricing {
   scroll-margin-top: 145px;
   background-color: var(--status-items);
-  background-image: url(./assets/img/map.png);
+  background-image: url(./assets/img/map.webp);
   background-repeat: no-repeat;
   background-size: 997px 640px;
   background-position: 0 0;
@@ -1481,7 +1481,7 @@ iframe {
   left: 0;
   width: 286px;
   height: 545px;
-  background-image: url(./assets/img/architecture-2.png);
+  background-image: url(./assets/img/architecture-2.webp);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 10;
@@ -1696,7 +1696,7 @@ iframe {
 .footer {
   scroll-margin-top: 145px;
   background-color: var(--dark);
-  background-image: url(./assets/img/city.png);
+  background-image: url(./assets/img/city.webp);
   background-size: contain;
   background-position: 0 684px;
   background-repeat: no-repeat;
@@ -1734,7 +1734,7 @@ iframe {
   flex-direction: row;
   gap: 257px;
   background-color: var(--accent);
-  background-image: url(./assets/img/newsletter.png);
+  background-image: url(./assets/img/newsletter.webp);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: top 40px left 270px;
@@ -2366,7 +2366,7 @@ iframe {
   top: 5.5px;
   width: 16px;
   height: 16px;
-  background-image: url(./assets/img/arrow.png);
+  background-image: url(./assets/img/arrow.webp);
   background-repeat: no-repeat;
   background-size: contain;
 }
