@@ -162,11 +162,12 @@
               src="./assets/img/engineer-with-set-square.webp"
               alt=""
               class="hero-portrait"
+              role="presentation"
             />
           </div>
         </div>
-        <img src="./assets/img/front-loader.webp" alt="" class="front-loader" />
-        <img src="./assets/img/crane.webp" alt="" class="crane" />
+        <img src="./assets/img/front-loader.webp" alt="" class="front-loader" role="presentation" />
+        <img src="./assets/img/crane.webp" alt="" class="crane" role="presentation" />
       </section>
 
       <section class="services" id="services">
@@ -199,6 +200,7 @@
                   src="./assets/img/building-logo.png"
                   alt=""
                   class="slide-img"
+                  role="presentation"
                 />
                 <div class="slide-text">
                   <h3 class="service-name">Building Construction</h3>
@@ -216,6 +218,7 @@
                   src="./assets/img/building-logo.png"
                   alt=""
                   class="slide-img"
+                  role="presentation"
                 />
                 <div class="slide-text">
                   <h3 class="service-name">Building Design</h3>
@@ -234,6 +237,7 @@
                   src="./assets/img/building-logo.png"
                   alt=""
                   class="slide-img"
+                  role="presentation"
                 />
                 <div class="slide-text">
                   <h3 class="service-name">Construction Management</h3>
@@ -252,6 +256,7 @@
                   src="./assets/img/building-logo.png"
                   alt=""
                   class="slide-img"
+                  role="presentation"
                 />
                 <div class="slide-text">
                   <h3 class="service-name">Renovation Services</h3>
@@ -270,6 +275,7 @@
                   src="./assets/img/building-logo.png"
                   alt=""
                   class="slide-img"
+                  role="presentation"
                 />
                 <div class="slide-text">
                   <h3 class="service-name">Structural Engineering</h3>
@@ -288,6 +294,7 @@
                   src="./assets/img/building-logo.png"
                   alt=""
                   class="slide-img"
+                  role="presentation"
                 />
                 <div class="slide-text">
                   <h3 class="service-name">Project Planning</h3>
@@ -670,7 +677,7 @@
               </div>
             </div>
             <div>
-              <img class="testimonials-quote-line" src="./assets/img/quote.webp" alt="" />
+              <img class="testimonials-quote-line" src="./assets/img/quote.webp" alt="" role="presentation" />
             </div>
             <div class="testimonials-photos">
               <img
@@ -910,7 +917,7 @@
                 <button
                   type="button"
                   class="blog-button"
-                  data-modal-target="#modal9"
+                  data-modal-target="#modal8"
                 >
                   <span>Read More</span>
                   <svg width="24px" height="7px">
@@ -918,7 +925,7 @@
                   </svg>
                 </button>
               </div>
-              <img src="" alt="" class="blog-main-article-pic" loading="lazy" />
+              <img src="" alt="" class="blog-main-article-pic" loading="lazy" role="presentation" />
             </div>
           </article>
           <ul class="blog-list">
@@ -926,10 +933,10 @@
               class="blog-article"
               id="article-template"
               style="display: none"
-              data-modal-target="#modal9"
+              data-modal-target="#modal8"
             >
               <span class="blog-article-date"></span>
-              <img src="" alt="" class="blog-article-pic" loading="lazy" />
+              <img src="" alt="" class="blog-article-pic" loading="lazy" role="presentation" />
               <div class="blog-descr blog-descr-other">
                 <span class="blog-author"></span>
                 <span class="blog-theme"></span>
@@ -987,7 +994,7 @@
               type="submit"
               class="sign-up-button"
               aria-label="Subscribe"
-              data-modal-target-on-submit="#modal8"
+              data-modal-target-on-submit="#modal9"
             >
               <svg class="sign-up-arrow" width="11px" height="11px">
                 <use href="./assets/sprite.svg#icon-arrow-up-right"></use>
@@ -1122,7 +1129,7 @@
             style="display: none"
             data-modal-target="#modal2"
           >
-            <img src="" alt="" class="modal-services-img" />
+            <img src="" alt="" class="modal-services-img" role="presentation" />
             <div class="modal-services-content">
               <h4 class="modal-services-title service-name"></h4>
               <p class="modal-services-descr service-descr"></p>
@@ -1147,7 +1154,7 @@
             ></p>
             <div class="full-service-text"></div>
           </div>
-          <img class="full-service-img" src="" alt="" />
+          <img class="full-service-img" src="" alt="" role="presentation" />
         </div>
         <div class="full-service-button-wrapper">
           <button type="button" class="blog-button" data-modal-target="#modal1">
@@ -1264,18 +1271,20 @@
                 id="passwordInput"
               />
             </label>
-            <div class="modal-form-eye" id="passwordToggle">
+            <button type="button" class="modal-form-eye" aria-label="Show password" id="passwordToggle">
               <img
                 class="modal-form-eye-open"
                 src="./assets/img/eye-open.png"
                 alt=""
+                role="presentation"
               />
               <img
                 class="modal-form-eye-close hide"
                 src="./assets/img/eye-close.png"
                 alt=""
+                role="presentation"
               />
-            </div>
+            </button>
           </div>
           <label class="modal-form-label">
             <span class="modal-form-label-span">Phone Number*</span>
@@ -1346,6 +1355,7 @@
               class="modal-pricing-logo"
               src="./assets/img/visa-and-mastercard-logos.webp"
               alt=""
+              role="presentation"
             />
           </label>
           <div class="modal-form-label-wrapper">
@@ -1413,7 +1423,6 @@
         </form>
       </div>
     </div>
-
     <div class="modal" id="modal7">
       <div class="modal-content modal-pricing finish">
         <svg width="18px" height="18px" class="close-icon" data-close>
@@ -1437,6 +1446,7 @@
           src="./assets/img/celebration.webp"
           alt=""
           class="modal-pricing-image"
+          role="presentation"
         />
         <h2 class="modal-pricing-title" id="finalGreeting">
           Welcome aboard, Anna!
@@ -1451,6 +1461,29 @@
       </div>
     </div>
     <div class="modal" id="modal8">
+      <div class="modal-content modal-blog">
+        <svg width="18px" height="18px" class="close-icon" data-close>
+          <use href="./assets/sprite.svg#icon-close"></use>
+        </svg>
+        <span class="modal-blog-article-date"></span>
+        <div class="blog-descr blog-descr-other">
+          <span class="blog-author"></span>
+          <span class="blog-theme"></span>
+        </div>
+        <h3 class="blog-article-title"></h3>
+        <div class="blog-article-content">
+          <img src="" alt="" class="modal-blog-article-pic" role="presentation" />
+          <div class="blog-article-content-text">
+            <p class="modal-blog-article-paragraph"></p>
+            <p class="blog-article-text"></p>
+          </div>
+        </div>
+        <button type="button" class="button modal-blog-button" data-close>
+          Close
+        </button>
+      </div>
+    </div>
+    <div class="modal" id="modal9">
       <div class="modal-content modal-subscribe">
         <svg width="18px" height="18px" class="close-icon" data-close>
           <use href="./assets/sprite.svg#icon-close"></use>
@@ -1470,29 +1503,6 @@
           P.S. Check your spam folder just in case.
         </p>
         <button type="button" class="button modal-subscribe-button" data-close>
-          Close
-        </button>
-      </div>
-    </div>
-    <div class="modal" id="modal9">
-      <div class="modal-content modal-blog">
-        <svg width="18px" height="18px" class="close-icon" data-close>
-          <use href="./assets/sprite.svg#icon-close"></use>
-        </svg>
-        <span class="modal-blog-article-date"></span>
-        <div class="blog-descr blog-descr-other">
-          <span class="blog-author"></span>
-          <span class="blog-theme"></span>
-        </div>
-        <h3 class="blog-article-title"></h3>
-        <div class="blog-article-content">
-          <img src="" alt="" class="modal-blog-article-pic" />
-          <div class="blog-article-content-text">
-            <p class="modal-blog-article-paragraph"></p>
-            <p class="blog-article-text"></p>
-          </div>
-        </div>
-        <button type="button" class="button modal-blog-button" data-close>
           Close
         </button>
       </div>

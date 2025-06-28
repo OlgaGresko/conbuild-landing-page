@@ -639,7 +639,7 @@ function formatDate(dateString) {
 }
 
 function renderModalContent(article) {
-  const modal = document.querySelector("#modal9");
+  const modal = document.querySelector("#modal8");
   const rawText = article.text;
   const formattedHTML = formatTextWithParagraphs(rawText);
   modal.querySelector(".modal-blog-article-date").textContent = formatDate(

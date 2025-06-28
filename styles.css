@@ -2452,6 +2452,8 @@ input:-webkit-autofill:active  {
   height: 20px;
   top: 3px;
   right: 10px;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
