@@ -348,7 +348,6 @@ fetch("./assets/data/projects.json")
   })
   .then((data) => {
     allProjects = data;
-    renderListServices(allProjects);
   })
   .catch((error) => {
     console.error("Error loading articles:", error);
