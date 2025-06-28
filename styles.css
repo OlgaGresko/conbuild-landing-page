@@ -1792,6 +1792,14 @@ iframe {
   cursor: pointer;
 }
 
+.sign-up-arrow {
+  transition: transform var(--transition);
+}
+
+.sign-up-button:hover .sign-up-arrow {
+  transform: scale(1.3);
+}
+
 .footer-lower {
   padding-top: 232px;
   display: flex;
