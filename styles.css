@@ -1901,6 +1901,8 @@ iframe {
   padding: 3rem;
   border-radius: 4px;
   min-width: 300px;
+  max-width: 100vw;
+  max-height: 95vh;
 }
 
 .modal.show {
@@ -1961,7 +1963,8 @@ iframe {
   padding: 4rem 6rem;
   width: 1700px;
   max-width: 85vw;
-  max-height: 78vh;
+  max-height: 95vh;
+  overflow-y: auto;
 }
 
 .modal-blog-article-date {
@@ -1991,12 +1994,14 @@ iframe {
 
 .blog-article-content-text {
   max-height: 56vh;
+  padding-right: 10px;
   overflow-y: auto;
 }
 
 .modal-blog-article-pic {
   margin-top: 7px;
   width: auto;
+  max-width: 50%;
   height: auto;
   object-fit: contain;
   display: block;
@@ -2029,6 +2034,7 @@ iframe {
   padding: 3rem 3rem;
   width: 1150px;
   height: 95vh;
+  overflow-y: auto;
 }
 
 .modal-services-list {
@@ -2077,6 +2083,7 @@ iframe {
   padding: 4rem 6rem;
   width: 1150px;
   height: 95vh;
+  overflow-y: auto;
 }
 
 .full-service-title {
@@ -2159,6 +2166,7 @@ iframe {
   padding: 4rem 6rem;
   width: 1700px;
   max-height: 95vh;
+  overflow-y: auto;
 }
 
 .modal-project-title {
@@ -2305,6 +2313,7 @@ iframe {
   width: 700px;
   padding: 4rem 4rem 3rem;
   font-family: "Jost", sans-serif;
+  overflow-y: auto;
 }
 
 .modal-progress-bar {
