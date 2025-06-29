@@ -359,11 +359,43 @@ const tabs = document.querySelectorAll(".process-button");
 const iframe = document.getElementById("video-frame");
 const playButton = document.querySelector(".custom-play-button");
 
+let player;
 let selectedVideoId = "HdW1-guocPA";
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("video-frame", {
+    videoId: selectedVideoId,
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange,
+    },
+  });
+}
+
+function onPlayerReady() {
+  playButton.style.display = "block";
+}
+
+function onPlayerStateChange(event) {
+  if (event.data === YT.PlayerState.PLAYING) {
+    playButton.style.display = "none";
+  } else if (
+    event.data === YT.PlayerState.PAUSED ||
+    event.data === YT.PlayerState.ENDED
+  ) {
+    playButton.style.display = "block";
+  }
+}
 
 function setVideo(videoId) {
   selectedVideoId = videoId;
-  iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=0&enablejsapi=1`;
+
+  if (player && player.loadVideoById) {
+    player.cueVideoById(videoId);
+  } else {
+    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1`;
+  }
+
   playButton.style.display = "block";
 }
 
@@ -379,8 +411,9 @@ tabs.forEach((tab) => {
 
 playButton.addEventListener("click", () => {
   playButton.style.display = "none";
-
-  iframe.src = `https://www.youtube-nocookie.com/embed/${selectedVideoId}?autoplay=1&enablejsapi=1`;
+  if (player && player.playVideo) {
+    player.playVideo();
+  }
 });
 
 // TESTIMONIALS
