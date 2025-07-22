@@ -1,3 +1,110 @@
+// HEADER
+
+const socialsShare = document.querySelector(".socials-share");
+const socialsList = document.querySelector(".socials-list");
+const burgerMenu = document.querySelector(".burger-menu");
+const navList = document.querySelector(".nav-list");
+
+function updateButtonActiveStates() {
+  const socialsOpen = getComputedStyle(socialsList).display === 'flex';
+  const navOpen = getComputedStyle(navList).display === 'flex';
+
+  if (socialsShare) {
+    if (socialsOpen) socialsShare.classList.add('active');
+    else socialsShare.classList.remove('active');
+  }
+
+  if (burgerMenu) {
+    if (navOpen) burgerMenu.classList.add('active');
+    else burgerMenu.classList.remove('active');
+  }
+}
+
+socialsShare?.addEventListener("click", () => {
+  const isHidden = getComputedStyle(socialsList).display === 'none';
+  const isBurgerVisible = getComputedStyle(burgerMenu).display !== 'none';
+  const isNavOpen = getComputedStyle(navList).display === 'flex';
+
+  if (isBurgerVisible && isNavOpen) {
+    navList.style.display = 'none';
+  }
+
+  socialsList.style.display = isHidden ? 'flex' : 'none';
+  updateButtonActiveStates();
+});
+
+burgerMenu?.addEventListener("click", () => {
+  const isHidden = getComputedStyle(navList).display === 'none';
+  const isSocialsVisible = getComputedStyle(socialsShare).display !== 'none';
+  const isSocialsOpen = getComputedStyle(socialsList).display === 'flex';
+
+  if (isSocialsVisible && isSocialsOpen) {
+    socialsList.style.display = 'none';
+  }
+
+  navList.style.display = isHidden ? 'flex' : 'none';
+  updateButtonActiveStates();
+});
+
+document.addEventListener("click", (event) => {
+  const target = event.target;
+
+  if (socialsShare && socialsList) {
+    const isSocialsVisible = getComputedStyle(socialsShare).display !== "none";
+    const isSocialsOpen = getComputedStyle(socialsList).display === "flex";
+    const clickedInsideSocials =
+      socialsShare.contains(target) || socialsList.contains(target);
+
+    if (isSocialsVisible && isSocialsOpen && !clickedInsideSocials) {
+      socialsList.style.display = 'none';
+    }
+  }
+
+  if (burgerMenu && navList) {
+    const isBurgerVisible = getComputedStyle(burgerMenu).display !== "none";
+    const isNavOpen = getComputedStyle(navList).display === "flex";
+    const clickedInsideBurger =
+      burgerMenu.contains(target) || navList.contains(target);
+
+    if (isBurgerVisible && isNavOpen && !clickedInsideBurger) {
+      navList.style.display = 'none';
+    }
+  }
+  updateButtonActiveStates();
+});
+
+window.addEventListener("resize", () => {
+  const isSocialsButtonVisible = getComputedStyle(socialsShare).display !== 'none';
+  const isBurgerVisible = getComputedStyle(burgerMenu).display !== 'none';
+
+  if (!isSocialsButtonVisible) {
+    socialsList.style.display = '';
+  }
+
+  if (!isBurgerVisible) {
+    navList.style.display = '';
+  }
+  updateButtonActiveStates();
+});
+
+const contactsList = document.querySelector('.contacts-list');
+
+contactsList.addEventListener('click', (event) => {
+  const li = event.target.closest('.contacts-item');
+  if (!li || !contactsList.contains(li)) return;
+
+  const allItems = contactsList.querySelectorAll('.contacts-item');
+
+  if (li.classList.contains('active')) {
+    li.classList.remove('active');
+  } else {
+    allItems.forEach(item => item.classList.remove('active'));
+    li.classList.add('active');
+  }
+});
+
+
+
 // HERO
 
 const sections = document.querySelectorAll("section, footer");

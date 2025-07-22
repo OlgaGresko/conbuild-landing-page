@@ -22,125 +22,151 @@
   <body>
     <header class="header">
       <img src="./assets/img/logo-bg.webp" alt="" class="logo-background" />
-      <div class="logo">
-        <a href="/" class="logo-link">
-          <img src="./assets/img/logo.webp" alt="logo" class="logo-pic" />
-          <div class="logo-descr">
-            <span class="logo-text">Construction Building</span>
-            <span class="logo-name">Conbuild</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="middle-header">
-        <div class="upper-header">
-          <ul class="contacts-list">
-            <li class="contacts-item">
-              <svg width="8px" height="16px" class="contacts-icon">
-                <use href="./assets/sprite.svg#icon-location"></use>
-              </svg>
-              <address class="contacts-text mail">
-                <a href="#contact">2464 Royal Ln, New York, NY</a>
-              </address>
-            </li>
-            <li class="contacts-item">
-              <svg width="12px" height="12px" class="contacts-icon">
-                <use href="./assets/sprite.svg#icon-e-mail"></use>
-              </svg>
-              <a href="mailto:info@golzergmail.com" class="contacts-text mail"
-                >info@conbuild.com</a
-              >
-            </li>
-            <li class="contacts-item">
-              <svg width="12px" height="11px" class="contacts-icon">
-                <use href="./assets/sprite.svg#icon-hours"></use>
-              </svg>
-              <p class="contacts-text">Mon - Sat 8:00 - 18:20</p>
-            </li>
-          </ul>
-          <ul class="socials-list">
-            <li class="socials-item">
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="socials-link"
-                aria-label="Facebook"
-              >
-                <svg width="6px" height="10px" class="socials-icon">
-                  <use href="./assets/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item">
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="socials-link"
-                aria-label="Instagram"
-              >
-                <svg width="10px" height="10px" class="socials-icon">
-                  <use href="./assets/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item">
-              <a
-                href="https://www.x.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="socials-link"
-                aria-label="X (Twitter)"
-              >
-                <svg width="10px" height="10px" class="socials-icon">
-                  <use href="./assets/sprite.svg#icon-x"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item">
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="socials-link"
-                aria-label="LinkedIn"
-              >
-                <svg width="10px" height="10px" class="socials-icon">
-                  <use href="./assets/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+      <div class="header-container">
+        <div class="logo">
+          <a href="/" class="logo-link">
+            <img src="./assets/img/logo.webp" alt="logo" class="logo-pic" />
+            <div class="logo-descr">
+              <span class="logo-text">Construction Building</span>
+              <span class="logo-name">Conbuild</span>
+            </div>
+          </a>
         </div>
-        <nav class="nav-list">
-          <a href="#hero" class="nav-link active">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#testimonials" class="nav-link">Testimonials</a>
-          <a href="#team" class="nav-link">Team</a>
-          <a href="#pricing" class="nav-link">Pricing</a>
-          <a href="#blog" class="nav-link">Blog</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-      </div>
 
-      <div class="phone">
-        <a href="tel:7045550127" class="phone-link">
-          <div class="phone-icon-frame">
-            <svg width="20px" height="20px" class="phone-icon">
-              <use href="./assets/sprite.svg#icon-phone"></use>
-            </svg>
+        <div class="middle-header">
+          <div class="upper-header">
+            <ul class="contacts-list">
+              <li class="contacts-item">
+                <svg
+                  width="8px"
+                  height="16px"
+                  class="contacts-icon icon-location"
+                >
+                  <use href="./assets/sprite.svg#icon-location"></use>
+                </svg>
+                <address class="contacts-text mail location">
+                  <a href="#contact">2464 Royal Ln, New York, NY</a>
+                </address>
+              </li>
+              <li class="contacts-item">
+                <svg width="12px" height="12px" class="contacts-icon icon-mail">
+                  <use href="./assets/sprite.svg#icon-e-mail"></use>
+                </svg>
+                <a href="mailto:info@golzergmail.com" class="contacts-text mail"
+                  >info@conbuild.com</a
+                >
+              </li>
+              <li class="contacts-item">
+                <svg width="12px" height="12px" class="contacts-icon">
+                  <use href="./assets/sprite.svg#icon-hours"></use>
+                </svg>
+                <p class="contacts-text hours">Mon - Sat 8:00 - 18:20</p>
+              </li>
+              <li class="contacts-item contacts-item-phone">
+                <svg width="12px" height="12px" class="contacts-icon">
+                  <use href="./assets/sprite.svg#icon-phone"></use>
+                </svg>
+                <a
+                  href="tel:7045550127"
+                  class="contacts-text contacts-text-phone"
+                  >(704) 555-0127</a
+                >
+              </li>
+            </ul>
+            <button type="button" class="socials-share">
+              <svg width="18px" height="18px" class="socials-icon share">
+                <use href="./assets/sprite.svg#icon-share"></use>
+              </svg>
+            </button>
+            <button type="button" class="burger-menu">
+              <svg width="20px" height="20px">
+                <use href="./assets/sprite.svg#icon-burger-menu"></use>
+              </svg>
+            </button>
+            <ul class="socials-list">
+              <li class="socials-item">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="socials-link"
+                  aria-label="Facebook"
+                >
+                  <svg width="6px" height="10px" class="socials-icon">
+                    <use href="./assets/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="socials-link"
+                  aria-label="Instagram"
+                >
+                  <svg width="10px" height="10px" class="socials-icon">
+                    <use href="./assets/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item">
+                <a
+                  href="https://www.x.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="socials-link"
+                  aria-label="X (Twitter)"
+                >
+                  <svg width="10px" height="10px" class="socials-icon">
+                    <use href="./assets/sprite.svg#icon-x"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="socials-link"
+                  aria-label="LinkedIn"
+                >
+                  <svg width="10px" height="10px" class="socials-icon">
+                    <use href="./assets/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="phone-text">
-            <span class="phone-text-cta">Call Us Anytime</span>
-            <span class="phone-text-number">(704) 555-0127</span>
-          </div>
-        </a>
+          <nav class="nav-list">
+            <a href="#hero" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
+            <a href="#team" class="nav-link">Team</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+            <a href="#blog" class="nav-link">Blog</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </nav>
+        </div>
+
+        <div class="phone">
+          <a href="tel:7045550127" class="phone-link">
+            <div class="phone-icon-frame">
+              <svg width="20px" height="20px" class="phone-icon">
+                <use href="./assets/sprite.svg#icon-phone"></use>
+              </svg>
+            </div>
+            <div class="phone-text">
+              <span class="phone-text-cta">Call Us Anytime</span>
+              <span class="phone-text-number">(704) 555-0127</span>
+            </div>
+          </a>
+        </div>
       </div>
     </header>
 
-    <main>
+    <!-- <main>
       <section class="hero" id="hero">
         <div class="hero-wrapper">
           <div class="hero-container">
@@ -625,16 +651,7 @@
                 <use href="./assets/sprite.svg#icon-play"></use>
               </svg>
             </button>
-            <iframe
-              id="video-frame"
-              width="100%"
-              height="541"
-              src="https://www.youtube-nocookie.com/embed/HdW1-guocPA?enablejsapi=1"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <div id="video-frame"></div>
           </div>
         </div>
       </section>
@@ -1284,6 +1301,7 @@
               type="text"
               name="fullName"
               required
+              autocomplete="given-name"
               id="fullNameInput"
               placeholder="Your full name"
               class="modal-form-label-input"
@@ -1295,6 +1313,7 @@
               type="email"
               name="email"
               required
+              autocomplete="username"
               placeholder="you@example.com"
               class="modal-form-label-input"
             />
@@ -1306,6 +1325,7 @@
                 type="password"
                 name="password"
                 required
+                autocomplete="new-password"
                 minlength="6"
                 placeholder="Create a password"
                 class="modal-form-label-input"
@@ -1565,7 +1585,7 @@
           Close
         </button>
       </div>
-    </div>
+    </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
