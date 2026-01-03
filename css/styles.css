@@ -360,14 +360,14 @@ section {
 }
 
 .hero-wrapper {
-  background: url(./assets/img/bigger-line.webp),
-    url(./assets/img/smaller-line.webp),
+  background: url(../assets/img/bigger-line.webp),
+    url(../assets/img/smaller-line.webp),
     linear-gradient(
       to bottom,
       rgba(14, 14, 14, 0.6) 0%,
       rgba(14, 14, 14, 0.9) 100%
     ),
-    url(./assets/img/hero.webp);
+    url(../assets/img/hero.webp);
   background-position: bottom -16px left -10px, bottom -16px left -10px, center,
     center;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -440,7 +440,7 @@ section {
 .hero-portrait {
   width: 640px;
   height: 729px;
-  background-image: url(./assets/img/portrait-bg.svg);
+  background-image: url(../assets/img/portrait-bg.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -467,7 +467,7 @@ section {
 
 .services-text {
   width: 476px;
-  background-image: url(./assets/img/man.webp);
+  background-image: url(../assets/img/man.webp);
   background-repeat: no-repeat;
   background-size: 70px 70px;
   background-position: right 0 bottom 31px;
@@ -552,27 +552,27 @@ section {
 }
 
 .swiper-first-1st {
-  background-image: url(./assets/img/building-construction.webp);
+  background-image: url(../assets/img/building-construction.webp);
 }
 
 .swiper-first-2nd {
-  background-image: url(./assets/img/building-design.webp);
+  background-image: url(../assets/img/building-design.webp);
 }
 
 .swiper-first-3rd {
-  background-image: url(./assets/img/construction-management.webp);
+  background-image: url(../assets/img/construction-management.webp);
 }
 
 .swiper-first-4th {
-  background-image: url(./assets/img/renovation-services.webp);
+  background-image: url(../assets/img/renovation-services.webp);
 }
 
 .swiper-first-5th {
-  background-image: url(./assets/img/structural-engineering.webp);
+  background-image: url(../assets/img/structural-engineering.webp);
 }
 
 .swiper-first-6th {
-  background-image: url(./assets/img/project-planning.webp);
+  background-image: url(../assets/img/project-planning.webp);
 }
 
 .slide-img {
@@ -609,7 +609,7 @@ section {
 
 .about {
   position: relative;
-  background-image: url(./assets/img/architecture.webp);
+  background-image: url(../assets/img/architecture.webp);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right 0 top 7px;
@@ -623,7 +623,7 @@ section {
   left: 0;
   width: 286px;
   height: 545px;
-  background-image: url(./assets/img/architecture-2.webp);
+  background-image: url(../assets/img/architecture-2.webp);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 10;
@@ -736,27 +736,27 @@ section {
 }
 
 .swiper-slide.swiper-second.swiper-second-1st {
-  background-image: url(./assets/img/about/about-1.webp);
+  background-image: url(../assets/img/about/about-1.webp);
 }
 
 .swiper-slide.swiper-second.swiper-second-2nd {
-  background-image: url(./assets/img/about/about-2.webp);
+  background-image: url(../assets/img/about/about-2.webp);
 }
 
 .swiper-slide.swiper-second.swiper-second-3rd {
-  background-image: url(./assets/img/about/about-3.webp);
+  background-image: url(../assets/img/about/about-3.webp);
 }
 
 .swiper-slide.swiper-second.swiper-second-4th {
-  background-image: url(./assets/img/about/about-4.webp);
+  background-image: url(../assets/img/about/about-4.webp);
 }
 
 .swiper-slide.swiper-second.swiper-second-5th {
-  background-image: url(./assets/img/about/about-5.webp);
+  background-image: url(../assets/img/about/about-5.webp);
 }
 
 .swiper-slide.swiper-second.swiper-second-6th {
-  background-image: url(./assets/img/about/about-6.webp);
+  background-image: url(../assets/img/about/about-6.webp);
 }
 
 .swiper-second.swiper-button-prev:after,
@@ -944,27 +944,27 @@ section {
 }
 
 .project-1 {
-  background-image: url(./assets/img/projects/project-1.webp);
+  background-image: url(../assets/img/projects/project-1.webp);
 }
 
 .project-2 {
-  background-image: url(./assets/img/projects/project-2.webp);
+  background-image: url(../assets/img/projects/project-2.webp);
 }
 
 .project-3 {
-  background-image: url(./assets/img/projects/project-3.webp);
+  background-image: url(../assets/img/projects/project-3.webp);
 }
 
 .project-4 {
-  background-image: url(./assets/img/projects/project-4.webp);
+  background-image: url(../assets/img/projects/project-4.webp);
 }
 
 .project-5 {
-  background-image: url(./assets/img/projects/project-5.webp);
+  background-image: url(../assets/img/projects/project-5.webp);
 }
 
 .project-6 {
-  background-image: url(./assets/img/projects/project-6.webp);
+  background-image: url(../assets/img/projects/project-6.webp);
 }
 
 .projects-item-button-container {
@@ -1045,7 +1045,7 @@ section {
 
 .process {
   position: relative;
-  background-image: url(./assets/img/architecture.webp);
+  background-image: url(../assets/img/architecture.webp);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right 0 top 7px;
@@ -1172,7 +1172,7 @@ iframe {
   left: 0;
   width: 286px;
   height: 545px;
-  background-image: url(./assets/img/architecture-2.webp);
+  background-image: url(../assets/img/architecture-2.webp);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 10;
@@ -1311,7 +1311,7 @@ iframe {
   right: 0;
   width: 286px;
   height: 545px;
-  background-image: url(./assets/img/architecture.webp);
+  background-image: url(../assets/img/architecture.webp);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 10;
@@ -1396,7 +1396,7 @@ iframe {
 .pricing {
   scroll-margin-top: 145px;
   background-color: var(--status-items);
-  background-image: url(./assets/img/map.webp);
+  background-image: url(../assets/img/map.webp);
   background-repeat: no-repeat;
   background-size: 997px 640px;
   background-position: 0 0;
@@ -1535,7 +1535,7 @@ iframe {
   left: 0;
   width: 286px;
   height: 545px;
-  background-image: url(./assets/img/architecture-2.webp);
+  background-image: url(../assets/img/architecture-2.webp);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 10;
@@ -1571,7 +1571,7 @@ iframe {
   font-size: 24px;
   line-height: 1.417;
   color: var(--bg-color);
-  background-image: url(./assets/img/date.png);
+  background-image: url(../assets/img/date.png);
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -1726,7 +1726,7 @@ iframe {
   height: 68px;
   color: var(--bg-color);
   text-align: center;
-  background-image: url(./assets/img/date.png);
+  background-image: url(../assets/img/date.png);
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -1752,7 +1752,7 @@ iframe {
 .footer {
   scroll-margin-top: 145px;
   background-color: var(--dark);
-  background-image: url(./assets/img/city.webp);
+  background-image: url(../assets/img/city.webp);
   background-size: contain;
   background-position: 0 684px;
   background-repeat: no-repeat;
@@ -1790,7 +1790,7 @@ iframe {
   flex-direction: row;
   gap: 257px;
   background-color: var(--accent);
-  background-image: url(./assets/img/newsletter.webp);
+  background-image: url(../assets/img/newsletter.webp);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: top 40px left 270px;
@@ -2032,7 +2032,7 @@ iframe {
   height: 68px;
   color: var(--bg-color);
   text-align: center;
-  background-image: url(./assets/img/date.png);
+  background-image: url(../assets/img/date.png);
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -2421,7 +2421,7 @@ iframe {
   top: 4px;
   width: 16px;
   height: 16px;
-  background-image: url(./assets/img/check.png);
+  background-image: url(../assets/img/check.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2444,7 +2444,7 @@ iframe {
   top: 5.5px;
   width: 16px;
   height: 16px;
-  background-image: url(./assets/img/arrow.webp);
+  background-image: url(../assets/img/arrow.webp);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2672,6 +2672,8 @@ input[type="checkbox"] {
   margin: 0 auto;
   margin-bottom: 18px;
 }
+
+/* --------- MEDIA QUERIES --------- */
 
 @media (min-width: 1751px) and (max-width: 1900px) {
   .header-container {
