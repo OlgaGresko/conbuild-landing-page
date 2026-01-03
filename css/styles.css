@@ -200,7 +200,13 @@ section {
   transition: color var(--transition);
 }
 
-.contacts-text.mail:hover {
+.contacts-text.mail:hover,
+.contacts-text.mail:focus {
+  color: var(--accent);
+}
+
+.contacts-text.mail a:hover,
+.contacts-text.mail a:focus {
   color: var(--accent);
 }
 
@@ -258,7 +264,8 @@ section {
   cursor: pointer;
 }
 
-.socials-icon:hover {
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
   fill: var(--bg-color);
 }
 
@@ -281,7 +288,8 @@ section {
   transition: color var(--transition);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent);
 }
 
@@ -327,7 +335,8 @@ section {
   transition: transform var(--transition);
 }
 
-.phone-link:hover .phone-icon {
+.phone-link:hover .phone-icon,
+.phone-link:focus .phone-icon {
   transform: scale(1.2);
 }
 
@@ -433,7 +442,8 @@ section {
   fill: var(--bg-color);
 }
 
-.button.accent:hover {
+.button.accent:hover,
+.button.accent:focus {
   transform: scale(1.05);
 }
 
@@ -508,7 +518,8 @@ section {
   margin-bottom: 9px;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: var(--accent);
   border: 1px solid transparent;
   color: var(--bg-color);
@@ -790,7 +801,9 @@ section {
 }
 
 .swiper-button-prev:hover svg,
-.swiper-button-next:hover svg {
+.swiper-button-prev:focus svg,
+.swiper-button-next:hover svg,
+.swiper-button-next:focus svg {
   fill: var(--accent);
 }
 
@@ -925,7 +938,9 @@ section {
 }
 
 .projects-button.swiper-button-prev:hover svg,
-.projects-button.swiper-button-next:hover svg {
+.projects-button.swiper-button-prev:focus svg,
+.projects-button.swiper-button-next:hover svg,
+.projects-button.swiper-button-next:focus svg {
   fill: var(--accent);
 }
 
@@ -1110,7 +1125,8 @@ section {
   pointer-events: none;
 }
 
-.process-button:hover {
+.process-button:hover,
+.process-button:focus {
   border: 1px solid transparent;
   background-color: var(--accent);
   color: var(--bg-color);
@@ -1155,7 +1171,8 @@ iframe {
   transition: transform var(--transition);
 }
 
-.custom-play-button:hover .custom-play-icon {
+.custom-play-button:hover .custom-play-icon,
+.custom-play-button:focus .custom-play-icon {
   transform: scale(1.4);
 }
 
@@ -1656,7 +1673,8 @@ iframe {
   transition: color var(--transition), fill var(--transition);
 }
 
-.blog-button:hover {
+.blog-button:hover,
+.blog-button:focus {
   color: var(--accent);
   fill: var(--accent);
 }
@@ -1743,6 +1761,11 @@ iframe {
 }
 
 .blog-article:hover .blog-button-listed {
+  color: var(--accent);
+  fill: var(--accent);
+}
+
+.blog-button-listed:focus {
   color: var(--accent);
   fill: var(--accent);
 }
@@ -1915,7 +1938,8 @@ iframe {
   color: var(--footer-light);
 }
 
-.footer-list > li:hover {
+.footer-list a:hover,
+.footer-list a:focus {
   color: var(--accent);
 }
 
