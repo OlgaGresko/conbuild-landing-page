@@ -104,22 +104,26 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 1000;
+
+  width: 100%;
   height: 145px;
+
   background-color: var(--dark);
 }
 
 .header-container {
-  margin: 0 auto;
-  height: 145px;
   display: flex;
   flex-direction: row;
+
+  margin: 0 auto;
+  height: 145px;
   width: 90vw;
 }
 
 .logo {
   flex: 0.45;
+
   padding: 40px 0;
 }
 
@@ -147,22 +151,24 @@ section {
 }
 
 .logo-text {
+  color: var(--bg-color);
   font-size: 14px;
   line-height: 1.714;
-  color: var(--bg-color);
 }
 
 .logo-name {
+  color: var(--bg-color);
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1;
-  color: var(--bg-color);
 }
 
 .middle-header {
-  height: 100%;
   flex: 1;
+
+  height: 100%;
+  
   border-right: 1px solid var(--dark-text);
 }
 
@@ -171,16 +177,19 @@ section {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   padding-right: 29px;
+
   border-bottom: 1px solid var(--dark-text);
 }
 
 .contacts-list {
-  padding: 16px 29px 17px 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 42px;
+
+  padding: 16px 29px 17px 60px;
 }
 
 .contacts-item {
@@ -199,9 +208,10 @@ section {
 }
 
 .contacts-text {
+  color: var(--contacts-color);
   font-size: 14px;
   line-height: 1.714;
-  color: var(--contacts-color);
+  
   transition: color var(--transition);
 }
 
@@ -217,10 +227,13 @@ section {
 
 .socials-share {
   display: none;
+
   width: 30px;
   height: 30px;
-  background-color: transparent;
+
   border: none;
+
+  background-color: transparent;
 }
 
 .socials-share svg {
@@ -239,33 +252,39 @@ section {
 }
 
 .socials-item {
-  width: 20px;
-  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 20px;
+  height: 20px;
 }
 
 .socials-link {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
+  height: 100%;
 }
 
 .socials-icon {
   display: inline-block;
+
   width: 1em;
   height: 1em;
+
   stroke-width: 0;
   fill: rgba(255, 255, 255, 0.3);
+
   transition: fill var(--transition);
 }
 
 .socials-icon.share {
   width: 18px;
   height: 18px;
+
   cursor: pointer;
 }
 
@@ -282,14 +301,17 @@ section {
   display: flex;
   flex-direction: row;
   gap: 32px;
+
   padding: 30px 0px 24px 60px;
 }
 
 .nav-link {
+  position: relative;
+
   font-weight: 700;
   line-height: 1.625;
   color: var(--bg-color);
-  position: relative;
+
   transition: color var(--transition);
 }
 
@@ -304,13 +326,16 @@ section {
 
 .nav-link.active::after {
   content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent);
+
   position: absolute;
   bottom: -31px;
   left: 0;
+  display: block;
+
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--accent);
 }
 
 .phone {
@@ -326,17 +351,21 @@ section {
 }
 
 .phone-icon-frame {
-  width: 60px;
-  height: 60px;
-  background-color: var(--accent);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  background-color: var(--accent);
+  
   transition: background-color var(--transition);
 }
 
 .phone-icon {
   fill: var(--bg-color);
+
   transition: transform var(--transition);
 }
 
@@ -352,17 +381,17 @@ section {
 }
 
 .phone-text-cta {
+  color: var(--contacts-color);
   font-size: 14px;
   line-height: 1.714;
-  color: var(--contacts-color);
 }
 
 .phone-text-number {
+  color: var(--bg-color);
   font-family: "Jost", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.625;
-  color: var(--bg-color);
 }
 
 /* --------- HERO --------- */
