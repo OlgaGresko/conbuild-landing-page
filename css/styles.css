@@ -498,7 +498,7 @@ section {
 .hero-portrait {
   width: 640px;
   height: 729px;
-  
+
   background-image: url(../assets/img/portrait-bg.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -526,6 +526,7 @@ section {
 
 .services-text {
   width: 476px;
+
   background-image: url(../assets/img/man.webp);
   background-repeat: no-repeat;
   background-size: 70px 70px;
@@ -533,34 +534,39 @@ section {
 }
 
 .section-name {
+  display: inline-block;
+  position: relative;
+
   margin-left: 25px;
   margin-bottom: 15px;
-  position: relative;
-  display: inline-block;
+  
+  color: var(--dark);
+
   font-family: "Jost", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.625;
-  color: var(--dark);
 }
 
 .section-name::before {
   content: "";
   display: block;
-  width: 15px;
-  height: 1px;
-  background-color: var(--accent);
   position: absolute;
   top: calc(50% - 1px);
   left: -25px;
+
+  width: 15px;
+  height: 1px;
+
+  background-color: var(--accent);
 }
 
 .section-title {
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 52px;
   font-weight: 600;
   line-height: 1.192;
-  color: var(--dark);
 }
 
 .section-title.services-section-title {
@@ -569,8 +575,10 @@ section {
 
 .button:hover,
 .button:focus {
-  background-color: var(--accent);
   border: 1px solid transparent;
+
+  background-color: var(--accent);
+  
   color: var(--bg-color);
   fill: var(--bg-color);
 }
@@ -589,12 +597,15 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   width: 306px;
   height: 100%;
   padding: 24px;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   overflow: hidden;
 }
 
@@ -602,8 +613,9 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(5, 0, 0, 0) 0%, rgba(14, 14, 14, 1) 100%);
   z-index: 0;
+
+  background: linear-gradient(to bottom, rgba(5, 0, 0, 0) 0%, rgba(14, 14, 14, 1) 100%);
 }
 
 .swiper-slide.swiper-first > * {
@@ -638,12 +650,15 @@ section {
 .slide-img {
   width: 95px;
   height: 74px;
+
   opacity: 0;
+
   transition: opacity var(--transition);
 }
 
 .slide-text {
   opacity: 0;
+
   transition: opacity var(--transition);
 }
 
@@ -653,11 +668,12 @@ section {
 
 .service-name {
   margin-bottom: 13px;
+
+  color: var(--bg-color);
   font-family: "Jost", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.417;
-  color: var(--bg-color);
   text-decoration: underline;
 }
 
