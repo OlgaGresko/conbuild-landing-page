@@ -398,6 +398,7 @@ section {
 
 .hero {
   position: relative;
+
   padding-bottom: 150px;
   margin-bottom: 143px;
 }
@@ -418,13 +419,15 @@ section {
 }
 
 .hero-container {
-  margin: 0 auto;
-  padding-top: 49px;
-  padding-bottom: 72px;
-  width: 1595px;
   display: flex;
   flex-direction: row;
   gap: 54px;
+
+  width: 1595px;
+
+  margin: 0 auto;
+  padding-top: 49px;
+  padding-bottom: 72px;
 }
 
 .hero-text {
@@ -435,43 +438,54 @@ section {
 
 .hero-title {
   margin-bottom: 6px;
+
+  color: var(--bg-color);
   font-family: "Jost", sans-serif;
   font-size: 158px;
   font-weight: 600;
   line-height: 0.873;
-  color: var(--bg-color);
 }
 
 .hero-descr {
+  margin-bottom: 43px;
+
+  color: var(--light-text);
   font-size: 24px;
   line-height: 1.417;
-  color: var(--light-text);
-  margin-bottom: 43px;
 }
 
 .button {
-  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  width: fit-content;
   padding: 17px 35px;
+
   font-family: "Jost", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.625;
-  background-color: var(--bg-color);
+
   border: 1px solid var(--dark);
+
+  background-color: var(--bg-color);
+
   color: var(--dark);
   fill: var(--dark);
+  
+  cursor: pointer;
+
   transition: background-color var(--transition), transform var(--transition),
     color var(--transition), fill var(--transition);
-  cursor: pointer;
 }
 
 .button.accent {
-  background-color: var(--accent);
   border: 1px solid transparent;
+
+  background-color: var(--accent);
+
   color: var(--bg-color);
   fill: var(--bg-color);
 }
@@ -484,6 +498,7 @@ section {
 .hero-portrait {
   width: 640px;
   height: 729px;
+  
   background-image: url(../assets/img/portrait-bg.svg);
   background-repeat: no-repeat;
   background-position: center;
