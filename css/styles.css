@@ -685,10 +685,12 @@ section {
 
 .about {
   position: relative;
+
   background-image: url(../assets/img/architecture.webp);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right 0 top 7px;
+
   overflow: visible;
 }
 
@@ -697,12 +699,14 @@ section {
   position: absolute;
   top: 580px;
   left: 0;
+  z-index: 10;
+
   width: 286px;
   height: 545px;
+  
   background-image: url(../assets/img/architecture-2.webp);
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: 10;
 }
 
 .container.container-about {
@@ -713,13 +717,16 @@ section {
   display: flex;
   flex-direction: row;
   gap: 172px;
+
   margin-bottom: 67px;
 }
 
 .about-text {
   margin-top: 16px;
   margin-bottom: 23px;
+
   width: 439px;
+
   background-color: var(--bg-color);
 }
 
@@ -728,6 +735,7 @@ section {
   flex-direction: row;
   gap: 24px;
   align-items: center;
+
   background-color: var(--bg-color);
 }
 
@@ -737,30 +745,34 @@ section {
 }
 
 .about-span {
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1;
-  color: var(--dark);
 }
 
 .about-span-reflection {
+  position: absolute;
+  left: 0;
+  top: 60%;
+
+  width: 100%;
+  height: 100%;
+
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1.313;
   line-height: 1;
-  color: var(--dark);
-  position: absolute;
-  left: 0;
-  top: 60%;
-  width: 100%;
   text-align: left;
-  transform: scaleY(-1);
+
   opacity: 1;
   overflow: hidden;
-  height: 100%;
   pointer-events: none;
+
+  transform: scaleY(-1);
 
   -webkit-mask-image: linear-gradient(
     to bottom,
@@ -779,10 +791,11 @@ section {
 }
 
 .swiper-wrapper.swiper-second {
+  display: flex;
+
   width: 100%;
   height: 332px;
   padding-bottom: 64px;
-  display: flex;
 }
 
 .swiper-slide.swiper-second {
@@ -790,11 +803,14 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding: 21px 29px;
+
   width: 416px;
   height: 332px;
+  padding: 21px 29px;
+
   background-size: cover;
   background-position: center;
+
   overflow: hidden;
 }
 
@@ -802,8 +818,9 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(5, 0, 0, 0.2) 0%, rgba(14, 14, 14, 1) 100%);
   z-index: 0;
+
+  background: linear-gradient(to bottom, rgba(5, 0, 0, 0.2) 0%, rgba(14, 14, 14, 1) 100%);
 }
 
 .about-swiper-content {
@@ -840,28 +857,34 @@ section {
   content: none;
 }
 .swiper-navigation.swiper-second {
-  display: flex;
-  justify-content: center;
-  width: 166px;
-  height: 20px;
   position: absolute;
   bottom: 0;
   left: calc(50% - (166px / 2));
+  display: flex;
+  justify-content: center;
+
+  width: 166px;
+  height: 20px;
   padding: 0 20px;
 }
 
 .swiper-second.swiper-button-prev,
 .swiper-second.swiper-button-next {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 60px;
   z-index: 10;
+
+  width: 60px;
+
+  border: none;
+
+  background-color: transparent;
+  
+  cursor: pointer;
 }
 
 .swiper-button-prev svg,
 .swiper-button-next svg {
   fill: var(--dark);
+
   transition: fill var(--transition);
 }
 
@@ -875,20 +898,23 @@ section {
 .about-swiper-content {
   position: relative;
   top: 94px;
-  transition: top var(--transition);
+
   user-select: none;
+
+  transition: top var(--transition);
 }
 
 .swiper-second-name {
+  color: var(--bg-color);
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1.313;
-  color: var(--bg-color);
 }
 
 .swiper-second-points {
   margin-top: 12px;
+  
   color: var(--bg-color);
 }
 
