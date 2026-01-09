@@ -942,6 +942,7 @@ section {
   display: flex;
   flex-direction: row;
   gap: 24px;
+
   cursor: default;
   user-select: none;
 }
@@ -951,28 +952,33 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+
   width: 306px;
   height: 206px;
+
   background-color: var(--status-items);
+
   transition: background-color var(--transition);
-  z-index: 10;
 }
 
 .status-number {
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 52px;
   font-weight: 600;
   line-height: 1.192;
-  color: var(--dark);
+
   transition: color var(--transition);
 }
 
 .status-descr {
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.417;
-  color: var(--dark);
+
   transition: color var(--transition);
 }
 
