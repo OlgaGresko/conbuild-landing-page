@@ -999,6 +999,7 @@ section {
 
 .container.container-projects {
   position: relative;
+
   margin-bottom: 67px;
 }
 
@@ -1010,10 +1011,11 @@ section {
   position: absolute;
   display: flex;
   justify-content: center;
-  width: 166px;
-  height: 40px;
   top: 66px;
   right: 0;
+
+  width: 166px;
+  height: 40px;
 }
 
 .projects-button.swiper-button-prev:after,
@@ -1024,14 +1026,18 @@ section {
 .projects-button.swiper-button-prev,
 .projects-button.swiper-button-next {
   width: 60px;
-  background-color: transparent;
+
   border: none;
+
+  background-color: transparent;
+  
   cursor: pointer;
 }
 
 .projects-button.swiper-button-prev svg,
 .projects-button.swiper-button-next svg {
   fill: var(--dark);
+
   transition: fill var(--transition);
 }
 
@@ -1053,6 +1059,7 @@ section {
 
 .projects-item {
   position: relative;
+  
   cursor: pointer;
 }
 
@@ -1085,20 +1092,27 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 82px;
-  height: 82px;
-  background-color: rgba(14, 14, 14, 0.5);
   left: 50%;
   top: 153px;
-  transform: translateX(-50%);
+
+  width: 82px;
+  height: 82px;
+
+  background-color: rgba(14, 14, 14, 0.5);
+
   cursor: pointer;
+  
+  transform: translateX(-50%);
 }
 
 .projects-item-button {
   width: 60px;
   height: 60px;
+
   border: none;
+
   background-color: var(--accent);
+
   cursor: pointer;
 }
 
@@ -1113,26 +1127,32 @@ section {
 
 .projects-type {
   display: inline-block;
+
   width: fit-content;
   margin-bottom: 20px;
   padding: 5px 16px;
+
+  color: var(--bg-color);
   font-family: "Jost", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.625;
-  color: var(--bg-color);
+
   background-color: var(--accent);
 }
 
 .projects-name {
   display: inline-block;
+
   width: fit-content;
   padding: 16px 24px;
+
+  color: var(--bg-color);
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1.313;
-  color: var(--bg-color);
+
   background-color: var(--dark);
 }
 
@@ -1140,17 +1160,21 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: end;
+
   width: 623px;
   height: 443px;
   padding: 30px;
+
   opacity: 1;
-  transition: opacity 1s ease;
   user-select: none;
+
+  transition: opacity 1s ease;
 }
 
 .hidden {
   opacity: 0;
   visibility: hidden;
+  
   transition: opacity 1s ease;
 }
 
