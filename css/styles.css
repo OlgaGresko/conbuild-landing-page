@@ -1182,10 +1182,12 @@ section {
 
 .process {
   position: relative;
+
   background-image: url(../assets/img/architecture.webp);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right 0 top 7px;
+
   overflow: visible;
 }
 
@@ -1207,28 +1209,36 @@ section {
   flex-direction: row;
   justify-content: space-between;
   gap: 24px;
+
   margin-bottom: 90px;
 }
 
 .process-button {
   width: calc((1296px - 48px) / 3);
-  background-color: var(--bg-color);
   height: 80px;
-  cursor: pointer;
+
   border: 1px solid var(--light);
+
   background-color: var(--bg-color);
+  
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.417;
-  color: var(--dark);
+  
+  cursor: pointer;
+
   transition: background-color var(--transition), color var(--transition);
 }
 
 .process-active {
   position: relative;
+
   border: 1px solid transparent;
+
   background-color: var(--accent);
+
   color: var(--bg-color);
 }
 
@@ -1237,27 +1247,35 @@ section {
   position: absolute;
   bottom: -11px;
   left: calc(((1296px - 48px) / 3) / 2);
+
   width: 0;
   height: 0;
+
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid var(--accent);
+
+  pointer-events: none;
+
   transform: translateX(-50%);
   transition: left 0.3s ease;
-  pointer-events: none;
 }
 
 .process-button:hover,
 .process-button:focus {
   border: 1px solid transparent;
+
   background-color: var(--accent);
+
   color: var(--bg-color);
 }
 
 .process-video-wrapper {
   position: relative;
+
   width: 100%;
   aspect-ratio: 16/9;
+
   overflow: hidden;
 }
 
@@ -1275,21 +1293,28 @@ iframe {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 2;
+
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
+
   border: none;
+  border-radius: 50%;
+
   background-color: var(--accent);
+
+  cursor: pointer;
+  
+  transform: translate(-50%, -50%);
   transition: background-color var(--transition);
 }
 
 .custom-play-icon {
   position: relative;
-  fill: var(--bg-color);
   z-index: 10;
+
+  fill: var(--bg-color);
+
   transition: transform var(--transition);
 }
 
