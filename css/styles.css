@@ -1334,24 +1334,29 @@ iframe {
   position: absolute;
   top: -142px;
   left: 0;
+  z-index: 10;
+
   width: 286px;
   height: 545px;
+
   background-image: url(../assets/img/architecture-2.webp);
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: 10;
 }
 
 .testimonials-container {
   position: relative;
+
   border-bottom: 1px solid var(--contacts-color);
 }
 
 .testimonials-text {
   position: relative;
-  width: 666px;
-  background-color: var(--bg-color);
   z-index: 10;
+
+  width: 666px;
+
+  background-color: var(--bg-color);
 }
 
 .section-name.testimonials-section-name {
@@ -1365,6 +1370,7 @@ iframe {
 .testimonials-main {
   display: flex;
   flex-direction: row;
+
   margin-bottom: 43px;
 }
 
@@ -1373,18 +1379,20 @@ iframe {
 }
 
 .testimonials-reviews {
-  margin-bottom: 33px;
   width: 950px;
+  margin-bottom: 33px;
 }
 
 .testimonials-review {
-  padding-top: 53px;
+  display: none;
+
   width: 950px;
+  padding-top: 53px;
+  
+  color: var(--dark-text);
   font-family: "Jost", sans-serif;
   font-size: 32px;
   line-height: 1.313;
-  color: var(--dark-text);
-  display: none;
 }
 
 .testimonials-review.active {
@@ -1403,17 +1411,18 @@ iframe {
 }
 
 .testimonials-quote-line {
-  height: 281px;
   width: 41px;
+  height: 281px;
 }
 
 .testimonials-name {
+  display: none;
+
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1.15;
-  color: var(--dark);
-  display: none;
 }
 
 .testimonials-name.active {
@@ -1421,10 +1430,11 @@ iframe {
 }
 
 .testimonials-role {
+  display: none;
+
+  color: var(--dark-text);
   font-size: 24px;
   line-height: 1.3;
-  color: var(--dark-text);
-  display: none;
 }
 
 .testimonials-role.active {
@@ -1437,29 +1447,36 @@ iframe {
   justify-content: center;
   align-items: center;
   gap: 10px;
+
   margin-left: 69px;
 }
 
 .testimonials-photo {
   width: 70px;
   height: 70px;
+
   border-radius: 50%;
+
   background-color: var(--light);
+
   cursor: pointer;
 }
 
 .testimonials-photo.active {
   width: 110px;
   height: 110px;
+
   border: 2px solid var(--accent);
 }
 
 .testimonials-hr {
   position: absolute;
+  bottom: -2px;
+
   width: 526px;
   height: 3px;
+
   background-color: var(--dark);
-  bottom: -2px;
 }
 
 /* --------- TEAM --------- */
