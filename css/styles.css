@@ -1586,6 +1586,7 @@ iframe {
 
 .pricing {
   scroll-margin-top: 145px;
+
   background-color: var(--status-items);
   background-image: url(../assets/img/map.webp);
   background-repeat: no-repeat;
@@ -1596,6 +1597,7 @@ iframe {
 .pricing-container {
   padding-top: 143px;
   padding-bottom: 236px;
+
   text-align: center;
 }
 
@@ -1615,11 +1617,15 @@ iframe {
 
 .pricing-item {
   position: relative;
+
   width: 416px;
   height: 536px;
   padding: 44px 39px 50px;
+
   border: 1px solid var(--contacts-color);
+
   background-color: var(--bg-color);
+
   text-align: start;
 }
 
@@ -1628,11 +1634,11 @@ iframe {
 }
 
 .price {
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1.313;
-  color: var(--dark);
 }
 
 .price-span {
@@ -1647,6 +1653,7 @@ iframe {
   flex-direction: row;
   gap: 16px;
   align-items: center;
+
   margin-bottom: 27px;
 }
 
@@ -1658,6 +1665,7 @@ iframe {
 .pricing-hr {
   width: 316px;
   height: 2px;
+
   background-color: var(--contacts-color);
 }
 
@@ -1667,11 +1675,13 @@ iframe {
 
 .pricing-feature {
   position: relative;
+
   padding-left: 16px;
+
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 16px;
   line-height: 2.25;
-  color: var(--dark);
 }
 
 .pricing-feature::before {
@@ -1679,10 +1689,13 @@ iframe {
   position: absolute;
   left: 0;
   top: 0.8em;
+
   width: 2px;
   height: 2px;
-  background-color: var(--dark);
+  
   border-radius: 50%;
+
+  background-color: var(--dark);
 }
 
 .pricing-feature.closed {
@@ -1697,6 +1710,7 @@ iframe {
   position: absolute;
   top: 0;
   left: 0;
+
   fill: var(--dark);
 }
 
@@ -1705,11 +1719,14 @@ iframe {
   top: 10px;
   right: 10px;
   display: block;
+
   width: 100px;
   height: 30px;
-  color: var(--bg-color);
+
   background-color: #39ca6e;
   border-radius: 20px;
+
+  color: var(--bg-color);
   text-align: center;
 }
 
