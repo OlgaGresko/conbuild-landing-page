@@ -2004,19 +2004,22 @@ iframe {
 /* --------- FOOTER --------- */
 
 .footer {
-  scroll-margin-top: 145px;
   background-color: var(--dark);
   background-image: url(../assets/img/city.webp);
   background-size: contain;
   background-position: 0 684px;
   background-repeat: no-repeat;
+
+  scroll-margin-top: 145px;
 }
 
 .map-wrapper {
   position: relative;
+
   width: 100%;
-  padding-bottom: 568px;
   height: 0;
+  padding-bottom: 568px;
+  
   overflow: hidden;
 }
 
@@ -2024,9 +2027,12 @@ iframe {
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+
   border: 0;
+
   filter: grayscale(100%);
 }
 
@@ -2037,12 +2043,14 @@ iframe {
 .sign-up-wrapper {
   position: absolute;
   top: -92px;
-  width: 100%;
-  height: 184px;
-  padding: 51px 109px;
   display: flex;
   flex-direction: row;
   gap: 257px;
+
+  width: 100%;
+  height: 184px;
+  padding: 51px 109px;
+  
   background-color: var(--accent);
   background-image: url(../assets/img/newsletter.webp);
   background-repeat: no-repeat;
@@ -2052,32 +2060,38 @@ iframe {
 
 .sign-up-cta {
   width: 403px;
+
+  color: var(--bg-color);
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1.313;
-  color: var(--bg-color);
+
   text-transform: capitalize;
 }
 
 .sign-up-form {
   position: relative;
+
   margin-top: 10px;
 }
 
 .sign-up-input {
-  padding-left: 10px;
   width: 417px;
   height: 45px;
-  background-color: transparent;
+  padding-left: 10px;
+
   border: none;
   border-bottom: 1px solid var(--bg-color);
+
+  background-color: transparent;
+  
   color: var(--bg-color);
 }
 
 .sign-up-input::placeholder {
-  font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
 }
 
 .sign-up-input:focus {
@@ -2089,11 +2103,16 @@ iframe {
   position: absolute;
   top: 0;
   right: 0;
+
   width: 38px;
   height: 31px;
-  background-color: var(--bg-color);
-  fill: var(--accent);
+
   border: none;
+
+  background-color: var(--bg-color);
+
+  fill: var(--accent);
+  
   cursor: pointer;
 }
 
@@ -2106,9 +2125,10 @@ iframe {
 }
 
 .footer-lower {
-  padding-top: 232px;
   display: flex;
   gap: 0;
+
+  padding-top: 232px;
 }
 
 .footer-lower > div:nth-child(1) {
@@ -2139,33 +2159,38 @@ iframe {
 .footer-text {
   width: 400px;
   margin-top: 12px;
+
   color: var(--footer-light);
 }
 
 .footer-available {
   margin-top: 36px;
+
+  color: var(--bg-color);
   font-family: "Jost", sans-serif;
   font-weight: 600;
   text-transform: capitalize;
-  color: var(--bg-color);
 }
 
 .footer-hours {
   margin-top: 6px;
+
   color: var(--accent);
 }
 
 .footer-header {
   margin-bottom: 24px;
+
+  color: var(--bg-color);
   font-family: "Jost", sans-serif;
   font-weight: 600;
-  color: var(--bg-color);
 }
 
 .footer-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
   color: var(--footer-light);
 }
 
@@ -2175,14 +2200,17 @@ iframe {
 }
 
 .footer-rights {
-  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 70px;
+  
   background-color: #000000;
+  
+  color: var(--footer-light);
   font-family: "DM Sans", sans-serif;
   text-transform: capitalize;
-  color: var(--footer-light);
 }
 
 .footer-rights-span {
