@@ -2224,19 +2224,23 @@ iframe {
   position: fixed;
   z-index: 1000;
   inset: 0;
-  background: rgba(0,0,0,0.6);
   justify-content: center;
   align-items: center;
+
+  background: rgba(0,0,0,0.6);
 }
 
 .modal-content {
   position: relative;
-  background: white;
-  padding: 3rem;
-  border-radius: 4px;
+   
   min-width: 300px;
   max-width: 100vw;
   max-height: 95vh;
+  padding: 3rem;
+
+  border-radius: 4px;
+
+  background: white;
 }
 
 .modal.show {
@@ -2250,9 +2254,12 @@ iframe {
   align-items: center;
   top: 20px;
   right: 20px;
-  fill: var(--dark);
-  background-color: transparent;
+
   border: none;
+
+  background-color: transparent;
+
+  fill: var(--dark);
   cursor: pointer;
 }
 
@@ -2260,26 +2267,29 @@ iframe {
   position: absolute;
   top: 1rem;
   right: 1rem;
+
   cursor: pointer;
 }
 
 .modal-subscribe-title {
   margin-bottom: 14px;
+
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.417;
-  color: var(--dark);
 }
 
 .modal-subscribe-wrapper {
-  margin-top: 8px;
-  margin-bottom: 8px;
   display: flex;
   flex-direction: row;
   gap: 6px;
   justify-content: start;
   align-items: center;
+
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .modal-subscribe-text {
@@ -2288,9 +2298,10 @@ iframe {
 
 .modal-subscribe-span {
   margin-bottom: 30px;
+
+  color: var(--accent);
   font-size: 18px;
   font-style: italic;
-  color: var(--accent);
 }
 
 .modal-subscribe-button {
@@ -2299,58 +2310,68 @@ iframe {
 
 .modal-content.modal-blog {
   position: relative;
-  padding: 4rem 6rem;
+
   width: 1700px;
   max-width: 85vw;
   max-height: 95vh;
+  padding: 4rem 6rem;
+
   overflow-y: auto;
 }
 
 .modal-blog-article-date {
   position: absolute;
-  padding: 8px 13px 8px 12px;
   top: 4rem;
   right: 6rem;
+
   width: 73px;
   height: 68px;
-  color: var(--bg-color);
-  text-align: center;
+  padding: 8px 13px 8px 12px;
+
   background-image: url(../assets/img/date.png);
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
+
+  color: var(--bg-color);
+  text-align: center;
 }
 
 .blog-article-content {
-  margin-top: 30px;
-  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   gap: 70px;
   justify-content: space-between;
   align-items: start;
+
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .blog-article-content-text {
   max-height: 56vh;
   padding-right: 10px;
+
   overflow-y: auto;
 }
 
 .modal-blog-article-pic {
-  margin-top: 7px;
+  display: block;
+
   width: auto;
   max-width: 50%;
   height: auto;
+  margin-top: 7px;
+
   object-fit: contain;
-  display: block;
 }
 
 .modal-blog-article-paragraph {
+  margin-bottom: 20px;
+
   font-family: "Jost", sans-serif;
   font-size: 17px;
   font-weight: 600;
-  margin-bottom: 20px;
 }
 
 .blog-article-text {
@@ -2366,13 +2387,15 @@ iframe {
 
 .modal-blog-button {
   display: block;
+
   margin-left: auto; 
 }
 
 .modal-services {
-  padding: 3rem 3rem;
   width: 1150px;
   height: 95vh;
+  padding: 3rem 3rem;
+  
   overflow-y: auto;
 }
 
