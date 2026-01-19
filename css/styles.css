@@ -86,9 +86,10 @@ section {
 }
 
 .container {
-  width: 1297px;
+  width: 1321px;
   margin: 0 auto;
   margin-bottom: 143px;
+  padding: 0 12px 0 12px;
 }
 
 .no-scroll {
