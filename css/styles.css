@@ -958,7 +958,7 @@ section {
   align-items: center;
   z-index: 10;
 
-  width: 306px;
+  width: calc((100% - 72px) / 4);
   height: 206px;
 
   background-color: var(--status-items);
@@ -1217,7 +1217,7 @@ section {
 }
 
 .process-button {
-  width: calc((1296px - 48px) / 3);
+  width: calc((100% - 48px) / 3);
   height: 80px;
 
   border: 1px solid var(--light);
@@ -1615,13 +1615,13 @@ iframe {
 .pricing-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 24px;
 }
 
 .pricing-item {
   position: relative;
 
-  width: 416px;
+  width: calc((100% - 48px) / 3);
   height: 536px;
   padding: 44px 39px 50px;
 
@@ -1909,7 +1909,7 @@ iframe {
   position: relative;
   z-index: 10;
 
-  width: 416px;
+  width: calc((100% - 48px) / 3);
   height: 526px;
   padding: 30px 30px 23px;
 
