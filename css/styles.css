@@ -2594,9 +2594,11 @@ iframe {
 }
 
 .modal-project-features {
-  list-style-type: disc;
   padding-left: 1.5em;
+
   font-weight: 500;
+
+  list-style-type: disc;
 }
 
 .modal-project-features > li:not(:last-child) {
@@ -2620,6 +2622,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   width: 1600px;
   max-height: 95vh;
   padding: 2rem 5rem;
@@ -2627,11 +2630,13 @@ iframe {
 
 .modal-team-title {
   margin-bottom: 40px;
+
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1.313;
-  color: var(--dark);
+  
   text-decoration: underline
 }
 
@@ -2641,22 +2646,25 @@ iframe {
   flex-wrap: wrap;
   column-gap: 60px;
   row-gap: 35px;
+
   margin-bottom: 40px;
   padding-right: 20px;
+
   overflow-y: auto;
 }
 
 .modal-team-item {
   width: calc((100% - 180px) / 4);
+
   cursor: help;
 }
 
 .modal-team-name {
+  color: var(--dark);
   font-family: "Jost", sans-serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 1.417;
-  color: var(--dark);
   text-align: center;
 }
 
@@ -2671,6 +2679,7 @@ iframe {
 
 .modal-team-img-wrapper {
   position: relative;
+  
   overflow: hidden;
 }
 
