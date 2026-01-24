@@ -2685,12 +2685,15 @@ iframe {
 
 .modal-team-overlay {
   position: absolute;
-  height: 100%;  
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 100%;  
   padding: 170px 45px;
+
   background-color: rgba(256, 256, 256, 0.7);
+
   transform: translateY(100%);
   transition: transform 0.5s ease;
 }
@@ -2704,14 +2707,17 @@ iframe {
 }
 
 .modal-pricing {
-  height: 580px;
   display: flex;
   flex-direction: column;
   align-items: start;
-  max-height: 95vh;
+
   width: 700px;
+  height: 580px;
+  max-height: 95vh;
   padding: 4rem 4rem 3rem;
+
   font-family: "Jost", sans-serif;
+  
   overflow-y: auto;
 }
 
