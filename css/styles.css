@@ -2725,26 +2725,30 @@ iframe {
   align-self: center;
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: space-between;
   gap: 50px;
+
+  width: 100%;
   margin-bottom: 40px;
 }
 
 .modal-progress-bar-first,
 .modal-progress-bar-second,
 .modal-progress-bar-third {
-  width: calc((100% - 60px) / 3);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
+
+  width: calc((100% - 60px) / 3);
 }
 
 .modal-progress-step {
   width: 100%;
   height: 10px;
+
   background-color: rgb(230, 230, 230);
+  
   border-radius: 10px;
 }
 
