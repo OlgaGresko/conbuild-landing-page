@@ -2843,11 +2843,13 @@ iframe {
 }
 
 .modal-form-label-input {
-  font-family: "Jost", sans-serif;
-  font-size: 16px;
   width: 100%;
+
   border: none;
   border-bottom: 1px solid var(--accent);
+
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
   letter-spacing: 2px;
 }
 
@@ -2857,6 +2859,7 @@ iframe {
 
 .modal-form-person input:focus {
   border-bottom: 2px solid var(--accent);
+
   outline: none;
 }
 
@@ -2875,12 +2878,16 @@ input:-webkit-autofill:active  {
 
 .modal-form-eye {
   position: absolute;
-  width: 20px;
-  height: 20px;
   top: 3px;
   right: 10px;
+
+  width: 20px;
+  height: 20px;
+  
   border: none;
+
   background-color: transparent;
+
   cursor: pointer;
 }
 
@@ -2890,17 +2897,19 @@ input:-webkit-autofill:active  {
 
 .modal-form-button-wrapper {
   align-self: center;
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  width: 100%;
 }
 
 .modal-form-payment {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  width: 100%;
 }
 
 .modal-form-label-input-2 {
