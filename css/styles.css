@@ -2772,8 +2772,10 @@ iframe {
   top: 0px;
   left: -20px;
   top: 4px;
+
   width: 16px;
   height: 16px;
+
   background-image: url(../assets/img/check.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -2784,8 +2786,10 @@ iframe {
 }
 
 .modal-progress-descr.active {
-  margin-left: 20px;
   position: relative;
+
+  margin-left: 20px;
+
   color: var(--accent);
 }
 
@@ -2795,8 +2799,10 @@ iframe {
   top: 0px;
   left: -20px;
   top: 5.5px;
+
   width: 16px;
   height: 16px;
+
   background-image: url(../assets/img/arrow.webp);
   background-repeat: no-repeat;
   background-size: contain;
@@ -2804,11 +2810,13 @@ iframe {
 
 .modal-pricing-congratulations {
   align-self: center;
+
   margin-bottom: 30px;
+
+  color: var(--dark);
   font-size: 18px;
   font-weight: 600;
   line-height: 1.625;
-  color: var(--dark);
 }
 
 .modal-pricing-cta {
@@ -2818,8 +2826,9 @@ iframe {
 .modal-form-person {
   display: flex;
   flex-direction: column;
-  width: 100%;
   gap: 30px;
+
+  width: 100%;
 }
 
 .modal-form-label {
