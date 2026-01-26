@@ -2913,12 +2913,14 @@ input:-webkit-autofill:active  {
 }
 
 .modal-form-label-input-2 {
-  height: 40px;
-  font-family: "Jost", sans-serif;
-  font-size: 16px;
   width: 100%;
+  height: 40px;
+
   border: 1px solid var(--accent);
   border-radius: 4px;
+
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
 }
 
 .modal-pricing-logo {
@@ -2931,7 +2933,9 @@ input:-webkit-autofill:active  {
 
 .modal-form-label-input-2.card-number {
   flex-grow: 1;
+
   padding-left: 15px;
+
   letter-spacing: 2px;
 }
 
@@ -2950,8 +2954,9 @@ input:-webkit-autofill:active  {
 }
 
 .modal-form-label-input-2.exp {
-  text-align: center;
   width: 100px;
+
+  text-align: center;
   letter-spacing: 2px;
 }
 
