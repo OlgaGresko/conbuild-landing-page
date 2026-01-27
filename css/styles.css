@@ -2969,8 +2969,9 @@ input:-webkit-autofill:active  {
 }
 
 .modal-form-label-input-2.cvv {
-  text-align: center;
   width: 100px;
+
+  text-align: center;
   letter-spacing: 2px;
 }
 
@@ -2979,36 +2980,42 @@ input:-webkit-autofill:active  {
 } 
 
 .modal-form-checkbox-group {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  margin-top: 20px;
 }
 
 .modal-form-checkbox {
   display: flex;
   align-items: center;
+
   font-size: 16px;
   line-height: 1.4;
 }
 
 input[type="checkbox"] {
   position: absolute;
-  opacity: 0;
+
   width: 1px;
   height: 1px;
   margin: 0;
   padding: 0;
+
+  opacity: 0;
   pointer-events: all;
 }
 
 .custom-checkbox {
-  width: 16px;
-  height: 16px;
-  border: 1px solid #ccc;
-  margin-right: 10px;
   display: inline-block;
   position: relative;
+
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+
+  border: 1px solid #ccc;
   border-radius: 3px;
 }
 
