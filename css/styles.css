@@ -3133,14 +3133,17 @@ input[type="checkbox"] {
     position: absolute;
     top: 56px;
     right: -1px;
-    padding: 10px 35px 30px;
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    background-color: var(--dark);
+    z-index: 10;
+
+    padding: 10px 35px 30px;
+    
     border: 1px solid var(--dark-text);
     border-top: 1px solid var(--dark);
-    z-index: 10;
+
+    background-color: var(--dark);
   }
 
   .socials-icon {
@@ -3171,10 +3174,11 @@ input[type="checkbox"] {
   }
 
   .nav-list {
-    padding-left: 0;
-    padding-right: 30px;
     justify-content: end;
     gap: 18px;
+
+    padding-left: 0;
+    padding-right: 30px;
   }
 
   .nav-link:nth-child(4) {
