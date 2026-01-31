@@ -3269,29 +3269,34 @@ input[type="checkbox"] {
   .upper-header {
     position: relative;
     justify-content: end;
+
     border: none;
   }
 
   .upper-header::after {
     content: "";
     display: block;
-    width: 83%;
-    height: 1px;
-    background-color: var(--dark-text);
     position: absolute;
     bottom: 0;
     right: 0;
+
+    width: 83%;
+    height: 1px;
+
+    background-color: var(--dark-text);
   }
 
   .contacts-list {
     gap: 20px;
+
     padding: 13px 20px 14px;
   }
 
   .nav-list {
-    padding-right: 30px;
     justify-content: end;
     gap: 18px;
+
+    padding-right: 30px;
   }
 
   .nav-link:nth-child(4) {
@@ -3318,8 +3323,10 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 30px;
     height: 30px;
+
     cursor: pointer;
   }
 
@@ -3373,6 +3380,7 @@ input[type="checkbox"] {
   .upper-header {
     position: relative;
     justify-content: end;
+    
     border: none;
   }
 
