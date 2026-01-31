@@ -415,7 +415,7 @@ section {
       rgba(14, 14, 14, 0.9) 100%
     ),
     url(../assets/img/hero.webp);
-  background-position: bottom -16px left -10px, bottom -16px left -10px, center,
+  background-position: bottom 0 left 0, bottom 0 left 0, center,
     center;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: auto, auto, cover, cover;
@@ -424,14 +424,13 @@ section {
 .hero-container {
   display: flex;
   flex-direction: row;
-  gap: 54px;
+  justify-content: space-between;
 
   width: 100%;
-  max-width: 1595px;
+  max-width: 1607px;
 
   margin: 0 auto;
-  padding-top: 49px;
-  padding-bottom: 72px;
+  padding: 49px 12px 72px 12px;
 }
 
 .hero-text {
@@ -501,17 +500,18 @@ section {
 
 .hero-portrait {
   width: 640px;
-  height: 729px;
+  height: 722px;
 
   background-image: url(../assets/img/portrait-bg.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom right;
+  background-size: contain;
 }
 
 .front-loader {
   position: absolute;
   bottom: 0;
-  left: calc(50% - (539px / 2));
+  left: 720px;
 }
 
 .crane {
@@ -3380,7 +3380,7 @@ input[type="checkbox"] {
   .upper-header {
     position: relative;
     justify-content: end;
-    
+
     border: none;
   }
 
