@@ -1787,6 +1787,7 @@ iframe {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: 202px;
 
   text-align: start;
@@ -1822,6 +1823,7 @@ iframe {
 }
 
 .blog-main-article-text {
+  padding-top: 20px;
   width: 459px;
 }
 
@@ -1880,7 +1882,7 @@ iframe {
 
 .blog-main-article-paragraph {
   width: 419px;
-  margin-bottom: 37px;
+  margin-bottom: 22px;
 }
 
 .blog-button {
