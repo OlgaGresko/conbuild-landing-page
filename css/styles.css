@@ -1068,31 +1068,38 @@ section {
 .projects-item {
   position: relative;
   
+  object-fit: cover;
   cursor: pointer;
 }
 
 .project-1 {
   background-image: url(../assets/img/projects/project-1.webp);
+  background-size: cover;
 }
 
 .project-2 {
   background-image: url(../assets/img/projects/project-2.webp);
+  background-size: cover;
 }
 
 .project-3 {
   background-image: url(../assets/img/projects/project-3.webp);
+  background-size: cover;
 }
 
 .project-4 {
   background-image: url(../assets/img/projects/project-4.webp);
+  background-size: cover;
 }
 
 .project-5 {
   background-image: url(../assets/img/projects/project-5.webp);
+  background-size: cover;
 }
 
 .project-6 {
   background-image: url(../assets/img/projects/project-6.webp);
+  background-size: cover;
 }
 
 .projects-item-button-container {
