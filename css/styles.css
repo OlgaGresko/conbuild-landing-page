@@ -1948,6 +1948,8 @@ iframe {
   width: 356px;
   height: 300px;
 
+  margin-bottom: 22px;
+
   background-color: #d8d8d8;
   
   object-fit: cover;
@@ -2069,7 +2071,7 @@ iframe {
   flex-direction: row;
   gap: 257px;
 
-  width: 100%;
+  width: calc(100% - 24px);
   height: 184px;
   padding: 51px 109px;
   
@@ -2095,13 +2097,12 @@ iframe {
 .sign-up-form {
   position: relative;
 
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .sign-up-input {
   width: 417px;
   height: 45px;
-  padding-left: 10px;
 
   border: none;
   border-bottom: 1px solid var(--bg-color);
@@ -2109,11 +2110,12 @@ iframe {
   background-color: transparent;
   
   color: var(--bg-color);
+  font-size: 16px;
 }
 
 .sign-up-input::placeholder {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .sign-up-input:focus {
