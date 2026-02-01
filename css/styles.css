@@ -1636,7 +1636,7 @@ iframe {
 
   width: calc((100% - 48px) / 3);
   height: 536px;
-  padding: 44px 39px 50px;
+  padding: 44px 50px 50px;
 
   border: 1px solid var(--contacts-color);
 
@@ -1678,21 +1678,21 @@ iframe {
   fill: transparent;
 }
 
-.pricing-hr {
-  width: 316px;
-  height: 2px;
-
-  background-color: var(--contacts-color);
-}
-
 .pricing-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  padding-top: 19px;
   margin-bottom: 38px;
+
+  border-top: 1px solid var(--contacts-color);
 }
 
 .pricing-feature {
   position: relative;
 
-  padding-left: 16px;
+  padding-left: 14px;
 
   color: var(--dark);
   font-family: "Jost", sans-serif;
@@ -1704,7 +1704,7 @@ iframe {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.8em;
+  top: 1em;
 
   width: 2px;
   height: 2px;
@@ -1720,6 +1720,10 @@ iframe {
 
 .pricing-feature.closed::before {
   background-color: var(--dark-text);
+}
+
+.pricing-button {
+  padding: 12px 35px;
 }
 
 .pricing-rectangle {
