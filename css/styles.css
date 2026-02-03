@@ -3456,8 +3456,10 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 30px;
     height: 30px;
+
     cursor: pointer;
   }
 
@@ -3507,6 +3509,7 @@ input[type="checkbox"] {
 
   .header-container {
     justify-content: space-between;
+    
     height: 57px;
     padding: 0 0 0 15px;
   }
