@@ -3518,13 +3518,15 @@ input[type="checkbox"] {
     display: flex;
     justify-content: start;
     align-items: center;
-    height: 57px;
     flex: 0.4;
+
+    height: 57px;
     padding: 0;
   }
 
   .logo-pic {
     padding: 3px;
+    
     border-radius: 50%;
     border: 2px solid var(--accent);
   }
