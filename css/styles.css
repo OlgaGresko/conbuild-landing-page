@@ -3557,12 +3557,14 @@ input[type="checkbox"] {
   }
 
   .upper-header {
-    height: 57px;
-    padding-right: 15px;
     position: relative;
     justify-content: end;
-    border: none;
     gap: 20px;
+
+    height: 57px;
+    padding-right: 15px;
+
+    border: none;
   }
 
   .upper-header::after {
