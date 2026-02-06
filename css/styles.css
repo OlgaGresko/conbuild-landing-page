@@ -3583,11 +3583,16 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 30px;
     height: 30px;
-    background-color: transparent;
-    fill: var(--accent);
+
     border: none;
+
+    background-color: transparent;
+
+    fill: var(--accent);
+    
     cursor: pointer;
   }
 
