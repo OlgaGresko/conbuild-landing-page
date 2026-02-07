@@ -132,6 +132,8 @@ section {
 
 .logo-background {
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: -999;
 }
 
@@ -3096,7 +3098,7 @@ input[type="checkbox"] {
 
 @media (min-width: 1601px) and (max-width: 1750px) {
   .header-container {
-      width: 98vw;
+      width: 94vw;
   }
 
   .logo-background {
@@ -3110,7 +3112,7 @@ input[type="checkbox"] {
 
 @media (min-width: 1401px) and (max-width: 1600px) {
   .header-container {
-      width: 99vw;
+      width: 96vw;
   }
 
   .logo-background {
