@@ -3197,6 +3197,10 @@ input[type="checkbox"] {
 /* --------- DESKTOP (<1401) --------- */
 
 @media (max-width: 1400px) {
+  .container {
+    padding: 0 48px;
+  }
+
   .header-container {
     width: 100vw;
   }
@@ -3304,6 +3308,20 @@ input[type="checkbox"] {
     width: 420px;
     height: 270px;
   }
+
+  .crane {
+  bottom: -46px;
+  left: 90px;
+  z-index: -999;
+}
+
+  .hero {
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-size: 46px;
+  }
 }
 
 /* --------- DESKTOP (993-1200) --------- */
@@ -3373,6 +3391,10 @@ input[type="checkbox"] {
   .nav-link.active::after {
     bottom: -35px;
   }
+  
+  .hero {
+    margin-bottom: 10px;
+  }
 
   .hero-container {
     gap: 30px;
@@ -3402,10 +3424,23 @@ input[type="checkbox"] {
 
   .front-loader {
     left: 290px;
-    bottom: 40px;
+    bottom: 60px;
 
     width: 350px;
     height: 225px;
+  }
+
+  .crane {
+  bottom: 30px;
+  left: 48px;
+  z-index: -999;
+
+  width: 50px;
+  height: auto;
+}
+
+  .section-title {
+    font-size: 40px;
   }
 }
 
