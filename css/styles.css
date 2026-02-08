@@ -3365,6 +3365,8 @@ input[type="checkbox"] {
   }
 
   .hero-container {
+    gap: 30px;
+
     padding: 40px 48px 72px 48px;
   }
 
@@ -3501,6 +3503,53 @@ input[type="checkbox"] {
 
   .contacts-item-phone {
     display: flex;
+  }
+
+  .hero-container {
+    gap: 30px;
+
+    padding: 36px 25px 20px 25px;
+  }
+
+  .hero-wrapper {
+  background-position:
+    bottom -90px left -90px,
+    bottom -90px left -90px,
+    center,
+    center;
+}
+
+  .hero-text {
+    padding-top: 86px;
+    padding-bottom: 90px;
+}
+
+  .hero-title {
+    font-size: 56px;
+  }
+
+  .hero-descr {
+    max-width: 550px;
+    margin-bottom: 36px;
+
+    font-size: 14px;
+  }
+
+  .hero-portrait {
+    width: 350px;
+    height: 395px;
+  }
+
+  .button {
+    padding: 14px 24px;
+  }
+
+  .front-loader {
+    left: 250px;
+    bottom: 90px;
+
+    width: 200px;
+    height: 129px;
   }
 }
 
