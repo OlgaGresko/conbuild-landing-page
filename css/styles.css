@@ -3116,6 +3116,8 @@ input[type="checkbox"] {
 
 /* --------- MEDIA QUERIES --------- */
 
+/* --------- DESKTOP (1751-1900) --------- */
+
 @media (min-width: 1751px) and (max-width: 1900px) {
   .header-container {
     width: 94vw;
@@ -3156,6 +3158,8 @@ input[type="checkbox"] {
   }
 }
 
+/* --------- DESKTOP (1401-1600) --------- */
+
 @media (min-width: 1401px) and (max-width: 1600px) {
   .header-container {
     width: 96vw;
@@ -3189,6 +3193,8 @@ input[type="checkbox"] {
     left: 300px;
   }
 }
+
+/* --------- DESKTOP (<1401) --------- */
 
 @media (max-width: 1400px) {
   .header-container {
@@ -3244,6 +3250,8 @@ input[type="checkbox"] {
   }
 }
 
+/* --------- DESKTOP (1201-1400) --------- */
+
 @media (min-width: 1201px) and (max-width: 1400px) {
   .header-container {
     padding: 0 25px;
@@ -3297,6 +3305,8 @@ input[type="checkbox"] {
     height: 270px;
   }
 }
+
+/* --------- DESKTOP (993-1200) --------- */
 
 @media (min-width: 993px) and (max-width: 1200px) {
   .header-container {
@@ -3398,6 +3408,8 @@ input[type="checkbox"] {
     height: 225px;
   }
 }
+
+/* --------- TABLET (769-992) --------- */
 
 @media (min-width: 769px) and (max-width: 992px) {
   .header-container {
@@ -3553,6 +3565,17 @@ input[type="checkbox"] {
   }
 }
 
+/* --------- MOBILE (<769) --------- */
+
+@media (max-width: 768px) {
+  .front-loader {
+    display: none;
+  }
+
+}
+
+/* --------- MOBILE (577-768) --------- */
+
 @media (min-width: 577px) and (max-width: 768px) {
   .logo-descr {
     display: none;
@@ -3703,11 +3726,9 @@ input[type="checkbox"] {
 
     font-size: 14px;
   }
-
-  .front-loader {
-    display: none;
-  }
 }
+
+/* --------- MOBILE (<577) --------- */
 
 @media (max-width: 576px) {
   body {
@@ -3948,10 +3969,6 @@ input[type="checkbox"] {
     padding: 12px 20px;
 
     font-size: 14px;
-  }
-
-  .front-loader {
-    display: none;
   }
 
   .crane {
