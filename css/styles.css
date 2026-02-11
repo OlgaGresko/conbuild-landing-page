@@ -3257,6 +3257,10 @@ input[type="checkbox"] {
 /* --------- DESKTOP (1201-1400) --------- */
 
 @media (min-width: 1201px) and (max-width: 1400px) {
+  .container {
+    margin-bottom: 120px;
+  }
+
   .header-container {
     padding: 0 25px;
   }
@@ -3331,6 +3335,10 @@ input[type="checkbox"] {
 /* --------- DESKTOP (993-1200) --------- */
 
 @media (min-width: 993px) and (max-width: 1200px) {
+  .container {
+    margin-bottom: 100px;
+  }
+
   .header-container {
     padding: 0 25px;
   }
