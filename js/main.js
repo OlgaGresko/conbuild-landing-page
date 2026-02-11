@@ -326,11 +326,14 @@ function updateCentralSlide2(swiperInstance) {
 
   slides.forEach((slide, index) => {
     const text = slide.querySelector(".about-swiper-content");
+    const list = slide.querySelector(".swiper-second-points");
 
     text.classList.remove("points-visible");
+    list.classList.remove("points-show");
 
     if (index === swiperInstance.activeIndex + 1) {
       text.classList.add("points-visible");
+      list.classList.add("points-show");
     }
   });
 }

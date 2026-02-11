@@ -919,6 +919,8 @@ section {
   top: 101px;
   z-index: 1;
 
+width: 80%;
+
   user-select: none;
 
   transition: top var(--transition);
@@ -3465,6 +3467,7 @@ input[type="checkbox"] {
 @media (min-width: 769px) and (max-width: 992px) {
   .container {
     padding: 0 25px;
+    margin-bottom: 80px;
   }
 
   .header-container {
@@ -3645,6 +3648,42 @@ input[type="checkbox"] {
     width: 260px;
     height: 100%;
   }
+
+  .about-swiper-content {
+  position: absolute;
+  top: 130px;
+}
+
+.swiper-second-name {
+  font-size: 26px;
+}
+
+.swiper-second-points {
+  display: none;
+font-size: 14px;
+}
+
+.points-visible {
+  top: 30px;
+}
+
+.points-show {
+  display: flex;
+}
+
+.about-upper-block {
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.about-span {
+  font-size: 26px;
+}
+
+.about-text {
+  width: 380px;
+  font-size: 14px;
+}
 }
 
 /* --------- MOBILE (<769) --------- */
