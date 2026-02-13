@@ -295,6 +295,14 @@ const swiper2 = new Swiper(".swiper-2", {
     nextEl: ".swiper-button-next.swiper-second",
     prevEl: ".swiper-button-prev.swiper-second",
   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    577: {
+      slidesPerView: 3
+    }
+  },
   on: {
     slideChange: function () {
       updateCentralSlide2(this);
