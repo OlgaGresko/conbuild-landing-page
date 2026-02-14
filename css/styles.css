@@ -3985,6 +3985,33 @@ input[type="checkbox"] {
     height: 332px;
     padding: 21px 10px;
   }
+
+  .container.container-about {
+    margin-bottom: 70px;
+  }
+
+  .section-title.status-title {
+    margin-bottom: 38px;
+  }
+
+  .status-list {
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .status-item {
+    width: calc((100% - 24px) / 2);
+    height: 160px;
+  }
+
+  .status-number {
+    font-size: 36px;
+  }
+
+  .status-descr {
+    font-size: 18px;
+  }
 }
 
 /* --------- MOBILE (<577) --------- */
@@ -4350,5 +4377,32 @@ input[type="checkbox"] {
     background-image: none;
     
     pointer-events: none;
+  }
+
+  .container.container-about {
+    margin-bottom: 50px;
+  }
+
+  .section-title.status-title {
+    margin-bottom: 34px;
+  }
+
+  .status-list {
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .status-item {
+    width: calc((100% - 10px) / 2);
+    height: 150px;
+  }
+
+  .status-number {
+    font-size: 30px;
+  }
+
+  .status-descr {
+    font-size: 14px;
   }
 }
