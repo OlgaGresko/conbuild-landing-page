@@ -3332,6 +3332,18 @@ input[type="checkbox"] {
   .section-title {
     font-size: 46px;
   }
+
+  .container.container-about {
+    margin-bottom: 120px;
+  }
+
+  .status-number {
+    font-size: 46px;
+  }
+
+  .status-descr {
+    font-size: 22px;
+  }
 }
 
 /* --------- DESKTOP (993-1200) --------- */
@@ -3459,6 +3471,22 @@ input[type="checkbox"] {
 
   .section-title {
     font-size: 40px;
+  }
+
+  .container.container-about {
+    margin-bottom: 100px;
+  }
+
+  .section-title.status-title {
+    margin-bottom: 50px;
+  }
+
+  .status-number {
+    font-size: 40px;
+  }
+
+  .status-descr {
+    font-size: 20px;
   }
 }
 
