@@ -3716,6 +3716,31 @@ input[type="checkbox"] {
 
     font-size: 14px;
   }
+
+  .container.container-about {
+    margin-bottom: 80px;
+  }
+
+  .section-title.status-title {
+    margin-bottom: 44px;
+  }
+
+  .status-list {
+    gap: 14px;
+  }
+
+  .status-item {
+    width: calc((100% - 42px) / 4);
+    height: 160px;
+  }
+
+  .status-number {
+    font-size: 30px;
+  }
+
+  .status-descr {
+    font-size: 18px;
+  }
 }
 
 /* --------- MOBILE (<769) --------- */
