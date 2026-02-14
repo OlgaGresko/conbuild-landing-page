@@ -3640,8 +3640,9 @@ input[type="checkbox"] {
   }
 
   .section-descr {
-    font-size: 14px;
     margin-bottom: 36px;
+
+    font-size: 14px;
   }
 
   .swiper-slide.swiper-first {
@@ -3660,6 +3661,7 @@ input[type="checkbox"] {
 
   .swiper-second-points {
     display: none;
+
     font-size: 14px;
   }
 
@@ -3673,6 +3675,7 @@ input[type="checkbox"] {
 
   .about-upper-block {
     gap: 50px;
+
     margin-bottom: 50px;
   }
 
@@ -3682,6 +3685,7 @@ input[type="checkbox"] {
 
   .about-text {
     width: 380px;
+
     font-size: 14px;
   }
 }
@@ -3702,8 +3706,8 @@ input[type="checkbox"] {
 
 @media (min-width: 577px) and (max-width: 768px) {
   .container {
-    padding: 0 25px;
     margin-bottom: 70px;
+    padding: 0 25px;
   }
   .logo-descr {
     display: none;
@@ -3873,8 +3877,9 @@ input[type="checkbox"] {
   }
 
   .section-descr {
-    font-size: 14px;
     margin-bottom: 36px;
+
+    font-size: 14px;
   }
 
   .swiper-slide.swiper-first {
@@ -3894,6 +3899,7 @@ input[type="checkbox"] {
 
   .swiper-second-points {
     display: none;
+
     font-size: 14px;
   }
 
@@ -3907,6 +3913,7 @@ input[type="checkbox"] {
 
   .about-upper-block {
     gap: 30px;
+
     margin-bottom: 40px;
   }
 
@@ -3916,13 +3923,14 @@ input[type="checkbox"] {
 
   .about-text {
     width: 350px;
+
     font-size: 14px;
   }
 
   .swiper-slide.swiper-second {
-  width: 416px;
-  height: 332px;
-  padding: 21px 10px;
+    width: 416px;
+    height: 332px;
+    padding: 21px 10px;
   }
 }
 
@@ -3934,8 +3942,8 @@ input[type="checkbox"] {
   }
 
   .container {
-    padding: 0 15px;
     margin-bottom: 50px;
+    padding: 0 15px;
   }
 
   .header {
@@ -4157,8 +4165,8 @@ input[type="checkbox"] {
   }
 
   .hero-title {
-    font-size: 38px;
     margin-bottom: 12px;
+    font-size: 38px;
   }
 
   .hero-descr {
@@ -4223,14 +4231,14 @@ input[type="checkbox"] {
     position: absolute;
     top: 90px;
     left: 50%;
-    transform: translateX(-50%);
 
     text-align: center;
+
+    transform: translateX(-50%);
   }
 
   .swiper-second-name {
     font-size: 22px;
-    /* text-align: center; */
   }
 
   .swiper-second-points {
@@ -4276,9 +4284,9 @@ input[type="checkbox"] {
   }
 
   .swiper-slide.swiper-second {
-  width: 100%;
-  height: 332px;
-  padding: 21px 10px;
+    width: 100%;
+    height: 332px;
+    padding: 21px 10px;
   }
 
   .about {
@@ -4287,7 +4295,7 @@ input[type="checkbox"] {
 
   .about::before {
     background-image: none;
+    
     pointer-events: none;
   }
-
 }
